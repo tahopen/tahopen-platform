@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16">
+  <defs>
+    <clipPath id="clip-favicon">
+      <rect width="16" height="16"/>
+    </clipPath>
+  </defs>
+  <g id="favicon" clip-path="url(#clip-favicon)">
+    <rect width="16" height="16" fill="#fff"/>
+    <rect id="Rectangle_1" data-name="Rectangle 1" width="16" height="16" fill="#fff"/>
+    <rect id="Rectangle_2463" data-name="Rectangle 2463" width="16" height="16" fill="#c00"/>
+    <path id="Path_3853" data-name="Path 3853" d="M63.5,72H61v8.375h2.5Z" transform="translate(-57.188 -67.5)" fill="none"/>
+    <path id="Path_3854" data-name="Path 3854" d="M108,50h2.5v9.741H108Z" transform="translate(-101.25 -46.875)" fill="none"/>
+    <path id="Path_3855" data-name="Path 3855" d="M157.5,104H155v6.375h2.5Z" transform="translate(-145.313 -97.5)" fill="none"/>
+    <g id="Rectangle_2" data-name="Rectangle 2" transform="translate(1 12)" fill="#fff" stroke="#fff" stroke-width="1">
+      <rect width="14" height="1" stroke="none"/>
+      <rect x="0.5" y="0.5" width="13" fill="none"/>
+    </g>
+    <g id="Group_1" data-name="Group 1" transform="translate(1)">
+      <g id="Rectangle_3" data-name="Rectangle 3" transform="translate(2 4)" fill="#fff" stroke="#fff" stroke-width="1">
+        <rect width="1" height="8" stroke="none"/>
+        <rect x="0.5" y="0.5" height="7" fill="none"/>
+      </g>
+      <g id="Rectangle_4" data-name="Rectangle 4" transform="translate(4 4)" fill="#fff" stroke="#fff" stroke-width="1">
+        <rect width="1" height="8" stroke="none"/>
+        <rect x="0.5" y="0.5" height="7" fill="none"/>
+      </g>
+      <g id="Rectangle_5" data-name="Rectangle 5" transform="translate(2.5 4)" fill="#fff" stroke="#fff" stroke-width="1">
+        <rect width="2" height="1" stroke="none"/>
+        <rect x="0.5" y="0.5" width="1" fill="none"/>
+      </g>
+    </g>
+    <g id="Group_3" data-name="Group 3" transform="translate(9 2)">
+      <g id="Rectangle_3-2" data-name="Rectangle 3" transform="translate(2 4)" fill="#fff" stroke="#fff" stroke-width="1">
+        <rect width="1" height="6" stroke="none"/>
+        <rect x="0.5" y="0.5" height="5" fill="none"/>
+      </g>
+      <g id="Rectangle_4-2" data-name="Rectangle 4" transform="translate(4 4)" fill="#fff" stroke="#fff" stroke-width="1">
+        <rect width="1" height="6" stroke="none"/>
+        <rect x="0.5" y="0.5" height="5" fill="none"/>
+      </g>
+      <g id="Rectangle_5-2" data-name="Rectangle 5" transform="translate(2.5 4)" fill="#fff" stroke="#fff" stroke-width="1">
+        <rect width="2" height="1" stroke="none"/>
+        <rect x="0.5" y="0.5" width="1" fill="none"/>
+      </g>
+    </g>
+    <g id="Group_2" data-name="Group 2" transform="translate(5 -2)">
+      <g id="Rectangle_3-3" data-name="Rectangle 3" transform="translate(2 4)" fill="#fff" stroke="#fff" stroke-width="1">
+        <rect width="1" height="10.252" stroke="none"/>
+        <rect x="0.5" y="0.5" height="9.252" fill="none"/>
+      </g>
+      <g id="Rectangle_4-3" data-name="Rectangle 4" transform="translate(4 4)" fill="#fff" stroke="#fff" stroke-width="1">
+        <rect width="1" height="10.252" stroke="none"/>
+        <rect x="0.5" y="0.5" height="9.252" fill="none"/>
+      </g>
+      <g id="Rectangle_5-3" data-name="Rectangle 5" transform="translate(2.5 4)" fill="#fff" stroke="#fff" stroke-width="1">
+        <rect width="2" height="1" stroke="none"/>
+        <rect x="0.5" y="0.5" width="1" fill="none"/>
+      </g>
+    </g>
+  </g>
+</svg>

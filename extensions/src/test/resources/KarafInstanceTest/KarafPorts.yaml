@@ -1,0 +1,31 @@
+Service:
+ - serviceName: karaf
+   serviceDescription: Karaf service ports
+
+ - serviceName: rmi 
+   serviceDescription: RMI service ports
+
+ServerPort:
+- id: KARAF_PORT
+  property: karaf.port
+  friendlyName: Karaf Port
+  startPort: 18801
+  serviceName: karaf
+
+- id: OSGI_SERVICE_PORT
+  property: org.pentaho.osgi.service.http.port
+  friendlyName: OSGI Service Port
+  startPort: 19050
+  serviceName: karaf
+
+- id: RMI_SERVER_PORT
+  property: org.pentaho.jmx.rmi.server.port
+  friendlyName: RMI Server Port
+  startPort: 54444
+  serviceName: rmi
+
+- id: RMI_REGISTRY_PORT
+  property: org.pentaho.jmx.rmi.registry.port
+  friendlyName: JMX RMI Registry Port
+  startPort: 21098
+  serviceName: rmi

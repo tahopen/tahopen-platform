@@ -1,0 +1,187 @@
+<chart xmlns="http://reporting.pentaho.org/namespaces/charting/1.0">
+
+  <stylesheet>
+
+    .seriesA {
+    color: #0045a1;
+    -x-pentaho-chart-line-width: 2px;
+    }
+
+    .seriesB {
+    color: #5f9e00;
+    -x-pentaho-chart-line-width: 2px;
+    }
+
+    .seriesC {
+    color: #ffc20f;
+    -x-pentaho-chart-line-width: 2px;
+    }
+
+    .seriesD {
+    color: #ff6600;
+    -x-pentaho-chart-line-width: 2px;
+    }
+
+    .seriesE {
+    color: #3c008f;
+    -x-pentaho-chart-line-width: 2px;
+    }
+
+    .seriesF {
+    color: #007a99;
+    -x-pentaho-chart-line-width: 2px;
+    }
+
+    .seriesG {
+    color: #a10067;
+    -x-pentaho-chart-line-width: 2px;
+    }
+
+    .seriesH {
+    color: #002255;
+    -x-pentaho-chart-line-width: 2px;
+    }
+
+    .seriesI {
+    color: #e03a00;
+    -x-pentaho-chart-line-width: 2px;
+    }
+
+    .seriesJ {
+    color: #006644;
+    -x-pentaho-chart-line-width: 2px;
+    }
+
+    .seriesK {
+    color: #ba0025;
+    -x-pentaho-chart-line-width: 2px;
+    }
+
+    .seriesL {
+    color: #660088;
+    -x-pentaho-chart-line-width: 2px;
+    }
+
+    .seriesM {
+    color: #4D7DBD;
+    -x-pentaho-chart-line-width: 2px;
+    }
+
+    .seriesN {
+    color: #8FBB4D;
+    -x-pentaho-chart-line-width: 2px;
+    }
+
+    .seriesO {
+    color: #FFD457;
+    -x-pentaho-chart-line-width: 2px;
+    }
+
+    .seriesP {
+    color: #FF944D;
+    -x-pentaho-chart-line-width: 2px;
+    }
+
+    .seriesQ {
+    color: #774DB1;
+    -x-pentaho-chart-line-width: 2px;
+    }
+
+    .seriesR {
+    color: #4DA2B8;
+    -x-pentaho-chart-line-width: 2px;
+    }
+
+    .seriesS {
+    color: #BD4D95 ;
+    -x-pentaho-chart-line-width: 2px;
+    }
+
+    .seriesT {
+    color: #4D6488 ;
+    -x-pentaho-chart-line-width: 2px;
+    }
+
+    .seriesU {
+    color: #E9754D ;
+    -x-pentaho-chart-line-width: 2px;
+    }
+
+    .seriesV {
+    color: #4D947C ;
+    -x-pentaho-chart-line-width: 2px;
+    }
+
+    .seriesW {
+    color: #CF4D66 ;
+    -x-pentaho-chart-line-width: 2px;
+    }
+
+    .seriesX {
+    color: #944DAC ;
+    -x-pentaho-chart-line-width: 2px;
+    }
+
+    .seriesY {
+    color: #99B5D9 ;
+    -x-pentaho-chart-line-width: 2px;
+    }
+
+    .seriesZ {
+    color: #BFD899 ;
+    -x-pentaho-chart-line-width: 2px;
+    }
+
+    .seriesAA {
+    color: #FFE79F ;
+    -x-pentaho-chart-line-width: 2px;
+    }
+    .seriesBB {
+    color: #FFC299 ;
+    -x-pentaho-chart-line-width: 2px;
+    }
+
+    .seriesCC {
+    color: #B199D2 ;
+    -x-pentaho-chart-line-width: 2px;
+    }
+
+    .seriesDD {
+    color: #99CAD6 ;
+    -x-pentaho-chart-line-width: 2px;
+    }
+
+  </stylesheet>
+
+  <series class="seriesA"/>
+  <series class="seriesB"/>
+  <series class="seriesC"/>
+  <series class="seriesD"/>
+  <series class="seriesE"/>
+  <series class="seriesF"/>
+  <series class="seriesG"/>
+  <series class="seriesH"/>
+  <series class="seriesI"/>
+  <series class="seriesJ"/>
+  <series class="seriesK"/>
+  <series class="seriesL"/>
+  <series class="seriesM"/>
+  <series class="seriesN"/>
+  <series class="seriesO"/>
+  <series class="seriesP"/>
+  <series class="seriesQ"/>
+  <series class="seriesR"/>
+  <series class="seriesS"/>
+  <series class="seriesT"/>
+  <series class="seriesU"/>
+  <series class="seriesV"/>
+  <series class="seriesW"/>
+  <series class="seriesX"/>
+  <series class="seriesY"/>
+  <series class="seriesZ"/>
+  <series class="seriesAA"/>
+  <series class="seriesBB"/>
+  <series class="seriesCC"/>
+  <series class="seriesDD"/>  
+  <plot style="-x-pentaho-chart-orientation: vertical; -x-pentaho-chart-drill-url-template: url(http://localhost:8080/Pentaho/JPivot); -x-pentaho-chart-scale: 1"/>
+</chart>

@@ -1,0 +1,50 @@
+<module rename-to="mantle">
+  <!-- Inherit the core Web Toolkit stuff. -->
+  <inherits name='com.google.gwt.user.User'/>
+  <inherits name='com.google.gwt.xml.XML'/>
+  <inherits name='com.google.gwt.gen2.Gen2'/>
+  <inherits name='com.google.gwt.gen2.table.ScrollTable'/>
+
+  <!-- If you want to support additional locales you should add them as below. -->
+  <inherits name="com.google.gwt.i18n.I18N"/>
+  <extend-property name="locale" values="en"/>
+  <extend-property name="locale" values="de"/>
+  <extend-property name="locale" values="fr"/>
+  <extend-property name="locale" values="ja"/>
+
+  <set-property-fallback name="locale" value="en"/>
+
+  <inherits name='org.pentaho.ui.Xul'/>
+  <inherits name='org.pentaho.ui.xul.Gwt'/>
+  <inherits name='com.googlecode.gwtx.Java'/>
+  <inherits name="com.google.gwt.json.JSON"/>
+
+  <inherits name='org.pentaho.platform.repository.usersettings.pojo.UserSettings'/>
+  <inherits name='org.pentaho.platform.plugin.services.pluginmgr.perspective.pojo.DefaultPluginPerspective'/>
+  <inherits name='org.pentaho.gwt.widgets.Widgets'/>
+  <inherits name="org.pentaho.mantle.client.environment.Environment"/>
+  <inherits name='org.pentaho.mantle.login.MantleLogin'/>
+  <inherits name="org.pentaho.platform.repository2.unified.webservices.IUnifiedRepositoryWebService"/>
+  <inherits name='org.pentaho.gwt.widgets.client.filechooser.FileChooser'/>
+  <inherits name="org.pentaho.platform.EmailSupport" />
+
+  <generate-with class="org.pentaho.mantle.rebind.CommandExecGenerator">
+    <when-type-assignable class="org.pentaho.mantle.client.commands.CommandExec"/>
+  </generate-with>
+  <generate-with class="org.pentaho.mantle.rebind.EventBusUtilGenerator">
+    <when-type-assignable class="org.pentaho.mantle.client.events.EventBusUtil"/>
+  </generate-with>
+
+  <set-property name="gwt.suppressNonStaticFinalFieldWarnings" value="true"/>
+
+
+<!-- **SuperDevMode** == Uncomment this and re-build to get a SuperDevMode compatible build
+  <add-linker name="xsiframe"/>
+  <set-configuration-property name="devModeRedirectEnabled" value="true"/>
+**SuperDevMode** -->
+
+
+  <!-- Specify the app entry point class.                   -->
+  <entry-point class='org.pentaho.mantle.client.MantleEntryPoint'/>
+
+</module>

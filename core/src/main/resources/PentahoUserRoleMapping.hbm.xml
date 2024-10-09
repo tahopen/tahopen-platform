@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="org.pentaho.platform.security.userroledao">
+  <!--
+    Depends on Hibernate configuration with hibernate.hbm2ddl.auto=update.
+  -->
+  
+  <class name="PentahoUserRoleMapping" table="GRANTED_AUTHORITIES">
+    <cache usage="read-write" />
+    <composite-id name="id" class="PentahoUserRoleMapping$Id">
+      <key-property name="user" column="USERNAME" type="string" length="50" />
+      <key-property name="role" column="AUTHORITY" type="string" length="50" />
+    </composite-id>
+  </class>
+
+</hibernate-mapping>

@@ -1,0 +1,27 @@
+bin/
+.idea/
+*.iml
+.settings
+.metadata/
+.recommenders/
+
+out/
+build-utils/dist/
+build-utils/lib/
+build-utils/test-lib/
+extensions/test-src/connections-solution/test/tmp/
+extensions/test-src/solution/test/tmp/
+
+# Files/Folders generated when building
+pentaho.log
+work-item-status.log
+localhost.log
+localhost.properties
+localhost.script
+example.txt
+wi-status.error
+
+extensions/localhost.tmp/
+logs/
+target/
+http:/

@@ -1,0 +1,352 @@
+<?xml version="1.0"?>
+<!DOCTYPE web-app PUBLIC
+   "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+   "http://java.sun.com/dtd/web-app_2_3.dtd">
+<web-app>
+
+  <context-param>
+    <param-name>solution-path</param-name>
+    <param-value></param-value> 
+  </context-param>
+<!--
+  <context-param>
+    <param-name>pentaho-system-cfg</param-name>
+    <param-value>c:/tmp/test_pentaho.xml</param-value>
+  </context-param>
+ -->
+
+  <!--  This context parameter is being deprecated. We don't use this any more. We have added a new context parameter called fully-qualified-server-url -->
+  <context-param>
+		<param-name>base-url</param-name>
+		<param-value></param-value>
+  </context-param>
+
+	<!--  FullyQualifiedServerUrl is used only in the case of offline content generation and whenever something need to talk back to the server -->
+  <context-param>
+		<param-name>fully-qualified-server-url</param-name>
+		<param-value>http://localhost:8080/pentaho/</param-value>
+  </context-param>
+	
+  <context-param>
+    <param-name>locale-language</param-name>
+    <!-- for example 'fr' for French, 'de' for German, da for danish -->
+    <param-value></param-value>
+  </context-param>
+
+  <context-param>
+    <param-name>locale-country</param-name>
+    <!-- for example 'FR' for France, 'CA' for Canada -->
+    <param-value></param-value>
+  </context-param>
+  <context-param>
+    <param-name>contextConfigLocation</param-name>
+    <param-value>/WEB-INF/applicationContext-spring-security.xml /WEB-INF/applicationContext-common-authorization.xml /WEB-INF/applicationContext-spring-security-memory.xml /WEB-INF/applicationContext-pentaho-security-memory.xml</param-value>
+  </context-param>
+
+  <!--
+    This defaults to UTF-8. Uncomment this section and change the value for other encodings.
+    Also change the URIEncoding in Tomcat's server.xml.
+  -->
+  <context-param>
+    <param-name>encoding</param-name>
+    <param-value>UTF-8</param-value>
+  </context-param>
+
+    <!-- this defaults to LTR (left to right), uncomment this section and change the value for other text directions
+  <context-param>
+    <param-name>text-direction</param-name>
+    <param-value>RTL</param-value>
+  </context-param>
+   -->
+
+  <!--
+  *
+  * hibernateManaged should be set to true if running the BI Platform
+  * in a managed environment (like JBoss, Orion, etc). In this configuration,
+  * you should specify another location for the hibernate.cfg.xml (see below)
+  * instead of simply using the default one provided. This setting essentially
+  * tells the HibernateUtil class to use JNDI to locate the factory class for
+  * getting sessions. This allows the platform to use Hibernate across boundaries
+  * in message beans (for example).
+  *
+  <context-param>
+    <param-name>hibernateManaged</param-name>
+    <param-value>true</param-value>
+  </context-param>
+  -->
+
+  <!--
+  *
+  * In managed environments, the transaction manager lookup class is specific to
+  * the container they're bound into. Thus, you will need a different configuration file
+  * depending upon the server that it's being deployed into. This setting allows the
+  * deployment to specify where to find the container-specific hibernate configuration.
+  *
+  <context-param>
+    <param-name>hibernateConfigPath</param-name>
+    <param-value>system/hibernate/hibernate-jboss-managed.xml</param-value>
+  </context-param>
+  -->
+
+  <!-- insert additional context-params -->
+
+  <filter> <!-- This must be the first filter listed in the web.xml -->
+    <filter-name>Set Character Encoding Filter</filter-name>
+    <filter-class>org.pentaho.platform.web.http.filters.PentahoAwareCharacterEncodingFilter</filter-class>
+    <init-param>
+      <param-name>ignore</param-name>
+      <param-value>yes</param-value>
+    </init-param>
+  </filter>
+  	<!-- Pentaho Request Context Filter is use to extract the Context Path from Servlet Request and store it in the PentahoRequestContextHolder.
+	This is needed to get the relative path to the server for online content generation and requesting of resources.
+	 -->
+	<filter>
+		<filter-name>Pentaho Request Context Filter</filter-name>
+		<filter-class>org.pentaho.platform.web.http.filters.PentahoRequestContextFilter</filter-class>
+	</filter>
+
+  <filter>
+    <filter-name>Spring Security Filter Chain Proxy</filter-name>
+    <filter-class>org.springframework.security.util.FilterToBeanProxy</filter-class>
+    <init-param>
+      <param-name>targetBean</param-name>
+      <param-value>filterChainProxy</param-value>
+    </init-param>
+  </filter>
+
+  <filter>
+    <filter-name>SystemStatusFilter</filter-name>
+    <filter-class>org.pentaho.platform.web.http.filters.SystemStatusFilter</filter-class>
+    <init-param>
+      <param-name>initFailurePage</param-name>
+      <param-value>InitFailure</param-value>
+      <description>This page is displayed if the PentahoSystem fails to properly initialize.</description>
+    </init-param>
+  </filter>
+
+  <filter>
+    <filter-name>Proxy Trusting Filter</filter-name>
+    <filter-class>org.pentaho.platform.web.http.filters.ProxyTrustingFilter</filter-class>
+    <init-param>
+      <param-name>TrustedIpAddrs</param-name>
+      <param-value></param-value>
+      <description>Comma separated list of IP addresses of a trusted hosts.</description>
+    </init-param>
+  </filter>
+	
+	<!--  Pentaho Web Context Filter checks to see if webcontext.js is being requested. It writes the content of webcontext.js 
+	      webcontext.js contains value for CONTEXT_PATH and FULL_QUALIFIED_URL
+	-->
+	<filter>
+		<filter-name>Pentaho Web Context Filter</filter-name>
+		<filter-class>org.pentaho.platform.web.http.filters.PentahoWebContextFilter</filter-class>
+	</filter>
+<!-- insert additional filters -->
+
+  <filter-mapping>
+    <filter-name>Set Character Encoding Filter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+
+  <filter-mapping>
+    <filter-name>SystemStatusFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+
+  <filter-mapping>
+    <filter-name>Proxy Trusting Filter</filter-name>
+    <url-pattern>/ServiceAction</url-pattern>
+  </filter-mapping>
+
+  <!-- Filter mapping for security. Note that all objects are locked down. We could change this here as desired. -->
+  <filter-mapping>
+    <filter-name>Spring Security Filter Chain Proxy</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+  
+  <filter-mapping>
+		<filter-name>Pentaho Request Context Filter</filter-name>
+		<url-pattern>/*</url-pattern>
+  </filter-mapping>
+  
+      <filter-mapping>
+		<filter-name>Pentaho Web Context Filter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>	
+  <!-- insert additional filter-mappings -->
+
+  <listener>
+    <listener-class>org.pentaho.platform.web.http.session.PentahoHttpSessionListener</listener-class>
+  </listener>
+  <listener>
+    <listener-class>org.pentaho.platform.web.http.context.SolutionContextListener</listener-class>
+  </listener>
+  <listener>
+    <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+  </listener>
+  <listener>
+    <listener-class>org.springframework.security.ui.session.HttpSessionEventPublisher</listener-class>
+  </listener>
+  <listener>
+    <listener-class>org.pentaho.platform.web.http.context.PentahoCacheContextListener</listener-class>
+  </listener>
+  <listener>
+    <listener-class>org.pentaho.platform.web.http.session.PentahoCacheSessionListener</listener-class>
+  </listener>
+  <!-- insert additional listeners -->
+
+  <servlet>
+      <servlet-name>ViewAction</servlet-name>
+    <servlet-class>org.pentaho.platform.web.servlet.ViewAction</servlet-class>
+  </servlet>
+
+  <servlet>
+      <servlet-name>content</servlet-name>
+    <servlet-class>org.pentaho.platform.web.servlet.UIServlet</servlet-class>
+  </servlet>
+
+  <servlet>
+      <servlet-name>ServiceAction</servlet-name>
+    <servlet-class>org.pentaho.platform.web.servlet.HttpWebService</servlet-class>
+  </servlet>
+
+  <servlet>
+      <servlet-name>GetImage</servlet-name>
+    <servlet-class>org.pentaho.platform.web.servlet.GetImage</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>Xmla</servlet-name>
+    <servlet-class>org.pentaho.platform.web.servlet.PentahoXmlaServlet</servlet-class>
+    <init-param>
+      <param-name>DataSourcesConfig</param-name>
+      <param-value>${pentaho.solutionpath}${pentaho.olap.xmladatasources}</param-value>
+    </init-param>
+    <init-param>
+      <param-name>CharacterEncoding</param-name>
+      <param-value>UTF-8</param-value>
+    </init-param>
+  </servlet>
+
+  <servlet>
+    <servlet-name>Home</servlet-name>
+    <jsp-file>/jsp/Home.jsp</jsp-file>
+  </servlet>
+
+  <servlet>
+    <servlet-name>InitFailure</servlet-name>
+    <jsp-file>/jsp/InitFailure.jsp</jsp-file>
+  </servlet>
+
+    <!-- ================================= merged servlets =================================== -->
+   <servlet>
+       <servlet-name>ManageUsers</servlet-name>
+       <servlet-class>org.pentaho.platform.web.servlet.SubscriptionUserCleanup</servlet-class>
+       <init-param>
+         <param-name>password</param-name>
+         <param-value/>
+         <description>password used for protecting access to servlet</description>
+       </init-param>
+     </servlet>
+
+   <servlet>
+       <servlet-name>GetResource</servlet-name>
+     <servlet-class>org.pentaho.platform.web.servlet.GetResource</servlet-class>
+   </servlet>
+
+  <!-- insert additional servlets -->
+    
+    
+  <servlet-mapping>
+    <servlet-name>Xmla</servlet-name>
+    <url-pattern>/Xmla</url-pattern>
+  </servlet-mapping>
+
+  <!-- Pentaho Servlets -->
+
+  <servlet-mapping>
+    <servlet-name>ViewAction</servlet-name>
+    <url-pattern>/ViewAction</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>content</servlet-name>
+    <url-pattern>/content</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>ServiceAction</servlet-name>
+    <url-pattern>/ServiceAction</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>GetImage</servlet-name>
+    <url-pattern>/getImage</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>Home</servlet-name>
+    <url-pattern>/Home</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>InitFailure</servlet-name>
+    <url-pattern>/InitFailure</url-pattern>
+  </servlet-mapping>
+
+    <!-- =============================== merged servlet-mappings ============================= -->
+
+    <servlet-mapping>
+      <servlet-name>GetResource</servlet-name>
+      <url-pattern>/GetResource</url-pattern>
+    </servlet-mapping>
+
+  <!-- insert additional servlet mappings -->
+
+    <session-config>
+      <session-timeout>30</session-timeout>
+    </session-config>
+
+    <welcome-file-list>
+      <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+
+  <!-- insert additional tag libs -->
+
+    <resource-ref>
+      <description>Quartz Connection</description>
+      <res-ref-name>jdbc/Quartz</res-ref-name>
+      <res-type>javax.sql.DataSource</res-type>
+      <res-auth>Container</res-auth>
+    </resource-ref>
+
+    <resource-ref>
+      <description>Hibernate</description>
+      <res-ref-name>jdbc/Hibernate</res-ref-name>
+      <res-type>javax.sql.DataSource</res-type>
+      <res-auth>Container</res-auth>
+    </resource-ref>
+
+  <!-- insert additional resource-refs -->
+
+  <security-constraint>
+    <display-name>Default JSP Security Constraints</display-name>
+    <web-resource-collection>
+      <web-resource-name>Portlet Directory</web-resource-name>
+      <url-pattern>/jsp/*</url-pattern>
+    </web-resource-collection>
+    <auth-constraint>
+      <role-name>PENTAHO_ADMIN</role-name>
+    </auth-constraint>
+    <user-data-constraint>
+      <transport-guarantee>NONE</transport-guarantee>
+    </user-data-constraint>
+  </security-constraint>
+
+  <security-role>
+		<description>Non-Existent Role - this prevents direct access to JSPs</description>
+		<role-name>PENTAHO_ADMIN</role-name>
+	</security-role> 
+
+</web-app>
