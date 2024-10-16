@@ -3,12 +3,12 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
   <parent>
-    <groupId>pentaho</groupId>
-    <artifactId>pentaho-platform-ce-parent</artifactId>
-    <version>10.1.0.0-SNAPSHOT</version>
+    <groupId>org.tahopen</groupId>
+    <artifactId>tahopen-platform-ce-parent</artifactId>
+    <version>0.1.0.0-SNAPSHOT</version>
   </parent>
-  <artifactId>pentaho-platform-build-utils</artifactId>
-  <version>10.1.0.0-SNAPSHOT</version>
+  <artifactId>tahopen-platform-build-utils</artifactId>
+  <version>0.1.0.0-SNAPSHOT</version>
   <properties>
     <maven-javadoc-plugin.version>2.10.4</maven-javadoc-plugin.version>
     <mockito-all.version>1.9.5</mockito-all.version>
