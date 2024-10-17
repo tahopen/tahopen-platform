@@ -107,7 +107,7 @@
     <xmlunit.version>1.6</xmlunit.version>
     <se-jcr.version>0.9</se-jcr.version>
     <secondstring.version>20060615</secondstring.version>
-    <pentaho-cwm.version>1.5.4</pentaho-cwm.version>
+    <pentaho-cwm.version>0.1.0.0-SNAPSHOT</pentaho-cwm.version>
     <trilead-ssh2.version>build213</trilead-ssh2.version>
     <xmlbeans.version>3.1.0</xmlbeans.version>
     <saaj.version>1.3</saaj.version>
