@@ -7,12 +7,13 @@
     <artifactId>tahopen-platform-assemblies</artifactId>
     <version>0.1.0.0-SNAPSHOT</version>
   </parent>
+  <groupId>org.tahopen</groupId>
   <artifactId>tahopen-user-console-package</artifactId>
   <version>0.1.0.0-SNAPSHOT</version>
   <packaging>pom</packaging>
   <dependencies>
     <dependency>
-      <groupId>tahopen</groupId>
+      <groupId>org.tahopen</groupId>
       <artifactId>tahopen-user-console</artifactId>
       <version>${project.version}</version>
       <classifier>gwt</classifier>

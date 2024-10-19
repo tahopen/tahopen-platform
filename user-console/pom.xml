@@ -7,6 +7,7 @@
     <artifactId>tahopen-platform-ce-parent</artifactId>
     <version>0.1.0.0-SNAPSHOT</version>
   </parent>
+  <groupId>org.tahopen</groupId>
   <artifactId>tahopen-user-console</artifactId>
   <version>0.1.0.0-SNAPSHOT</version>
   <properties>
@@ -16,15 +17,15 @@
     <json-simple.version>1.1</json-simple.version>
     <license.header.definition.file>${basedir}/../license/styles/javadoc_style_license_header.xml</license.header.definition.file>
     <mockito.version>1.8.5</mockito.version>
-    <commons-xul.version>10.1.0.0-SNAPSHOT</commons-xul.version>
-    <common-ui.version>10.1.0.0-SNAPSHOT</common-ui.version>
-    <commons-gwt.version>10.1.0.0-SNAPSHOT</commons-gwt.version>
+    <commons-xul.version>0.1.0.0-SNAPSHOT</commons-xul.version>
+    <common-ui.version>9.4.0.0-SNAPSHOT</common-ui.version>
+    <commons-gwt.version>0.1.0.0-SNAPSHOT</commons-gwt.version>
   </properties>
   <dependencies>
     <dependency>
-      <groupId>pentaho-kettle</groupId>
+      <groupId>tahopen-kettle</groupId>
       <artifactId>kettle-core</artifactId>
-      <version>9.5.0.0</version>
+      <version>${project.version}</version>
       <scope>provided</scope>
     </dependency>
     <dependency>
@@ -52,8 +53,8 @@
       </exclusions>
     </dependency>
     <dependency>
-      <groupId>pentaho</groupId>
-      <artifactId>pentaho-platform-core</artifactId>
+      <groupId>org.tahopen</groupId>
+      <artifactId>tahopen-platform-core</artifactId>
       <version>${project.version}</version>
       <scope>compile</scope>
       <exclusions>
@@ -64,8 +65,8 @@
       </exclusions>
     </dependency>
     <dependency>
-      <groupId>pentaho</groupId>
-      <artifactId>pentaho-platform-repository</artifactId>
+      <groupId>org.tahopen</groupId>
+      <artifactId>tahopen-platform-repository</artifactId>
       <version>${project.version}</version>
       <scope>compile</scope>
       <exclusions>
@@ -76,8 +77,8 @@
       </exclusions>
     </dependency>
     <dependency>
-      <groupId>pentaho</groupId>
-      <artifactId>pentaho-platform-extensions</artifactId>
+      <groupId>org.tahopen</groupId>
+      <artifactId>tahopen-platform-extensions</artifactId>
       <version>${project.version}</version>
       <scope>compile</scope>
       <exclusions>
@@ -88,8 +89,8 @@
       </exclusions>
     </dependency>
     <dependency>
-      <groupId>pentaho</groupId>
-      <artifactId>pentaho-platform-api</artifactId>
+      <groupId>org.tahopen</groupId>
+      <artifactId>tahopen-platform-api</artifactId>
       <version>${project.version}</version>
       <classifier>sources</classifier>
       <exclusions>
@@ -100,8 +101,8 @@
       </exclusions>
     </dependency>
     <dependency>
-      <groupId>pentaho</groupId>
-      <artifactId>pentaho-platform-core</artifactId>
+      <groupId>org.tahopen</groupId>
+      <artifactId>tahopen-platform-core</artifactId>
       <version>${project.version}</version>
       <classifier>sources</classifier>
       <exclusions>
@@ -112,8 +113,8 @@
       </exclusions>
     </dependency>
     <dependency>
-      <groupId>pentaho</groupId>
-      <artifactId>pentaho-platform-repository</artifactId>
+      <groupId>org.tahopen</groupId>
+      <artifactId>tahopen-platform-repository</artifactId>
       <version>${project.version}</version>
       <classifier>sources</classifier>
       <exclusions>
@@ -124,8 +125,8 @@
       </exclusions>
     </dependency>
     <dependency>
-      <groupId>pentaho</groupId>
-      <artifactId>pentaho-platform-extensions</artifactId>
+      <groupId>org.tahopen</groupId>
+      <artifactId>tahopen-platform-extensions</artifactId>
       <version>${project.version}</version>
       <classifier>sources</classifier>
       <exclusions>
@@ -136,7 +137,7 @@
       </exclusions>
     </dependency>
     <dependency>
-      <groupId>org.pentaho</groupId>
+      <groupId>org.tahopen</groupId>
       <artifactId>commons-gwt-widgets</artifactId>
       <version>${commons-gwt.version}</version>
       <exclusions>
@@ -147,7 +148,7 @@
       </exclusions>
     </dependency>
     <dependency>
-      <groupId>org.pentaho</groupId>
+      <groupId>org.tahopen</groupId>
       <artifactId>commons-gwt-widgets</artifactId>
       <version>${commons-gwt.version}</version>
       <classifier>sources</classifier>
@@ -159,7 +160,7 @@
       </exclusions>
     </dependency>
     <dependency>
-      <groupId>org.pentaho</groupId>
+      <groupId>org.tahopen</groupId>
       <artifactId>commons-xul-core</artifactId>
       <version>${commons-xul.version}</version>
       <exclusions>
@@ -170,7 +171,7 @@
       </exclusions>
     </dependency>
     <dependency>
-      <groupId>org.pentaho</groupId>
+      <groupId>org.tahopen</groupId>
       <artifactId>commons-xul-core</artifactId>
       <version>${commons-xul.version}</version>
       <classifier>sources</classifier>
@@ -182,7 +183,7 @@
       </exclusions>
     </dependency>
     <dependency>
-      <groupId>org.pentaho</groupId>
+      <groupId>org.tahopen</groupId>
       <artifactId>commons-xul-gwt-impl</artifactId>
       <version>${commons-xul.version}</version>
       <exclusions>
@@ -193,7 +194,7 @@
       </exclusions>
     </dependency>
     <dependency>
-      <groupId>org.pentaho</groupId>
+      <groupId>org.tahopen</groupId>
       <artifactId>commons-xul-gwt-impl</artifactId>
       <version>${commons-xul.version}</version>
       <classifier>sources</classifier>
