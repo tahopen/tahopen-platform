@@ -2682,7 +2682,7 @@
     -->
     <dependency>
       <groupId>org.tahopen</groupId>
-      <artifactId>pentaho-vfs-browser</artifactId>
+      <artifactId>tahopen-vfs-browser</artifactId>
       <version>${pentaho-vfs.version}</version>
       <scope>test</scope>
     </dependency>
