@@ -493,11 +493,18 @@
         </exclusion>
       </exclusions>
     </dependency>
+    <!--
     <dependency>
       <groupId>org.tahopen</groupId>
       <artifactId>tahopen-concurrent</artifactId>
       <version>${pentaho-concurrent.version}</version>
     </dependency>
+    -->
+    <dependency>
+      <groupId>pentaho</groupId>
+      <artifactId>pentaho-concurrent</artifactId>
+      <version>${pentaho-concurrent.version}</version>
+    </dependency>    
     <dependency>
       <groupId>org.apache.jackrabbit</groupId>
       <artifactId>oak-jackrabbit-api</artifactId>
@@ -744,7 +751,8 @@
     </dependency>
     <dependency>
       <groupId>org.tahopen</groupId>
-      <artifactId>tahopen-vfs</artifactId>
+      <!-- <artifactId>tahopen-vfs</artifactId> -->
+      <artifactId>tahopen-vfs-browser</artifactId>      
       <version>${pentaho-vfs.version}</version>
     </dependency>
     <dependency>
@@ -758,7 +766,7 @@
       <version>${project.version}</version>
     </dependency>
     <dependency>
-      <groupId>o4rg.tahopen</groupId>
+      <groupId>org.tahopen</groupId>
       <artifactId>tahopen-platform-api</artifactId>
       <version>${project.version}</version>
     </dependency>
@@ -899,7 +907,8 @@
     <dependency>
       <groupId>org.tahopen</groupId>
       <artifactId>simple-jndi</artifactId>
-      <version>${simple-jndi.version}</version>
+      <version>0.1.0.0-SNAPSHOT</version>      
+      <!--<version>${simple-jndi.version}</version>-->
       <scope>test</scope>
     </dependency>
     <dependency>

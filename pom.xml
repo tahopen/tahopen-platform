@@ -56,7 +56,7 @@
     <jettison.version>1.2</jettison.version>
     <hamcrest-all.version>1.3</hamcrest-all.version>
     <javax.inject.version>1</javax.inject.version>
-    <pentaho-vfs.version>1.0</pentaho-vfs.version>
+    <pentaho-vfs.version>0.1.0.0-SNAPSHOT</pentaho-vfs.version>
     <wstx-asl.version>3.2.4</wstx-asl.version>
     <icu4j.version>63.1</icu4j.version>
     <commons-dbcp.version>1.4</commons-dbcp.version>
@@ -154,7 +154,7 @@
     <jcommon.version>1.0.16</jcommon.version>
     <drools.version>6.4.0.Final</drools.version>
     <snmp4j.version>1.9.3d</snmp4j.version>
-    <mondrian.version>10.1.0.0-SNAPSHOT</mondrian.version>
+    <mondrian.version>0.1.0.0-SNAPSHOT</mondrian.version>
     <wsdl4j-qname.version>1.6.1</wsdl4j-qname.version>
     <javatar.version>2.5</javatar.version>
     <jfreechart.version>1.0.13</jfreechart.version>
