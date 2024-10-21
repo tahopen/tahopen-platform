@@ -275,8 +275,8 @@
       <scope>compile</scope>
     </dependency>
     <dependency>
-      <groupId>pentaho</groupId>
-      <artifactId>pentaho-big-data-legacy-core</artifactId>
+      <groupId>org.tahopen</groupId>
+      <artifactId>tahopen-big-data-legacy-core</artifactId>
       <version>${big-data-plugin.version}</version>
       <exclusions>
         <exclusion>

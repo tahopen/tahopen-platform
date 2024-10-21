@@ -27,22 +27,22 @@
             <configuration>
               <artifactItems>
                 <artifactItem>
-                  <groupId>pentaho</groupId>
-                  <artifactId>pentaho-cdf-samples</artifactId>
+                  <groupId>org.tahopen</groupId>
+                  <artifactId>tahopen-cdf-samples</artifactId>
                   <version>${project.version}</version>
                   <type>zip</type>
                   <outputDirectory>${pentaho-server.samples.directory}</outputDirectory>
                 </artifactItem>
                 <artifactItem>
-                  <groupId>pentaho</groupId>
+                  <groupId>org.tahopen</groupId>
                   <artifactId>cda-samples</artifactId>
                   <version>${project.version}</version>
                   <type>zip</type>
                   <outputDirectory>${pentaho-server.samples.directory}</outputDirectory>
                 </artifactItem>
                 <artifactItem>
-                  <groupId>org.pentaho.ctools</groupId>
-                  <artifactId>pentaho-cdf-dd-samples</artifactId>
+                  <groupId>org.tahopen.ctools</groupId>
+                  <artifactId>tahopen-cdf-dd-samples</artifactId>
                   <version>${project.version}</version>
                   <type>zip</type>
                   <outputDirectory>${pentaho-server.samples.directory}</outputDirectory>

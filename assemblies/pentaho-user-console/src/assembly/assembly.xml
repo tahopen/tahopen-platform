@@ -12,7 +12,7 @@
     <dependencySet>
       <unpack>true</unpack>
       <includes>
-        <include>pentaho:pentaho-user-console:jar:gwt</include>
+        <include>org.tahopen:tahopen-user-console:jar:gwt</include>
       </includes>
       <unpackOptions>
         <includes>
