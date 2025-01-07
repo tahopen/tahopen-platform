@@ -19,8 +19,8 @@
   </properties>
   <dependencies>
     <dependency>
-      <groupId>pentaho</groupId>
-      <artifactId>pentaho-data</artifactId>
+      <groupId>org.tahopen</groupId>
+      <artifactId>tahopen-data</artifactId>
       <version>${project.version}</version>
       <type>zip</type>
     </dependency>
@@ -151,15 +151,15 @@
                 <artifactItem>
                   <groupId>pentaho</groupId>
                   <artifactId>oss-licenses</artifactId>
-                  <version>${project.version}</version>
+                  <version>9.4.0.0-SNAPSHOT</version>
                   <type>zip</type>
                   <overWrite>false</overWrite>
                   <outputDirectory>${pentaho-server.directory}/licenses</outputDirectory>
                   <includes>PentahoServer_OSS_Licenses.html</includes>
                 </artifactItem>
                 <artifactItem>
-                  <groupId>pentaho</groupId>
-                  <artifactId>pentaho-solutions</artifactId>
+                  <groupId>org.tahopen</groupId>
+                  <artifactId>tahopen-solutions</artifactId>
                   <type>zip</type>
                   <outputDirectory>${project.build.directory}</outputDirectory>
                   <includes>**/dialects/hsqldb/applicationContext-spring-security-hibernate.properties,

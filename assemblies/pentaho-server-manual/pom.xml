@@ -52,7 +52,7 @@
                 <artifactItem>
                   <groupId>pentaho</groupId>
                   <artifactId>oss-licenses</artifactId>
-                  <version>${project.version}</version>
+                  <version>9.4.0.0-SNAPSHOT</version>
                   <type>zip</type>
                   <overWrite>false</overWrite>
                   <outputDirectory>${pentaho-server.directory}/licenses</outputDirectory>
@@ -70,8 +70,8 @@
             <configuration>
               <artifactItems>
                 <artifactItem>
-                  <groupId>pentaho</groupId>
-                  <artifactId>pentaho-war</artifactId>
+                  <groupId>org.tahopen</groupId>
+                  <artifactId>tahopen-war</artifactId>
                   <version>${project.version}</version>
                   <type>war</type>
                   <overWrite>false</overWrite>
