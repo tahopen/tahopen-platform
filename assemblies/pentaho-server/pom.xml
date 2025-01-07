@@ -25,26 +25,26 @@
       <type>zip</type>
     </dependency>
     <dependency>
-      <groupId>pentaho</groupId>
-      <artifactId>pentaho-style</artifactId>
+      <groupId>org.tahopen</groupId>
+      <artifactId>tahopen-style</artifactId>
       <version>${project.version}</version>
       <type>war</type>
     </dependency>
     <dependency>
-      <groupId>pentaho</groupId>
-      <artifactId>pentaho-war</artifactId>
+      <groupId>org.tahopen</groupId>
+      <artifactId>tahopen-war</artifactId>
       <version>${project.version}</version>
       <type>war</type>
     </dependency>
     <dependency>
-      <groupId>pentaho</groupId>
-      <artifactId>pentaho-solutions</artifactId>
+      <groupId>org.tahopen</groupId>
+      <artifactId>tahopen-solutions</artifactId>
       <version>${project.version}</version>
       <type>zip</type>
     </dependency>
     <dependency>
-      <groupId>pentaho</groupId>
-      <artifactId>pentaho-tomcat-logs</artifactId>
+      <groupId>org.tahopen</groupId>
+      <artifactId>tahopen-tomcat-logs</artifactId>
       <version>${project.version}</version>
     </dependency>
     <dependency>

@@ -473,11 +473,13 @@
       <version>${project.version}</version>
       <scope>compile</scope>
     </dependency>
+    <!-- remove to tahopen 
     <dependency>
-      <groupId>org.pentaho</groupId>
+      <groupId>pentaho</groupId>
       <artifactId>shim-api-core</artifactId>
       <version>${pentaho-hadoop-shims.version}</version>
     </dependency>
+    -->
     <dependency>
       <groupId>org.tahopen</groupId>
       <artifactId>tahopen-metaverse-api</artifactId>
@@ -801,20 +803,22 @@
       </exclusions>
     </dependency>
     <dependency>
-      <groupId>org.pentaho.reporting.library</groupId>
+      <groupId>org.tahopen.reporting.library</groupId>
       <artifactId>libpixie</artifactId>
       <version>${project.version}</version>
     </dependency>
     <dependency>
-      <groupId>org.pentaho.reporting.library</groupId>
+      <groupId>org.tahopen.reporting.library</groupId>
       <artifactId>libsparkline</artifactId>
       <version>${project.version}</version>
     </dependency>
+    <!-- remove to tahopen
     <dependency>
-      <groupId>org.pentaho</groupId>
-      <artifactId>pentaho-hadoop-shims-common-mapreduce</artifactId>
+      <groupId>pentaho</groupId>
+      <artifactId>tahopen-hadoop-shims-common-mapreduce</artifactId>
       <version>${pentaho-hadoop-shims.version}</version>
     </dependency>
+    -->
     <dependency>
       <groupId>org.apache.xmlgraphics</groupId>
       <artifactId>xmlgraphics-commons</artifactId>
