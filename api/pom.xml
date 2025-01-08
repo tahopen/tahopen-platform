@@ -5,21 +5,21 @@
   <parent>
     <groupId>org.tahopen</groupId>
     <artifactId>tahopen-platform-ce-parent</artifactId>
-    <version>0.1.0.0-SNAPSHOT</version>
+    <version>0.1.0.0</version>
   </parent>
   <artifactId>tahopen-platform-api</artifactId>
-  <version>0.1.0.0-SNAPSHOT</version>
+  <version>0.1.0.0</version>
   <properties>
     <maven-surefire-plugin.reuseForks>false</maven-surefire-plugin.reuseForks>
     <mockito-all.version>1.8.5</mockito-all.version>
     <license.header.definition.file>${basedir}/../license/styles/javadoc_style_license_header.xml</license.header.definition.file>
     <commons-lang.version>2.6</commons-lang.version>
     <license.header.file>${basedir}/../license/templates/LGPL-2.1.txt</license.header.file>
-    <tahopen-connections.version>0.1.0.0-SNAPSHOT</tahopen-connections.version>
-    <tahopen-actionsequence-dom.version>0.1.0.0-SNAPSHOT</tahopen-actionsequence-dom.version>
-    <commons-xul.version>0.1.0.0-SNAPSHOT</commons-xul.version>
-    <commons-database.version>0.1.0.0-SNAPSHOT</commons-database.version>
-    <pentaho-osgi-bundles.version>0.1.0.0-SNAPSHOT</pentaho-osgi-bundles.version>
+    <tahopen-connections.version>0.1.0.0</tahopen-connections.version>
+    <tahopen-actionsequence-dom.version>0.1.0.0</tahopen-actionsequence-dom.version>
+    <commons-xul.version>0.1.0.0</commons-xul.version>
+    <commons-database.version>0.1.0.0</commons-database.version>
+    <pentaho-osgi-bundles.version>0.1.0.0</pentaho-osgi-bundles.version>
   </properties>
   <dependencies>
     <dependency>
