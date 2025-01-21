@@ -21,7 +21,7 @@
     <pentaho-actionsequence-dom.version>0.1.0.0-SNAPSHOT</pentaho-actionsequence-dom.version>
     <pentaho-metadata.version>0.1.0.0-SNAPSHOT</pentaho-metadata.version>
     <pentaho-versionchecker.version>0.1.0.0-SNAPSHOT</pentaho-versionchecker.version>
-    <pdi.version>0.1.0.0-SNAPSHOT</pdi.version>
+    <pdi.version>0.1.0.0</pdi.version>
   </properties>
   <dependencies>
     <dependency>
