@@ -1,6 +1,6 @@
 <assembly xmlns="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.3"
-          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-          xsi:schemaLocation="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.3 http://maven.apache.org/xsd/assembly-1.1.3.xsd">
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.3 http://maven.apache.org/xsd/assembly-1.1.3.xsd">
 
   <id>pentaho-server</id>
 
@@ -85,7 +85,7 @@
     <dependencySet>
       <unpack>true</unpack>
       <includes>
-        <include>pentaho:pentaho-data:zip</include>
+        <include>org.tahopen:tahopen-data:zip</include>
       </includes>
       <unpackOptions>
         <includes>
@@ -100,7 +100,7 @@
     <dependencySet>
       <unpack>true</unpack>
       <includes>
-        <include>pentaho:pentaho-data:zip</include>
+        <include>org.tahopen:tahopen-data:zip</include>
       </includes>
       <outputDirectory>.</outputDirectory>
       <useTransitiveDependencies>false</useTransitiveDependencies>
@@ -110,7 +110,7 @@
     <dependencySet>
       <unpack>true</unpack>
       <includes>
-        <include>pentaho:pentaho-style:war</include>
+        <include>org.tahopen:tahopen-style:war</include>
       </includes>
       <outputDirectory>tomcat/webapps/pentaho-style</outputDirectory>
       <useTransitiveDependencies>false</useTransitiveDependencies>
@@ -119,7 +119,7 @@
     <dependencySet>
       <unpack>true</unpack>
       <includes>
-        <include>pentaho:pentaho-war:war</include>
+        <include>org.tahopen:tahopen-war:war</include>
       </includes>
       <outputDirectory>tomcat/webapps/pentaho</outputDirectory>
       <useTransitiveDependencies>false</useTransitiveDependencies>
@@ -128,7 +128,7 @@
     <dependencySet>
       <unpack>true</unpack>
       <includes>
-        <include>pentaho:pentaho-solutions:zip</include>
+        <include>org.tahopen:tahopen-solutions:zip</include>
       </includes>
       <outputDirectory>.</outputDirectory>
       <useTransitiveDependencies>false</useTransitiveDependencies>
@@ -161,7 +161,7 @@
     </dependencySet>
     <dependencySet>
       <includes>
-        <include>pentaho:pentaho-tomcat-logs:jar</include>
+        <include>org.tahopen:tahopen-tomcat-logs:jar</include>
       </includes>
       <outputDirectory>tomcat/lib</outputDirectory>
       <outputFileNameMapping>pentaho-tomcat-logs.${artifact.extension}</outputFileNameMapping>
