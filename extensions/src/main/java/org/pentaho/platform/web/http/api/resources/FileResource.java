@@ -158,7 +158,7 @@ public class FileResource extends AbstractJaxRSResource {
   }
 
   /**
-   * Performs a system back up of the Pentaho system. This includes content, schedules, users, roles, datasources, and the metastore.
+   * Performs a system back up of the Tahopen system. This includes content, schedules, users, roles, datasources, and the metastore.
    *
    * <p><b>Example Request:</b><br />
    *    GET pentaho/api/repo/files/backup
@@ -178,7 +178,7 @@ public class FileResource extends AbstractJaxRSResource {
   @GET
   @Path( "/backup" )
   @StatusCodes( {
-    @ResponseCode( code = 200, condition = "Successfully exported the existing Pentaho System" ),
+    @ResponseCode( code = 200, condition = "Successfully exported the existing Tahopen System" ),
     @ResponseCode( code = 403, condition = "User does not have administrative permissions" ),
     @ResponseCode( code = 500, condition = "Failure to complete the export." ) } )
   public Response systemBackup( @HeaderParam ( "user-agent" ) String userAgent ) {
@@ -208,7 +208,7 @@ public class FileResource extends AbstractJaxRSResource {
   @Path( "/systemRestore" )
   @Consumes( MediaType.MULTIPART_FORM_DATA )
   @StatusCodes( {
-    @ResponseCode( code = 200, condition = "Successfully imported the Pentaho System" ),
+    @ResponseCode( code = 200, condition = "Successfully imported the Tahopen System" ),
     @ResponseCode( code = 403, condition = "User does not have administrative permissions" ),
     @ResponseCode( code = 500, condition = "Failure to complete the import." ) } )
   public Response systemRestore( @FormDataParam( "fileUpload" ) InputStream fileUpload, @FormDataParam ( "overwriteFile" ) String overwriteFile,

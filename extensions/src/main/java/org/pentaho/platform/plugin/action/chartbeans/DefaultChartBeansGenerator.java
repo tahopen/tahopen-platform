@@ -78,7 +78,7 @@ public class DefaultChartBeansGenerator implements IChartBeansGenerator {
   //$NON-NLS-1$
 
   private static final String JFREE_CHART_HTML_TEMPLATE =
-      "<html><head><title>Pentaho Chart</title></head><body style='margin:0;' scroll='no'>{imageMap}<img border=\"0\" "
+      "<html><head><title>Tahopen Chart</title></head><body style='margin:0;' scroll='no'>{imageMap}<img border=\"0\" "
           + "width=\"{chartWidth}\" height=\"{chartHeight}\" src=\"{contextPath}getImage?image={imageFile}\" "
           + "{useMap}/></body></html>";
   //$NON-NLS-1$

@@ -1,8 +1,10 @@
 <?xml version="1.0"?>
-<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<project
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+  xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
-    <parent>
+  <parent>
     <groupId>org.pentaho</groupId>
     <artifactId>pentaho-ce-jar-parent-pom</artifactId>
     <version>9.4.0.0-343</version>
@@ -11,7 +13,7 @@
   <artifactId>pentaho-platform-ce-parent</artifactId>
   <version>9.4.0.0-343</version>
   <packaging>pom</packaging>
-  <name>Pentaho BI Platform Community Edition</name>
+  <name>Tahopen BI Platform Community Edition</name>
   <description>Parent pom for pentaho-platform projects</description>
   <url>http://www.pentaho.com</url>
   <scm>
@@ -381,7 +383,7 @@
   <repositories>
     <repository>
       <id>pentaho-public</id>
-      <name>Pentaho Public</name>
+      <name>Tahopen Public</name>
       <url>https://repo.orl.eng.hitachivantara.com/artifactory/pnt-mvn/</url>
       <releases>
         <enabled>true</enabled>
@@ -397,7 +399,7 @@
   <pluginRepositories>
     <pluginRepository>
       <id>pentaho-public-plugins</id>
-      <name>Pentaho Public Plugins</name>
+      <name>Tahopen Public Plugins</name>
       <url>https://repo.orl.eng.hitachivantara.com/artifactory/pnt-mvn/</url>
       <snapshots>
         <enabled>false</enabled>

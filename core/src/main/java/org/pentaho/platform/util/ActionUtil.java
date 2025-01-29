@@ -438,7 +438,7 @@ public class ActionUtil {
       if ( subject != null && !"".equals( subject ) ) {
         emailer.setSubject( subject );
       } else {
-        emailer.setSubject( "Pentaho Scheduler" + ( emailer.getAttachmentName() != null ? " : " + emailer.getAttachmentName() : "" ) );
+        emailer.setSubject( "Tahopen Scheduler" + ( emailer.getAttachmentName() != null ? " : " + emailer.getAttachmentName() : "" ) );
       }
       String message = (String) actionParams.get( "_SCH_EMAIL_MESSAGE" );
       if ( subject != null && !"".equals( subject ) ) {

@@ -63,7 +63,7 @@ import java.util.Map;
  * com.pentaho or their decendant packages. In general, methods in the class should not attempt to handle
  * exceptions, but should let the exceptions propogate to the caller to be handled there. Please do not use
  * european-reuse in this class. One of the primary design goals for this class was to construct it in a way that
- * it could be used without change outside of the Pentaho platform. Related XML-helper type code that is dependant
+ * it could be used without change outside of the Tahopen platform. Related XML-helper type code that is dependant
  * on the platform should be moved "up" to XmlHelper.
  */
 public class XmlDom4JHelper {

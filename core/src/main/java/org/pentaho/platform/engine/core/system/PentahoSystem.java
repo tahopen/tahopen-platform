@@ -110,12 +110,12 @@ public class PentahoSystem {
 
   public static final String BACKGROUND_EXECUTION = "IBackgroundExecution"; //$NON-NLS-1$
 
-  // TODO: Read the Conditional Execution information from Pentaho XML.
+  // TODO: Read the Conditional Execution information from Tahopen XML.
   public static final String CONDITIONAL_EXECUTION = "IConditionalExecution"; //$NON-NLS-1$
   public static String DEFAULT_CONDITIONAL_EXECUTION_PROVIDER;
   public static String DEFAULT_MESSAGE_FORMATTER;
 
-  // TODO: Read the Scheduler Class from Pentaho XML.
+  // TODO: Read the Scheduler Class from Tahopen XML.
   public static final String SCHEDULER = "IScheduler"; //$NON-NLS-1$
 
   public static final String MESSAGE_FORMATTER = "IMessageFormatter"; //$NON-NLS-1$
@@ -688,7 +688,7 @@ public class PentahoSystem {
   }
 
   /**
-   * A convenience method for retrieving Pentaho system objects from the object factory. Looks up an object by using the
+   * A convenience method for retrieving Tahopen system objects from the object factory. Looks up an object by using the
    * name of the <code>interfaceClass</code> as the object key in
    * {@link PentahoSystem#get(Class, String, IPentahoSession)}. NOTE: session will be derived for you by using
    * PentahoSessionHolder, so a session must already have been bound to the thread local in PentahoSessionHolder in
@@ -699,7 +699,7 @@ public class PentahoSystem {
   }
 
   /**
-   * A convenience method for retrieving Pentaho system objects from the object factory. Looks up an object by using the
+   * A convenience method for retrieving Tahopen system objects from the object factory. Looks up an object by using the
    * name of the <code>interfaceClass</code> as the object key in {@link PentahoSystem#get(Class, IPentahoSession, Map)}
    * . NOTE: session will be derived for you by using PentahoSessionHolder, so a session must already have been bound to
    * the thread local in PentahoSessionHolder in order for you to be able to access session-bound objects.
@@ -725,7 +725,7 @@ public class PentahoSystem {
   }
 
   /**
-   * A convenience method for retrieving Pentaho system objects from the object factory. Looks up an object by using the
+   * A convenience method for retrieving Tahopen system objects from the object factory. Looks up an object by using the
    * name of the <code>interfaceClass</code> as the object key in {@link PentahoSystem#getAll(Class, IPentahoSession)}.
    * NOTE: session will be derived for you by using PentahoSessionHolder, so a session must already have been bound to
    * the thread local in PentahoSessionHolder in order for you to be able to access session-bound objects.
@@ -735,7 +735,7 @@ public class PentahoSystem {
   }
 
   /**
-   * A convenience method for retrieving Pentaho system objects from the object factory. Looks up an object by using the
+   * A convenience method for retrieving Tahopen system objects from the object factory. Looks up an object by using the
    * name of the <code>interfaceClass</code> as the object key in {@link PentahoSystem#getAll(Class, IPentahoSession)}.
    * NOTE: session will be derived for you by using PentahoSessionHolder, so a session must already have been bound to
    * the thread local in PentahoSessionHolder in order for you to be able to access session-bound objects.
@@ -768,7 +768,7 @@ public class PentahoSystem {
   }
 
   /**
-   * A convenience method for retrieving Pentaho system objects from the object factory implementing or extending the
+   * A convenience method for retrieving Tahopen system objects from the object factory implementing or extending the
    * given Class literal
    * <p/>
    * {@link PentahoSystem#get(Class, String, IPentahoSession)}.
@@ -779,8 +779,8 @@ public class PentahoSystem {
   }
 
   /**
-   * A convenience method for retrieving Pentaho system objects from the object factory. Returns an instance of a
-   * configured object of the Pentaho system. This method will return <code>null</code> if the object could not be
+   * A convenience method for retrieving Tahopen system objects from the object factory. Returns an instance of a
+   * configured object of the Tahopen system. This method will return <code>null</code> if the object could not be
    * retrieved for any reason. If the object is defined but for some reason can not be retrieved, an error message will
    * be logged.
    *
@@ -1329,7 +1329,7 @@ public class PentahoSystem {
   }
 
   /**
-   * Gets the factory that will create and manage Pentaho system objects.
+   * Gets the factory that will create and manage Tahopen system objects.
    *
    * @return the factory
    */
@@ -1338,7 +1338,7 @@ public class PentahoSystem {
   }
 
   /**
-   * Registers the factory that will create and manage Pentaho system objects.
+   * Registers the factory that will create and manage Tahopen system objects.
    *
    * @param pentahoObjectFactory
    *          the factory
@@ -1358,7 +1358,7 @@ public class PentahoSystem {
   }
 
   /**
-   * Registers the primary factory that will create and manage Pentaho system objects.
+   * Registers the primary factory that will create and manage Tahopen system objects.
    *
    * @param pentahoObjectFactory
    *          the factory

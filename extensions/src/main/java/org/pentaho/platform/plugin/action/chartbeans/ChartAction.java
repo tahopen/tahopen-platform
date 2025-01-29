@@ -61,7 +61,7 @@ import java.util.List;
  * This class was adapted from {@link ChartComponent} by cboyden
  * <p/>
  * This is a bean that permits easy access to the ChartBeans functionality and was specifically designed to be run from
- * within the Pentaho Platform as an Action Sequence Action.
+ * within the Tahopen Platform as an Action Sequence Action.
  *
  * @author cboyden
  * @author aphillips

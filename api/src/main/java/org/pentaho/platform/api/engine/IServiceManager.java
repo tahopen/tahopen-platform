@@ -23,7 +23,7 @@ package org.pentaho.platform.api.engine;
 /**
  * A service manager allows a POJO to be exposed as various types of services by constructing a simple
  * {@link ServiceConfig} and calling {@link #registerService(ServiceConfig)}. An implementation of
- * {@link IServiceManager} acts as a depot of service objects in the Pentaho BI platform.
+ * {@link IServiceManager} acts as a depot of service objects in the Tahopen BI platform.
  * <p>
  * For information on providing services via platform plugins, see the wiki link below.
  * 

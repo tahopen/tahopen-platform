@@ -74,9 +74,9 @@ import static java.util.Optional.ofNullable;
 import static java.util.stream.Collectors.toMap;
 
 /**
- * Handles the storage and retrieval of Pentaho Metada Domain objects in a repository. It does this by using a
+ * Handles the storage and retrieval of Tahopen Metada Domain objects in a repository. It does this by using a
  * pre-defined system location (defined by {@link PentahoMetadataDomainRepositoryInfo}) as the storage location for the
- * Domain files and associated locale files. </p> Since Domain IDs are the unique identifier for Pentaho Metadata
+ * Domain files and associated locale files. </p> Since Domain IDs are the unique identifier for Tahopen Metadata
  * domains and may contain any character (including repository folder separator character(s) like '/', a {@link UUID}
  * will be created to store each file. The metadata for the file will be used to store the information (such as the
  * Domain ID). </p>
@@ -128,10 +128,10 @@ public class PentahoMetadataDomainRepository implements IMetadataDomainRepositor
   // The repository used to store / retrieve objects
   private IUnifiedRepository repository;
 
-  // Mapping between the Pentaho Metadata Domain ID and the repository files for that Domain
+  // Mapping between the Tahopen Metadata Domain ID and the repository files for that Domain
   private final PentahoMetadataInformationMap metadataMapping;
 
-  // Mapping between the Datasource Type and Pentaho Metadata Domain ID
+  // Mapping between the Datasource Type and Tahopen Metadata Domain ID
   private final PentahoDataSourceTypeMap dataSourceTypeMapping;
 
   // The parser used to serialize / deserialize metadata files
@@ -169,7 +169,7 @@ public class PentahoMetadataDomainRepository implements IMetadataDomainRepositor
    *                         will create a default instance)
    * @param xmiParser        the parser class for serializing / de-serializing Domain objects </br>(NOTE: {@code null}
    *                         is acceptable and will create a default instance)
-   * @param localizationUtil the object used to add locale bundles into a Pentaho Metadata Domain object </br>(NOTE:
+   * @param localizationUtil the object used to add locale bundles into a Tahopen Metadata Domain object </br>(NOTE:
    *                         {@code null} is acceptable and will create a default instance)
    */
   protected PentahoMetadataDomainRepository( final IUnifiedRepository repository,

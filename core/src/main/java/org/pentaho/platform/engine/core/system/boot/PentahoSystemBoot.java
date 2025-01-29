@@ -197,7 +197,7 @@ public class PentahoSystemBoot {
   }
 
   /**
-   * Starts the Pentaho platform, making it ready to process requests.
+   * Starts the Tahopen platform, making it ready to process requests.
    * 
    * @throws PlatformInitializationException
    *           if there was a problem initializing the platform
@@ -222,7 +222,7 @@ public class PentahoSystemBoot {
   }
 
   /**
-   * Stops the Pentaho platform
+   * Stops the Tahopen platform
    * 
    * @return
    */
@@ -233,7 +233,7 @@ public class PentahoSystemBoot {
   }
 
   /**
-   * Gets the object factory for the Pentaho platform
+   * Gets the object factory for the Tahopen platform
    * 
    * @return
    */
@@ -242,7 +242,7 @@ public class PentahoSystemBoot {
   }
 
   /**
-   * Sets the object factory for the Pentaho platform, This defaults to the StandaloneObjectFactory
+   * Sets the object factory for the Tahopen platform, This defaults to the StandaloneObjectFactory
    * 
    * @return
    */
@@ -268,7 +268,7 @@ public class PentahoSystemBoot {
   }
 
   /**
-   * Adds a lifecycle listener. This object will be notified when the Pentaho platform starts and stops.
+   * Adds a lifecycle listener. This object will be notified when the Tahopen platform starts and stops.
    * 
    * @param lifecycleListener
    */
@@ -297,7 +297,7 @@ public class PentahoSystemBoot {
   }
 
   /**
-   * Gets the system settings object that will be used by the Pentaho platform
+   * Gets the system settings object that will be used by the Tahopen platform
    * 
    * @return
    */
@@ -306,7 +306,7 @@ public class PentahoSystemBoot {
   }
 
   /**
-   * Sets the system settings object that will be used by the Pentaho platform
+   * Sets the system settings object that will be used by the Tahopen platform
    * 
    * @return
    */
@@ -316,7 +316,7 @@ public class PentahoSystemBoot {
   }
 
   /**
-   * Returns true if the Pentaho platform has initialized successfully.
+   * Returns true if the Tahopen platform has initialized successfully.
    * 
    * @return
    */

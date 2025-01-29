@@ -106,7 +106,7 @@ public class PentahoBasicProcessingFilter extends BasicAuthenticationFilter impl
     } else if ( isBasicAuthRequest( request ) && SecurityContextHolder.getContext().getAuthentication() == null ) {
       // Session is valid, not authenticated, and Basic-auth is supplied.
       // Check to see if the session-flushed cookie we created is present, and, if so, force reauthentication for
-      // the Pentaho realm.
+      // the Tahopen realm.
       if ( clearSessionFlushedCookie( request, response ) ) {
         getAuthenticationEntryPoint()
           .commence( request, response, new BadCredentialsException( "Clearing Basic-Auth" ) );

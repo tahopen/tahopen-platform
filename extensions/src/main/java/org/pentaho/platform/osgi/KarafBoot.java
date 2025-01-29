@@ -50,7 +50,7 @@ import java.util.Set;
 import java.util.UUID;
 
 /**
- * This Pentaho SystemListener starts the Embedded Karaf framework to support OSGI in the platform.
+ * This Tahopen SystemListener starts the Embedded Karaf framework to support OSGI in the platform.
  */
 public class KarafBoot implements IPentahoSystemListener {
   public static final String CLEAN_KARAF_CACHE = "org.pentaho.clean.karaf.cache";

@@ -237,7 +237,7 @@ public class SecurityHelper implements ISecurityHelper {
    * @deprecated use SystemUtils.canAdminister() instead
    *
    * @param session The users IPentahoSession object
-   * @return true if the user is considered a Pentaho administrator
+   * @return true if the user is considered a Tahopen administrator
    */
   @Override
   @Deprecated

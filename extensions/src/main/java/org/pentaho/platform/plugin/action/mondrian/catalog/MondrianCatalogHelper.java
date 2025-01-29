@@ -343,10 +343,10 @@ public class MondrianCatalogHelper implements IAclAwareMondrianCatalogService {
     if ( useLegacyDbName ) {
       datasourcesXML.append( "<DataSourceName>Provider=Mondrian</DataSourceName>\n" ); //$NON-NLS-1$
     } else {
-      datasourcesXML.append( "<DataSourceName>Pentaho Mondrian</DataSourceName>\n" ); //$NON-NLS-1$
+      datasourcesXML.append( "<DataSourceName>Tahopen Mondrian</DataSourceName>\n" ); //$NON-NLS-1$
     }
     datasourcesXML
-        .append( "<DataSourceDescription>Pentaho BI Platform Datasources</DataSourceDescription>\n" ); //$NON-NLS-1$
+        .append( "<DataSourceDescription>Tahopen BI Platform Datasources</DataSourceDescription>\n" ); //$NON-NLS-1$
     datasourcesXML.append(
         "<URL>" + contextPathFromRequestContextHolder() + "Xmla</URL>\n" ); //$NON-NLS-1$
     datasourcesXML.append( "<DataSourceInfo>Provider=Mondrian</DataSourceInfo>\n" ); //$NON-NLS-1$

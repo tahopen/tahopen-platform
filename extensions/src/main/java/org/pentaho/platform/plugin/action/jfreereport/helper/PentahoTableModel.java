@@ -103,7 +103,7 @@ public class PentahoTableModel extends AbstractTableModel implements CloseableTa
       getLogger().info( Messages.getInstance().getErrorString( "PentahoTableModel.ERROR_0001_GET_VALUE_AT" ) ); //$NON-NLS-1$
     } catch ( Throwable t ) {
       IVersionHelper versionHelper = PentahoSystem.get( IVersionHelper.class, null );
-      getLogger().error( "Error Start: Pentaho " + versionHelper.getVersionInformation( this.getClass() ) ); //$NON-NLS-1$
+      getLogger().error( "Error Start: Tahopen " + versionHelper.getVersionInformation( this.getClass() ) ); //$NON-NLS-1$
       getLogger().error( Messages.getInstance().getErrorString( "PentahoTableModel.ERROR_0001_GET_VALUE_AT" ), t ); //$NON-NLS-1$
       getLogger().error( "Error end:" ); //$NON-NLS-1$
     }

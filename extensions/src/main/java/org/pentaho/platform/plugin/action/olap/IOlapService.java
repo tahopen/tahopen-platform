@@ -83,7 +83,7 @@ public interface IOlapService {
    * @param dataSourceInfo Connection properties. ie: Provider=mondrian;DataSource=SampleData.
    * @param inputStream Stream of the mondrian schema's XML
    * @param overwriteInRepossitory Whether to overwrite a catalog of the same name.
-   * @param session Pentaho session to perform this task.
+   * @param session Tahopen session to perform this task.
    */
   void addHostedCatalog(
       String name,

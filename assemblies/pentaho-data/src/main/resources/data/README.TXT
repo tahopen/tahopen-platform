@@ -8,6 +8,6 @@ If you would like to create the sample data source connection, run the following
 
 create_sample_datasource_<db>.sql
 
-If you want to use an existing 1.7.0 Pentaho rdbms repository database, run the following script:
+If you want to use an existing 1.7.0 Tahopen rdbms repository database, run the following script:
 
 migration.sql

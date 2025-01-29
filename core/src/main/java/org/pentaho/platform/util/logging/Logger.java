@@ -291,7 +291,7 @@ public class Logger {
     String id = ( caller == null ) ? Messages.getInstance().getString( "Logger.DEBUG_LOG_UNKNOWN" ) : caller; //$NON-NLS-1$
     if ( Logger.logLevel <= ILogger.ERROR ) {
       if ( Logger.versionHelper != null ) {
-        Logger.logger.error( "Error: Pentaho " + Logger.versionHelper.getVersionInformation( Logger.class ) ); //$NON-NLS-1$
+        Logger.logger.error( "Error: Tahopen " + Logger.versionHelper.getVersionInformation( Logger.class ) ); //$NON-NLS-1$
       } else {
         Logger.logger.error( "Error: Pentaho" ); //$NON-NLS-1$
       }
@@ -305,7 +305,7 @@ public class Logger {
     String id = ( caller == null ) ? Messages.getInstance().getString( "Logger.DEBUG_LOG_UNKNOWN" ) : caller; //$NON-NLS-1$
     if ( Logger.logLevel <= ILogger.FATAL ) {
       if ( Logger.versionHelper != null ) {
-        Logger.logger.error( "Error: Pentaho " + Logger.versionHelper.getVersionInformation( Logger.class ) ); //$NON-NLS-1$
+        Logger.logger.error( "Error: Tahopen " + Logger.versionHelper.getVersionInformation( Logger.class ) ); //$NON-NLS-1$
       } else {
         Logger.logger.error( "Error: Pentaho" ); //$NON-NLS-1$
       }

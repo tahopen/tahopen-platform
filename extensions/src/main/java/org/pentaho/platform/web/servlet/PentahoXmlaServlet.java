@@ -77,7 +77,7 @@ import java.util.concurrent.Callable;
 /**
  * Filters out <code>DataSource</code> elements that are not XMLA-related.
  * <p/>
- * Background: Pentaho re-used datasources.xml for non-XMLA purposes. But since <code>DefaultXmlaServlet</code> requires
+ * Background: Tahopen re-used datasources.xml for non-XMLA purposes. But since <code>DefaultXmlaServlet</code> requires
  * actual XMLA datasources, this servlet extends <code>DefaultXmlaServlet</code> and removes the non-XMLA datasources
  * before continuing normal <code>DefaultXmlaServlet</code> behavior.
  * <p/>

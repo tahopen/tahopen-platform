@@ -1,19 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<report-definition xmlns="http://jfreereport.sourceforge.net/namespaces/reports/legacy/ext" name="InventoryLINECHARTTEST3" engine-version="0.8.9-rc11">
+<report-definition xmlns="http://jfreereport.sourceforge.net/namespaces/reports/legacy/ext"
+  name="InventoryLINECHARTTEST3" engine-version="0.8.9-rc11">
   <parser-config>
-    <object-factory class="org.jfree.report.modules.parser.ext.factory.base.URLClassFactory"/>
-    <object-factory class="org.jfree.report.modules.parser.ext.factory.objects.DefaultClassFactory"/>
-    <object-factory class="org.jfree.report.modules.parser.ext.factory.objects.BandLayoutClassFactory"/>
-    <object-factory class="org.jfree.report.modules.parser.ext.factory.base.ArrayClassFactory"/>
-    <element-factory class="org.jfree.report.modules.parser.ext.factory.elements.DefaultElementFactory"/>
-    <stylekey-factory class="org.jfree.report.modules.parser.ext.factory.stylekey.DefaultStyleKeyFactory"/>
-    <stylekey-factory class="org.jfree.report.modules.parser.ext.factory.stylekey.PageableLayoutStyleKeyFactory"/>
-    <template-factory class="org.jfree.report.modules.parser.ext.factory.templates.DefaultTemplateCollection"/>
-    <datasource-factory class="org.jfree.report.modules.parser.ext.factory.datasource.DefaultDataSourceFactory"/>
+    <object-factory class="org.jfree.report.modules.parser.ext.factory.base.URLClassFactory" />
+    <object-factory class="org.jfree.report.modules.parser.ext.factory.objects.DefaultClassFactory" />
+    <object-factory
+      class="org.jfree.report.modules.parser.ext.factory.objects.BandLayoutClassFactory" />
+    <object-factory class="org.jfree.report.modules.parser.ext.factory.base.ArrayClassFactory" />
+    <element-factory
+      class="org.jfree.report.modules.parser.ext.factory.elements.DefaultElementFactory" />
+    <stylekey-factory
+      class="org.jfree.report.modules.parser.ext.factory.stylekey.DefaultStyleKeyFactory" />
+    <stylekey-factory
+      class="org.jfree.report.modules.parser.ext.factory.stylekey.PageableLayoutStyleKeyFactory" />
+    <template-factory
+      class="org.jfree.report.modules.parser.ext.factory.templates.DefaultTemplateCollection" />
+    <datasource-factory
+      class="org.jfree.report.modules.parser.ext.factory.datasource.DefaultDataSourceFactory" />
   </parser-config>
   <report-config>
     <simple-page-definition width="1" height="1">
-      <page orientation="portrait" topmargin="36" leftmargin="36" bottommargin="36" rightmargin="36" pageformat="LETTER"/>
+      <page orientation="portrait" topmargin="36" leftmargin="36" bottommargin="36" rightmargin="36"
+        pageformat="LETTER" />
     </simple-page-definition>
     <configuration>
       <property name="org.jfree.report.NoPrinterAvailable">true</property>
@@ -478,7 +486,8 @@
               <basic-key name="trim-text-content">true</basic-key>
             </style>
             <template references="message-field">
-              <basic-object name="format">From $(time_start, date, MMM. d, yyyy) through $(time_stop, date, MMM. d, yyyy)</basic-object>
+              <basic-object name="format">From $(time_start, date, MMM. d, yyyy) through
+                $(time_stop, date, MMM. d, yyyy)</basic-object>
               <basic-object name="nullValue"></basic-object>
             </template>
           </element>
@@ -520,7 +529,8 @@
             <basic-key name="keepAspectRatio">true</basic-key>
           </style>
           <template references="image-url-element">
-            <basic-object name="content">http://${hostColonPort}/pentaho/GetResource?resource=test/charts/InventoryLINECHARTTEST3_staticImage0.jpg</basic-object>
+            <basic-object name="content">
+              http://${hostColonPort}/pentaho/GetResource?resource=test/charts/InventoryLINECHARTTEST3_staticImage0.jpg</basic-object>
           </template>
         </element>
         <element type="shape/generic">
@@ -918,7 +928,7 @@
           <basic-key name="trim-text-content">true</basic-key>
         </style>
         <template references="label">
-          <basic-object name="content">Pentaho Sample Report</basic-object>
+          <basic-object name="content">Tahopen Sample Report</basic-object>
         </template>
       </element>
       <element type="text/plain">
@@ -1018,7 +1028,7 @@
     </watermark>
     <groups>
       <group name="default">
-        <fields/>
+        <fields />
         <group-header>
           <style>
             <basic-key name="pagebreak-before">false</basic-key>
@@ -2083,7 +2093,8 @@
     <property-ref name="report.name" class="java.lang.String">InventoryLINECHARTTEST3</property-ref>
     <property-ref name="time_start" class="java.util.Date">2005-01-01T00:00:00.000-0500</property-ref>
     <property-ref name="time_stop" class="java.util.Date">2005-05-31T00:00:00.000-0400</property-ref>
-    <expression name="backgroundTrigger" class="org.jfree.report.function.ElementVisibilitySwitchFunction">
+    <expression name="backgroundTrigger"
+      class="org.jfree.report.function.ElementVisibilitySwitchFunction">
       <properties>
         <property name="element">background</property>
         <property name="initialState" class="java.lang.Boolean">false</property>
@@ -2101,7 +2112,8 @@
       <properties>
         <property name="encoding">iso-8859-1</property>
         <property name="field[0]" class="java.lang.String">PRODUCTVENDOR</property>
-        <property name="pattern">/pentaho/ViewAction?&amp;solution=samples&amp;path=steel-wheels/reports&amp;action=order_detail.xaction&amp;customer={0}</property>
+        <property name="pattern">
+          /pentaho/ViewAction?&amp;solution=samples&amp;path=steel-wheels/reports&amp;action=order_detail.xaction&amp;customer={0}</property>
         <property name="urlEncodeResult" class="java.lang.Boolean">false</property>
         <property name="urlEncodeValues" class="java.lang.Boolean">false</property>
       </properties>
@@ -2117,7 +2129,8 @@
         <property name="field">SOLD_PRICE</property>
       </properties>
     </expression>
-    <expression name="chartDataSource" class="org.pentaho.plugin.jfreereport.reportcharts.CategorySetCollectorFunction">
+    <expression name="chartDataSource"
+      class="org.pentaho.plugin.jfreereport.reportcharts.CategorySetCollectorFunction">
       <properties>
         <property name="categoryColumn">PRODUCTVENDOR</property>
         <property name="categoryStartColumn" class="java.lang.Integer">0</property>
@@ -2128,7 +2141,8 @@
         <property name="valueColumn[0]" class="java.lang.String">SOLD_PRICE</property>
       </properties>
     </expression>
-    <expression name="BarChart" class="org.pentaho.plugin.jfreereport.reportcharts.BarChartExpression">
+    <expression name="BarChart"
+      class="org.pentaho.plugin.jfreereport.reportcharts.BarChartExpression">
       <properties>
         <property name="antiAlias" class="java.lang.Boolean">true</property>
         <property name="backgroundColor">#C8D0D5</property>
@@ -2158,7 +2172,8 @@
         <property name="useDrawable" class="java.lang.Boolean">true</property>
       </properties>
     </expression>
-    <expression name="ChartFunction4" class="org.pentaho.plugin.jfreereport.reportcharts.LineChartExpression">
+    <expression name="ChartFunction4"
+      class="org.pentaho.plugin.jfreereport.reportcharts.LineChartExpression">
       <properties>
         <property name="antiAlias" class="java.lang.Boolean">true</property>
         <property name="backgroundColor">#FFFFFF</property>
@@ -2187,7 +2202,8 @@
         <property name="useDrawable" class="java.lang.Boolean">true</property>
       </properties>
     </expression>
-    <expression name="DataCollector4" class="org.pentaho.plugin.jfreereport.reportcharts.CategorySetCollectorFunction">
+    <expression name="DataCollector4"
+      class="org.pentaho.plugin.jfreereport.reportcharts.CategorySetCollectorFunction">
       <properties>
         <property name="categoryColumn">PRODUCTVENDOR</property>
         <property name="categoryStartColumn" class="java.lang.Integer">0</property>

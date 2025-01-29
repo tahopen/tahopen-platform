@@ -864,7 +864,7 @@ public class OlapServiceImpl implements IOlapService {
 
     datasourcesXML.append( "<DataSource>\n" ); //$NON-NLS-1$
     datasourcesXML.append( "<DataSourceName>" + DATASOURCE_NAME + "</DataSourceName>\n" ); //$NON-NLS-1$
-    datasourcesXML.append( "<DataSourceDescription>Pentaho BI Platform Datasources</DataSourceDescription>\n" ); //$NON-NLS-1$
+    datasourcesXML.append( "<DataSourceDescription>Tahopen BI Platform Datasources</DataSourceDescription>\n" ); //$NON-NLS-1$
     datasourcesXML.append( "<URL>Xmla</URL>\n" ); //$NON-NLS-1$
     datasourcesXML.append( "<DataSourceInfo>Provider=mondrian</DataSourceInfo>\n" ); //$NON-NLS-1$
     datasourcesXML.append( "<ProviderName>PentahoXMLA</ProviderName>\n" ); //$NON-NLS-1$

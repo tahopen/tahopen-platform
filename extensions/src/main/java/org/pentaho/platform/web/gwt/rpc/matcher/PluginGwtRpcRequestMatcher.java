@@ -28,7 +28,7 @@ import java.util.Collection;
 
 /**
  * The <code>PluginGwtRpcRequestMatcher</code> class is a specialized GWT-RPC request matcher
- * which can be used to match URLs of GWT-RPC services of Pentaho Platform plugins (e.g.
+ * which can be used to match URLs of GWT-RPC services of Tahopen Platform plugins (e.g.
  * <code>/gwtrpc/serviceName</code>).
  *
  * @see PluginGwtRpc

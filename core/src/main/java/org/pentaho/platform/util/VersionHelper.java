@@ -62,7 +62,7 @@ public class VersionHelper implements IVersionHelper {
             .append( bundle.getString( "release.milestone.number" ) ).append( '.' ).append( bundle.getString( "release.build.number" ) ).append( " (class)" ); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
         return buff.toString();
       } catch ( Exception ex ) {
-        return "Pentaho BI Platform - No Version Information Available"; //$NON-NLS-1$
+        return "Tahopen BI Platform - No Version Information Available"; //$NON-NLS-1$
       }
     }
   }

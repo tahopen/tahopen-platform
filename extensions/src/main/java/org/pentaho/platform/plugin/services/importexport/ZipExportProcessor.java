@@ -318,7 +318,7 @@ public class ZipExportProcessor extends BaseExportProcessor {
 
         properties = getUnifiedRepository().getLocalePropertiesForFileById( repositoryFile.getId(), locale.getLocale() );
         if ( properties != null ) {
-          properties.remove( "jcr:primaryType" ); // Pentaho Type
+          properties.remove( "jcr:primaryType" ); // Tahopen Type
 
           try ( InputStream is = createLocaleFile( name + localeName, properties, locale.getLocale() ) ) {
             if ( is != null ) {

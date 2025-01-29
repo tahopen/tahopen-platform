@@ -2,7 +2,7 @@
 
 # *****************************************************************************
 #
-# Pentaho Data Integration
+# Tahopen Data Integration
 #
 # Copyright (C) 2008 - ${copyright.year} by Hitachi Vantara : http://www.hitachivantara.com
 #

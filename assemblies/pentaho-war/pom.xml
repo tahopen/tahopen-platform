@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<project
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+  xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>pentaho</groupId>
@@ -30,7 +32,8 @@
     <big-data-plugin.version>9.4.0.0-343</big-data-plugin.version>
   </properties>
   <dependencies>
-    <!-- region - Fasterxml jackson providers are required to be in the main classloader for serialization of POJOs
+    <!-- region - Fasterxml jackson providers are required to be in the main classloader for
+    serialization of POJOs
          in the Publish Model step. -->
     <dependency>
       <groupId>com.fasterxml.jackson.jaxrs</groupId>
@@ -481,9 +484,9 @@
       <scope>compile</scope>
     </dependency>
     <dependency>
-      <groupId>org.pentaho</groupId>
+      <groupId>org.tahopen</groupId>
       <artifactId>shim-api-core</artifactId>
-      <version>${pentaho-hadoop-shims.version}</version>
+      <version>0.1.0.0-SNAPSHOT</version>
     </dependency>
     <dependency>
       <groupId>pentaho</groupId>
@@ -561,7 +564,8 @@
 
     <!-- OSGi Dependencies -->
     <!-- Because of: -->
-    <!-- pentaho-platform-core (PentahoSystem) and pdi-osgi-bridge-core (KarafLifecycleListener and OSGIPluginRegistryExtension) -->
+    <!-- pentaho-platform-core (PentahoSystem) and pdi-osgi-bridge-core (KarafLifecycleListener and
+    OSGIPluginRegistryExtension) -->
     <dependency>
       <groupId>org.osgi</groupId>
       <artifactId>org.osgi.core</artifactId>
@@ -824,9 +828,9 @@
       <version>${project.version}</version>
     </dependency>
     <dependency>
-      <groupId>org.pentaho</groupId>
-      <artifactId>pentaho-hadoop-shims-common-mapreduce</artifactId>
-      <version>${pentaho-hadoop-shims.version}</version>
+      <groupId>org.tahopen</groupId>
+      <artifactId>tahopen-hadoop-shims-common-mapreduce</artifactId>
+      <version>0.1.0.0-SNAPSHOT</version>
     </dependency>
     <dependency>
       <groupId>org.apache.xmlgraphics</groupId>
@@ -1062,7 +1066,9 @@
             </goals>
             <configuration>
               <target>
-                <copy file="${project.build.directory}/webjars/META-INF/resources/webjars/jquery/${jquery.version}/dist/jquery.min.js" todir="${project.build.directory}/pentaho-server/tomcat/webapps/pentaho/docs/" />
+                <copy
+                  file="${project.build.directory}/webjars/META-INF/resources/webjars/jquery/${jquery.version}/dist/jquery.min.js"
+                  todir="${project.build.directory}/pentaho-server/tomcat/webapps/pentaho/docs/" />
               </target>
             </configuration>
           </execution>

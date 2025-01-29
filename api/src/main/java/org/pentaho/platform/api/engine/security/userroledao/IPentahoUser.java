@@ -25,7 +25,7 @@ import org.pentaho.platform.api.mt.ITenant;
 import java.io.Serializable;
 
 /**
- * A user of the Pentaho platform. Contains a set of roles for which this user is a member.
+ * A user of the Tahopen platform. Contains a set of roles for which this user is a member.
  * 
  * @author mlowery
  */

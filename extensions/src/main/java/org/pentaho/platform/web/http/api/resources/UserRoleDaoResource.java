@@ -67,7 +67,7 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 
 /**
- * UserRoleDao manages Pentaho Security user and roles in the BA platform.
+ * UserRoleDao manages Tahopen Security user and roles in the BA platform.
  */
 @Path ( "/userroledao/" )
 public class UserRoleDaoResource extends AbstractJaxRSResource {

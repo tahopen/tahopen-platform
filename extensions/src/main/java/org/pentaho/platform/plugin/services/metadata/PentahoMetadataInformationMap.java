@@ -32,7 +32,7 @@ import java.util.Map;
 import java.util.Set;
 
 /**
- * Holder of information relating to the mappings between Pentaho Metadata Domain IDs, Locales, and the repository
+ * Holder of information relating to the mappings between Tahopen Metadata Domain IDs, Locales, and the repository
  * filename.
  * 
  * @author <a href="mailto:dkincade@pentaho.com">David M. Kincade</a>

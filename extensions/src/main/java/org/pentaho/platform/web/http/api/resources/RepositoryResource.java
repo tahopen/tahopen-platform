@@ -417,7 +417,7 @@ public class RepositoryResource extends AbstractJaxRSResource {
    *
    *&lt;!-- Ldap administration configuration --&gt;
    *&lt;div id=&quot;ldapAdministration&quot;&gt;
-   *&lt;div class=&quot;ldapAdministrationTitleLabel authMethod&quot;&gt;Pentaho System Administrator&lt;/div&gt;
+   *&lt;div class=&quot;ldapAdministrationTitleLabel authMethod&quot;&gt;Tahopen System Administrator&lt;/div&gt;
    *&lt;div class=&quot;ldapAdministratiorUserLabel authText&quot;&gt;Select user from LDAP server:&lt;/div&gt;
    *&lt;div class=&quot;groupOption&quot;&gt;
    *&lt;input class=&quot;ldapAdministratorUserInput adminField&quot; type=&quot;text&quot;  /&gt;

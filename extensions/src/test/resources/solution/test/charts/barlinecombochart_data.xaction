@@ -1,35 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<action-sequence> 
+<action-sequence>
   <title>Chart Component Test (BarLineChart)</title>
   <version>1</version>
   <logging-level>DEBUG</logging-level>
-  <documentation> 
-    <author>Ingo Klose</author>  
-    <result-type>chart</result-type>  
-    <description>Testing the Pentaho Chart component with a BarLine Chart</description> 
+  <documentation>
+    <author>Ingo Klose</author>
+    <result-type>chart</result-type>
+    <description>Testing the Tahopen Chart component with a BarLine Chart</description>
   </documentation>
 
-  <inputs/>
+  <inputs />
 
-  <outputs> 
-    <results type="result-set"/> 
+  <outputs>
+    <results type="result-set" />
   </outputs>
 
-  <resources/>
-  
-  <actions> 
-    <action-definition> 
+  <resources />
+
+  <actions>
+    <action-definition>
       <component-name>SQLLookupRule</component-name>
       <action-type>Relational</action-type>
-      <action-outputs> 
-        <query-result type="result-set" mapping="results"/> 
+      <action-outputs>
+        <query-result type="result-set" mapping="results" />
       </action-outputs>
-      <component-definition> 
-        <jndi><![CDATA[SampleData]]></jndi>  
-        <query><![CDATA[select department, sum(actual) as Actual, sum(budget) as Budget, ((sum(variance))/(sum(budget))) as Variance from QUADRANT_ACTUALS GROUP BY department]]></query>  
-        <live><![CDATA[true]]></live> 
-      </component-definition> 
+      <component-definition>
+        <jndi><![CDATA[SampleData]]></jndi>
+        <query><![CDATA[select department, sum(actual) as Actual, sum(budget) as Budget, ((sum(variance))/(sum(budget))) as Variance from QUADRANT_ACTUALS GROUP BY department]]></query>
+        <live><![CDATA[true]]></live>
+      </component-definition>
     </action-definition>
- 
-  </actions> 
+
+  </actions>
 </action-sequence>

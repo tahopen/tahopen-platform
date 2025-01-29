@@ -28,14 +28,13 @@ import javax.jws.WebService;
 import java.util.List;
 
 /**
- * Implementation of {@link IAuthorizationPolicyWebService} that delegates to an {@link IAuthorizationPolicy}
+ * Implementation of {@link IAuthorizationPolicyWebService} that delegates to an
+ * {@link IAuthorizationPolicy}
  * instance.
  * 
  * @author mlowery
  */
-@WebService( endpointInterface = "org.pentaho.platform.security.policy.rolebased.ws.IAuthorizationPolicyWebService",
-    serviceName = "authorizationPolicy", portName = "authorizationPolicyPort",
-    targetNamespace = "http://www.pentaho.org/ws/1.0" )
+@WebService(endpointInterface = "org.pentaho.platform.security.policy.rolebased.ws.IAuthorizationPolicyWebService", serviceName = "authorizationPolicy", portName = "authorizationPolicyPort", targetNamespace = "http://www.pentaho.org/ws/1.0")
 public class DefaultAuthorizationPolicyWebService implements IAuthorizationPolicyWebService {
 
   // ~ Static fields/initializers
@@ -50,18 +49,18 @@ public class DefaultAuthorizationPolicyWebService implements IAuthorizationPolic
   // ====================================================================================================
 
   /**
-   * No-arg constructor for when in Pentaho BI Server.
+   * No-arg constructor for when in Tahopen BI Server.
    */
   public DefaultAuthorizationPolicyWebService() {
     super();
-    policy = PentahoSystem.get( IAuthorizationPolicy.class );
-    if ( policy == null ) {
-      throw new IllegalStateException( Messages.getInstance().getString(
-          "DefaultAuthorizationPolicyWebService.ERROR_0001_MISSING_AUTHZ_POLICY" ) ); //$NON-NLS-1$
+    policy = PentahoSystem.get(IAuthorizationPolicy.class);
+    if (policy == null) {
+      throw new IllegalStateException(Messages.getInstance().getString(
+          "DefaultAuthorizationPolicyWebService.ERROR_0001_MISSING_AUTHZ_POLICY")); //$NON-NLS-1$
     }
   }
 
-  public DefaultAuthorizationPolicyWebService( final IAuthorizationPolicy policy ) {
+  public DefaultAuthorizationPolicyWebService(final IAuthorizationPolicy policy) {
     super();
     this.policy = policy;
   }
@@ -69,12 +68,12 @@ public class DefaultAuthorizationPolicyWebService implements IAuthorizationPolic
   // ~ Methods
   // =========================================================================================================
 
-  public List<String> getAllowedActions( final String actionNamespace ) {
-    return policy.getAllowedActions( actionNamespace );
+  public List<String> getAllowedActions(final String actionNamespace) {
+    return policy.getAllowedActions(actionNamespace);
   }
 
-  public boolean isAllowed( final String actionName ) {
-    return policy.isAllowed( actionName );
+  public boolean isAllowed(final String actionName) {
+    return policy.isAllowed(actionName);
   }
 
 }

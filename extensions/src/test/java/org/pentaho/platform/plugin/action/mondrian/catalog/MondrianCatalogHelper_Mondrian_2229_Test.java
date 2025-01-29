@@ -48,7 +48,7 @@ public class MondrianCatalogHelper_Mondrian_2229_Test {
   @Test
   public void testGenerateInMemoryDatasourcesXml_DataSourceNameProviderNotUsingLegacyDbName() throws Exception {
     String result = prepareResultForMondrian2229Tests( false );
-    assertThat( result, containsString( "<DataSourceName>Pentaho Mondrian</DataSourceName>" ) );
+    assertThat( result, containsString( "<DataSourceName>Tahopen Mondrian</DataSourceName>" ) );
   }
 
   @Test

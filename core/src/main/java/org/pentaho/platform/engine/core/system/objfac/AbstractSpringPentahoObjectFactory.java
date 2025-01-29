@@ -224,7 +224,7 @@ public abstract class AbstractSpringPentahoObjectFactory implements IPentahoObje
         } catch ( Throwable t ) {
           // Spring could not create the object, perhaps due to session scoping, let's try
           // retrieving it from our internal session map
-          logger.debug( "Retrieving object from Pentaho session map (not Spring)." ); //$NON-NLS-1$
+          logger.debug( "Retrieving object from Tahopen session map (not Spring)." ); //$NON-NLS-1$
 
           try {
             object = session.getAttribute( interfaceClass.getSimpleName() );

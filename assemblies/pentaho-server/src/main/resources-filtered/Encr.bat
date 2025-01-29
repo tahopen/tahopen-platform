@@ -2,7 +2,7 @@
 
 REM *****************************************************************************
 REM
-REM Pentaho Data Integration
+REM Tahopen Data Integration
 REM
 REM Copyright (C) 2008 - ${copyright.year} by Hitachi Vantara : http://www.hitachivantara.com
 REM

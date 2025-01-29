@@ -21,7 +21,7 @@
 package org.pentaho.platform.api.email;
 
 /**
- * The Email Service used in the Pentaho Platform
+ * The Email Service used in the Tahopen Platform
  */
 public interface IEmailService {
   /**

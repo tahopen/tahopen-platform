@@ -25,11 +25,11 @@
 		</from>
 		
 		<subject type="string">
-		  <default-value>Pentaho Example1</default-value>
+		  <default-value>Tahopen Example1</default-value>
 		</subject>
 		
 		<message-plain type="string">
-		  <default-value>This is an email from the Pentaho BI Platform - Example1</default-value>
+		  <default-value>This is an email from the Tahopen BI Platform - Example1</default-value>
 		</message-plain>
   </inputs>
   

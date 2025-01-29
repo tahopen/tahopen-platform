@@ -25,30 +25,30 @@
     <data-sets>
         <oda-data-set name="Data Set">
             <property name="dataSource">Data source</property>
-            <property name="queryText">select 
-  QUADRANT_ACTUALS.REGION as "region", 
-  QUADRANT_ACTUALS.DEPARTMENT as "department", 
-  QUADRANT_ACTUALS.POSITIONTITLE as "positiontitle", 
-  QUADRANT_ACTUALS.ACTUAL as "actual", 
-  QUADRANT_ACTUALS.BUDGET as "budget", 
-  QUADRANT_ACTUALS.VARIANCE as "variance" 
- from QUADRANT_ACTUALS </property>
+            <property name="queryText">select
+                QUADRANT_ACTUALS.REGION as "region",
+                QUADRANT_ACTUALS.DEPARTMENT as "department",
+                QUADRANT_ACTUALS.POSITIONTITLE as "positiontitle",
+                QUADRANT_ACTUALS.ACTUAL as "actual",
+                QUADRANT_ACTUALS.BUDGET as "budget",
+                QUADRANT_ACTUALS.VARIANCE as "variance"
+                from QUADRANT_ACTUALS </property>
             <property name="type">JdbcSelectDataSet</property>
         </oda-data-set>
     </data-sets>
     <styles>
-        <style name="report"/>
-        <style name="label"/>
-        <style name="text"/>
+        <style name="report" />
+        <style name="label" />
+        <style name="text" />
         <style name="data">
             <property name="fontFamily">sans-serif</property>
             <property name="fontSize">9pt</property>
         </style>
-        <style name="table"/>
-        <style name="grid"/>
-        <style name="list"/>
-        <style name="image"/>
-        <style name="None Style"/>
+        <style name="table" />
+        <style name="grid" />
+        <style name="list" />
+        <style name="image" />
+        <style name="None Style" />
         <style name="Column Headers">
             <property name="backgroundColor">#FF6600</property>
             <property name="fontFamily">sans-serif</property>
@@ -81,7 +81,8 @@
             <property name="verticalAlign">middle</property>
         </style>
         <style name="Logo">
-            <property name="backgroundImage">C:\files\dev\code\jboss-4.0.1sp1\server\default\deploy\samples.war\images\quadrant-stores.jpg</property>
+            <property name="backgroundImage">
+                C:\files\dev\code\jboss-4.0.1sp1\server\default\deploy\samples.war\images\quadrant-stores.jpg</property>
             <property name="backgroundRepeat">no-repeat</property>
         </style>
     </styles>
@@ -94,14 +95,14 @@
             <page-footer>
                 <grid>
                     <property name="width">100%</property>
-                    <column/>
-                    <column/>
-                    <column/>
+                    <column />
+                    <column />
+                    <column />
                     <row>
                         <property name="height">0.1in</property>
-                        <cell/>
-                        <cell/>
-                        <cell/>
+                        <cell />
+                        <cell />
+                        <cell />
                     </row>
                     <row>
                         <property name="height">0.25in</property>
@@ -117,7 +118,7 @@
                                 <property name="fontFamily">sans-serif</property>
                                 <property name="fontSize">9pt</property>
                                 <property name="textAlign">center</property>
-                                <text-property name="content"><![CDATA[Sample output from Pentaho Reporting]]></text-property>
+                                <text-property name="content"><![CDATA[Sample output from Tahopen Reporting]]></text-property>
                             </text>
                         </cell>
                         <cell>
@@ -156,11 +157,11 @@
             </column>
             <header>
                 <row>
-                    <cell/>
-                    <cell/>
-                    <cell/>
-                    <cell/>
-                    <cell/>
+                    <cell />
+                    <cell />
+                    <cell />
+                    <cell />
+                    <cell />
                 </row>
             </header>
             <group>
@@ -176,16 +177,18 @@
                             <property name="style">Major Group</property>
                             <grid>
                                 <property name="width">100%</property>
-                                <column/>
-                                <column/>
+                                <column />
+                                <column />
                                 <row>
-                                    <cell/>
+                                    <cell />
                                     <cell>
                                         <property name="textAlign">right</property>
                                         <image>
                                             <property name="height">45pt</property>
                                             <property name="width">150pt</property>
-                                            <expression name="imageName">C:\Documents and Settings\James Dixon\My Documents\Pentaho\stuff\quadrant-stores2.png</expression>
+                                            <expression name="imageName">C:\Documents and
+                                                Settings\James Dixon\My
+                                                Documents\Pentaho\stuff\quadrant-stores2.png</expression>
                                         </image>
                                     </cell>
                                 </row>
@@ -197,10 +200,10 @@
                                             <text-property name="text">Regional Report</text-property>
                                         </label>
                                     </cell>
-                                    <cell/>
+                                    <cell />
                                 </row>
                             </grid>
-</cell>
+                        </cell>
                     </row>
                     <row>
                         <property name="height">20pt</property>
@@ -213,7 +216,7 @@
                                 <column>
                                     <property name="width">50pt</property>
                                 </column>
-                                <column/>
+                                <column />
                                 <row>
                                     <cell>
                                         <label>
@@ -231,9 +234,9 @@
                                 </row>
                             </grid>
                         </cell>
-                        <cell/>
-                        <cell/>
-                        <cell/>
+                        <cell />
+                        <cell />
+                        <cell />
                     </row>
                 </header>
                 <footer>
@@ -243,8 +246,8 @@
                             <property name="colSpan">2</property>
                             <property name="rowSpan">1</property>
                             <grid>
-                                <column/>
-                                <column/>
+                                <column />
+                                <column />
                                 <row>
                                     <cell>
                                         <data>
@@ -309,16 +312,16 @@
                             <grid>
                                 <property name="pageBreakAfter">always</property>
                                 <property name="width">100%</property>
-                                <column/>
+                                <column />
                                 <row>
-                                    <cell/>
+                                    <cell />
                                 </row>
                             </grid>
-</cell>
-                        <cell/>
-                        <cell/>
-                        <cell/>
-                        <cell/>
+                        </cell>
+                        <cell />
+                        <cell />
+                        <cell />
+                        <cell />
                     </row>
                 </footer>
             </group>
@@ -397,11 +400,11 @@
                     </row>
                     <row>
                         <property name="height">0.04in</property>
-                        <cell/>
-                        <cell/>
-                        <cell/>
-                        <cell/>
-                        <cell/>
+                        <cell />
+                        <cell />
+                        <cell />
+                        <cell />
+                        <cell />
                     </row>
                     <row>
                         <cell>
@@ -412,9 +415,9 @@
                                 <expression name="valueExpr">row["department"]</expression>
                             </data>
                         </cell>
-                        <cell/>
-                        <cell/>
-                        <cell/>
+                        <cell />
+                        <cell />
+                        <cell />
                     </row>
                 </header>
                 <footer>
@@ -480,10 +483,10 @@
                                 <text-property name="text">.</text-property>
                             </label>
                         </cell>
-                        <cell/>
-                        <cell/>
-                        <cell/>
-                        <cell/>
+                        <cell />
+                        <cell />
+                        <cell />
+                        <cell />
                     </row>
                 </footer>
             </group>
@@ -554,7 +557,8 @@
     </body>
     <list-property name="images">
         <structure>
-            <property name="name">C:\files\dev\code\jboss-4.0.1sp1\server\default\deploy\samples.war\images\quadrant-stores.gif</property>
+            <property name="name">
+                C:\files\dev\code\jboss-4.0.1sp1\server\default\deploy\samples.war\images\quadrant-stores.gif</property>
             <property name="data">
                 R0lGODlhAgFNAPcAAACMlKWlpaWlvaWlzqW9vaW9zqW93qXO572lpb29pb3e98bejM6lpc6lzs69pc69
                 3s7Ovc7n587n987n/95ja969pd7Opd7e997359739973/+fOpefevef39+f/9+f//++cAPfevffezvf/
@@ -616,7 +620,8 @@
             </property>
         </structure>
         <structure>
-            <property name="name">C:\files\dev\code\jboss-4.0.1sp1\server\default\deploy\samples.war\images\quadrant-stores.png</property>
+            <property name="name">
+                C:\files\dev\code\jboss-4.0.1sp1\server\default\deploy\samples.war\images\quadrant-stores.png</property>
             <property name="data">
                 iVBORw0KGgoAAAANSUhEUgAAAQIAAABNCAIAAADCVP0KAAAAK3RFWHRDcmVhdGlvbiBUaW1lAFN1biAx
                 IE1heSAyMDA1IDIyOjI4OjIyIC0wNTAw6yQiGAAAAAd0SU1FB9UFAgIeH7YDhoMAAAAJcEhZcwAACxIA
@@ -660,7 +665,8 @@
             </property>
         </structure>
         <structure>
-            <property name="name">C:\files\dev\code\jboss-4.0.1sp1\server\default\deploy\samples.war\images\quadrant-stores.jpg</property>
+            <property name="name">
+                C:\files\dev\code\jboss-4.0.1sp1\server\default\deploy\samples.war\images\quadrant-stores.jpg</property>
             <property name="data">
                 /9j/4AAQSkZJRgABAQIAHAAcAAD/2wBDAAIBAQIBAQICAgICAgICAwUDAwMDAwYEBAMFBwYHBwcGBwcI
                 CQsJCAgKCAcHCg0KCgsMDAwMBwkODw0MDgsMDAz/2wBDAQICAgMDAwYDAwYMCAcIDAwMDAwMDAwMDAwM
@@ -794,7 +800,8 @@
             </property>
         </structure>
         <structure>
-            <property name="name">C:\Documents and Settings\James Dixon\My Documents\Pentaho\stuff\quadrant-stores2.png</property>
+            <property name="name">C:\Documents and Settings\James Dixon\My
+                Documents\Pentaho\stuff\quadrant-stores2.png</property>
             <property name="data">
                 iVBORw0KGgoAAAANSUhEUgAAAQIAAABNCAIAAADCVP0KAAAAK3RFWHRDcmVhdGlvbiBUaW1lAFN1biAx
                 IE1heSAyMDA1IDIyOjI4OjIyIC0wNTAw6yQiGAAAAAd0SU1FB9UGDhYbC8f3aH8AAAAJcEhZcwAACvAA

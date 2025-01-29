@@ -831,7 +831,7 @@ public class KettleComponent extends ComponentBase implements RowListener {
             }
             RowMetaInterface row = trans.getTransMeta().getStepFields( stepName );
 
-            // create the metadata that the Pentaho result sets need
+            // create the metadata that the Tahopen result sets need
             String[] fieldNames = row.getFieldNames();
             String[][] columns = new String[1][fieldNames.length];
             for ( int column = 0; column < fieldNames.length; column++ ) {

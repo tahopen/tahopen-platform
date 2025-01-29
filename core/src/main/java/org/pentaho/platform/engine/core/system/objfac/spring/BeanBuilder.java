@@ -64,7 +64,7 @@ public class BeanBuilder implements FactoryBean {
             + " : "
             + attributes
             + "). Very likely a published "
-            + "pentaho bean is resolving itself. Ensure that the published attributes do not match that of the Pentaho "
+            + "pentaho bean is resolving itself. Ensure that the published attributes do not match that of the Tahopen "
             + "bean query. The system will attempt to find the next highest available bean, but at a performance "
             + "penilty" );
         // attempt to find a lower priority bean for them
@@ -78,7 +78,7 @@ public class BeanBuilder implements FactoryBean {
           return objectReferences.get( 1 ).getObject();
         } else {
           // there's only one bean, this is a fatal situation
-          throw new IllegalStateException( "Fatal Circular reference in Pentaho Bean ( " + type + " : " + attributes
+          throw new IllegalStateException( "Fatal Circular reference in Tahopen Bean ( " + type + " : " + attributes
               + ")" );
         }
 

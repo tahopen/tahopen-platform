@@ -36,7 +36,7 @@
 										<td width="100%">Subscription Error</td>
 									</tr>
 								</table>
-								<span class="">You cannot subscribe to this. Contact your Pentaho administrator to request subscription capability for this.</span>
+								<span class="">You cannot subscribe to this. Contact your Tahopen administrator to request subscription capability for this.</span>
 							</body>
 						</html>
 					</xsl:when>

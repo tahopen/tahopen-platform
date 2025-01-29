@@ -42,7 +42,7 @@ import java.util.List;
 
 /**
  * The <code>PluginGwtRpc</code> class is a specialized GWT-RPC which can be used
- * to handle remote calls to services of Pentaho Platform plugins, e.g. <code>/gwtrpc/serviceName</code>.
+ * to handle remote calls to services of Tahopen Platform plugins, e.g. <code>/gwtrpc/serviceName</code>.
  * <p>
  * Plugin GWT remote services must be registered in the current {@link IServiceManager} with the service type `gwt`.
  * <p>
@@ -53,14 +53,14 @@ import java.util.List;
  * &lt;webservice id="&lt;serviceName&gt;" type="gwt" class="&lt;my.remote.service.Class&gt;" /&gt;
  * </pre>
  * <p>
- * This service would become exposed under the Pentaho context URL <code>/gwtrpc/&lt;serviceName&gt;</code>.
+ * This service would become exposed under the Tahopen context URL <code>/gwtrpc/&lt;serviceName&gt;</code>.
  * The class <code>&lt;my.remote.service.Class&gt;</code> must be accessible in the plugin's class loader
  * and should implement the {@link com.google.gwt.user.client.rpc.RemoteService} interface.
  * <p>
  * Plugin remote services handle GWT serialization policies in one of two ways:
  * <p>
  * A static serialization policy can be defined in the plugin's <code>plugin.spring.xml</code>,
- * by registering with the Pentaho System a bean of a class extending from {@link SerializationPolicy},
+ * by registering with the Tahopen System a bean of a class extending from {@link SerializationPolicy},
  * such as {@link org.pentaho.platform.web.servlet.PentahoSerializationPolicy}.
  * This policy will be used whatever the <i>strong name</i> being requested.
  * For example:

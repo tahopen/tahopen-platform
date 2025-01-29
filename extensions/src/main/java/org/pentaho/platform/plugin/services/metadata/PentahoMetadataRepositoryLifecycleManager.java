@@ -41,7 +41,7 @@ import org.springframework.util.Assert;
 import java.io.Serializable;
 
 /**
- * Initializes folders used by Pentaho Metadata
+ * Initializes folders used by Tahopen Metadata
  * 
  * @author dkincade
  */

@@ -19,7 +19,7 @@
 # *******************************************************************************************
 
 echo --------------------------------------------------------------------------------------------
-echo The Pentaho BI Platform now contains a version checker that will notify you
+echo The Tahopen BI Platform now contains a version checker that will notify you
 echo when newer versions of the software are available. The version checker is enabled by default.
 echo For information on what the version checker does, why it is beneficial, and how it works see:
 echo https://pentaho-community.atlassian.net/wiki/display/ServerDoc2x/Version+Checker

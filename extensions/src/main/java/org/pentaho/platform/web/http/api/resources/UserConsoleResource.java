@@ -58,7 +58,7 @@ import static javax.ws.rs.core.Response.Status.FORBIDDEN;
 
 /**
  * The {@code UserConsoleResource} service provides both shared and user-specific state or settings related with the use
- * of the Pentaho User Console.
+ * of the Tahopen User Console.
  * <p>
  * The following operations provide access to User Console system settings (shared by all users):
  * <ul>

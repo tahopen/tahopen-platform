@@ -88,7 +88,7 @@ import java.util.regex.PatternSyntaxException;
  * not accessible to users. For example if the BI Platform is hosted in a DMZ.
  * <p>
  * <p>
- * For this class to be useful, both Pentaho servers should be using the same database repository.
+ * For this class to be useful, both Tahopen servers should be using the same database repository.
  * <p>
  * The sending server should be using the ProxyServlet enabled to generate the requests.
  * <p>
@@ -265,12 +265,12 @@ public class ProxyTrustingFilter implements Filter {
 
   protected void doFilterCore( HttpServletRequest request, String name ) throws ServletException {
     try {
-      // Create a Pentaho user session and make it current.
+      // Create a Tahopen user session and make it current.
       becomeUser( name );
 
       HttpSession httpSession = request.getSession();
 
-      // Associate the new Pentaho session with the HTTP session.
+      // Associate the new Tahopen session with the HTTP session.
       //
       // Despite that we're already setting the session in PentahoSessionHolder,
       // because HttpSessionPentahoSessionIntegrationFilter runs afterwards, as configured by default,

@@ -30,8 +30,8 @@ import java.util.Map;
 import java.util.Set;
 
 /**
- * Holder of information relating to the mappings between Pentaho Metadata Domain datasource types and
- * Pentaho Metadata Domain IDs.
+ * Holder of information relating to the mappings between Tahopen Metadata Domain datasource types and
+ * Tahopen Metadata Domain IDs.
  * <p></p>
  * Map :{
  *    "TYPE-1 ": ["domain-7", "domain-34"]

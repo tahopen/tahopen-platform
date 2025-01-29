@@ -38,7 +38,7 @@ import java.io.File;
 
 /**
  * The <code>SystemGwtRpc</code> class is a specialized GWT-RPC which can be used
- * to handle remote calls to services of the Pentaho Platform itself, e.g. <code>/ws/gwt/serviceName</code>.
+ * to handle remote calls to services of the Tahopen Platform itself, e.g. <code>/ws/gwt/serviceName</code>.
  * <p>
  * System GWT remote services must be registered in the Spring container file <code>pentahoServices.spring.xml</code>
  * as a bean whose identifier has the structure: <code>ws-gwt-&lt;serviceName&gt;</code>.
@@ -56,7 +56,7 @@ import java.io.File;
  * then the remote service would be exposed in the URL <code>/ws/gwt/products/manager</code>.
  * <p>
  * System remote services load GWT serialization policies from the directory of the root class loader
- * of the Pentaho web application.
+ * of the Tahopen web application.
  * <p>
  * For example, if the GWT module making the remote call lives at <code>/mantle</code>,
  * then the serialization policy file name, given its strong name, would be:
@@ -125,7 +125,7 @@ public class SystemGwtRpc extends AbstractGwtRpc {
 
     // This code was previously part of the GwtRpcProxyServlet class.
     // There were/are really no known uses of this class.
-    // The only declared System, GWT-RPC service is /ws/gwt/unifiedRepository and is not used by any Pentaho code.
+    // The only declared System, GWT-RPC service is /ws/gwt/unifiedRepository and is not used by any Tahopen code.
     //
 
     // No access to servlet config. Used to be passed, when this code was part of GwtRpcProxyServlet class.

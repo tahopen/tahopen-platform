@@ -1,7 +1,5 @@
 <?xml version="1.0"?>
-<!DOCTYPE web-app PUBLIC
-    "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
-    "http://java.sun.com/dtd/web-app_2_3.dtd">
+<!DOCTYPE web-app PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN" "http://java.sun.com/dtd/web-app_2_3.dtd">
 
 <web-app>
 
@@ -25,7 +23,8 @@
   <!-- [BEGIN HSQLDB DATABASES] -->
   <context-param>
     <param-name>hsqldb-databases</param-name>
-    <param-value>sampledata@../../data/hsqldb/sampledata,hibernate@../../data/hsqldb/hibernate,quartz@../../data/hsqldb/quartz</param-value>
+    <param-value>
+      sampledata@../../data/hsqldb/sampledata,hibernate@../../data/hsqldb/hibernate,quartz@../../data/hsqldb/quartz</param-value>
   </context-param>
   <!-- [END HSQLDB DATABASES] -->
 
@@ -41,16 +40,18 @@
   </filter>
 
   <filter>
-    <filter-name>Pentaho Path Decoding Filter</filter-name>
+    <filter-name>Tahopen Path Decoding Filter</filter-name>
     <filter-class>org.pentaho.platform.web.http.filters.PentahoPathDecodingFilter</filter-class>
   </filter>
 
-  <!-- Pentaho Request Context Filter is use to extract the Context Path from Servlet Request and store it in the PentahoRequestContextHolder.
-  This is needed to get the relative path to the server for online content generation and requesting of resources.
+  <!-- Tahopen Request Context Filter is use to extract the Context Path from Servlet Request and
+  store it in the PentahoRequestContextHolder.
+  This is needed to get the relative path to the server for online content generation and requesting
+  of resources.
    -->
 
-	<filter>
-    <filter-name>Pentaho Request Context Filter</filter-name>
+  <filter>
+    <filter-name>Tahopen Request Context Filter</filter-name>
     <filter-class>org.pentaho.platform.web.http.filters.PentahoRequestContextFilter</filter-class>
   </filter>
 
@@ -74,8 +75,7 @@
     <init-param>
       <param-name>initFailurePage</param-name>
       <param-value>InitFailure</param-value>
-      <description>This page is displayed if the PentahoSystem fails to
-        properly initialize.</description>
+      <description>This page is displayed if the PentahoSystem fails to properly initialize.</description>
     </init-param>
   </filter>
 
@@ -89,22 +89,23 @@
     </init-param>
   </filter>
 
-  <!--  Pentaho Web Context Filter checks to see if webcontext.js is being requested. It writes the content of webcontext.js
+  <!--  Tahopen Web Context Filter checks to see if webcontext.js is being requested. It writes the
+  content of webcontext.js
         webcontext.js contains value for CONTEXT_PATH and FULL_QUALIFIED_URL
     -->
   <filter>
-    <filter-name>Pentaho Web Context Filter</filter-name>
+    <filter-name>Tahopen Web Context Filter</filter-name>
     <filter-class>org.pentaho.platform.web.http.filters.PentahoWebContextFilter</filter-class>
   </filter>
 
   <!-- insert additional filters -->
 
   <filter-mapping>
-    <filter-name>Pentaho Path Decoding Filter</filter-name>
+    <filter-name>Tahopen Path Decoding Filter</filter-name>
     <url-pattern>/*</url-pattern>
   </filter-mapping>
 
-	<filter-mapping>
+  <filter-mapping>
     <filter-name>WEBAPP_ROOT URL rewrite filter</filter-name>
     <url-pattern>/*</url-pattern>
   </filter-mapping>
@@ -139,12 +140,12 @@
   </filter-mapping>
 
   <filter-mapping>
-    <filter-name>Pentaho Request Context Filter</filter-name>
+    <filter-name>Tahopen Request Context Filter</filter-name>
     <url-pattern>/*</url-pattern>
   </filter-mapping>
 
   <filter-mapping>
-    <filter-name>Pentaho Web Context Filter</filter-name>
+    <filter-name>Tahopen Web Context Filter</filter-name>
     <url-pattern>/*</url-pattern>
   </filter-mapping>
   <!-- insert additional filter-mappings -->
@@ -155,9 +156,9 @@
     <listener-class>org.pentaho.platform.web.http.context.SpringEnvironmentSetupListener</listener-class>
   </listener>
 
-    <listener>
-        <listener-class>org.apache.felix.http.proxy.ProxyListener</listener-class>
-    </listener>
+  <listener>
+    <listener-class>org.apache.felix.http.proxy.ProxyListener</listener-class>
+  </listener>
 
   <!--   enables session and request scoped object creation in Spring -->
   <listener>
@@ -333,7 +334,6 @@
   </servlet>
 
 
-
   <servlet>
     <servlet-name>jaxwsEndpoint-spring</servlet-name>
     <display-name>jaxwsEndpoint-spring</display-name>
@@ -357,20 +357,20 @@
   </servlet>
 
 
-    <servlet>
-        <servlet-name>proxy</servlet-name>
-        <servlet-class>org.apache.felix.http.proxy.ProxyServlet</servlet-class>
-        <load-on-startup>1</load-on-startup>
-    </servlet>
+  <servlet>
+    <servlet-name>proxy</servlet-name>
+    <servlet-class>org.apache.felix.http.proxy.ProxyServlet</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
 
   <!-- insert additional servlets -->
 
   <servlet-mapping>
-        <servlet-name>proxy</servlet-name>
-        <url-pattern>/osgi/*</url-pattern>
-    </servlet-mapping>
+    <servlet-name>proxy</servlet-name>
+    <url-pattern>/osgi/*</url-pattern>
+  </servlet-mapping>
 
-	<servlet-mapping>
+  <servlet-mapping>
     <servlet-name>Carte</servlet-name>
     <url-pattern>/kettle/*</url-pattern>
   </servlet-mapping>
@@ -420,7 +420,7 @@
     <url-pattern>/plugin/*</url-pattern>
   </servlet-mapping>
 
-  <!-- Pentaho Servlets -->
+  <!-- Tahopen Servlets -->
 
   <servlet-mapping>
     <servlet-name>ViewAction</servlet-name>
@@ -565,22 +565,22 @@
   </security-constraint>
 
   <security-role>
-		<description>Non-Existent Role - this prevents direct access to JSPs</description>
-		<role-name>PENTAHO_ADMIN</role-name>
-	</security-role>
+    <description>Non-Existent Role - this prevents direct access to JSPs</description>
+    <role-name>PENTAHO_ADMIN</role-name>
+  </security-role>
 
-	<error-page>
-		<error-code>404</error-code>
-		<location>/unavailable.html</location>
-	</error-page>
-	<error-page>
-		<error-code>403</error-code>
-		<location>/unavailable.html</location>
-	</error-page>
-	<error-page>
-		<error-code>500</error-code>
-		<location>/unavailable.html</location>
-	</error-page>
+  <error-page>
+    <error-code>404</error-code>
+    <location>/unavailable.html</location>
+  </error-page>
+  <error-page>
+    <error-code>403</error-code>
+    <location>/unavailable.html</location>
+  </error-page>
+  <error-page>
+    <error-code>500</error-code>
+    <location>/unavailable.html</location>
+  </error-page>
 
 
 </web-app>

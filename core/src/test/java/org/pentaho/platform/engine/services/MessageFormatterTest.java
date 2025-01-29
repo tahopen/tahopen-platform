@@ -106,7 +106,7 @@ public class MessageFormatterTest {
       MessageFormatter mf = new MessageFormatter();
       StringBuffer messageBuffer = new StringBuffer();
       mf.formatSuccessMessage( MessageFormatter.HTML_MIME_TYPE, runtimeCtx, messageBuffer, false );
-      assertEquals( "<html><head><title>Pentaho BI Platform - Start Action</title><link rel=\"stylesheet\" "
+      assertEquals( "<html><head><title>Tahopen BI Platform - Start Action</title><link rel=\"stylesheet\" "
           + "type=\"text/css\" href=\"/pentaho-style/active/default.css\"></head><body dir=\"LTR\"><table "
           + "cellspacing=\"10\"><tr><td class=\"portlet-section\" colspan=\"3\">Action Successful<hr "
           + "size=\"1\"/></td></tr><tr><td class=\"portlet-font\" valign=\"top\">Test=<img%20src=\"http://www"

@@ -75,10 +75,10 @@ import java.util.function.Function;
  * Concrete specialized classes exist that can handle GWT-RPC requests for services of:
  * <ul>
  *   <li>
- *     {@link PluginGwtRpc} - services of Pentaho Platform plugins, e.g. <code>/gwtrpc/serviceName</code>;
+ *     {@link PluginGwtRpc} - services of Tahopen Platform plugins, e.g. <code>/gwtrpc/serviceName</code>;
  *   </li>
  *   <li>
- *     {@link SystemGwtRpc} - services of the Pentaho Platform itself, e.g. <code>/ws/gwt/serviceName</code>.
+ *     {@link SystemGwtRpc} - services of the Tahopen Platform itself, e.g. <code>/ws/gwt/serviceName</code>.
  *   </li>
  * </ul>
  */

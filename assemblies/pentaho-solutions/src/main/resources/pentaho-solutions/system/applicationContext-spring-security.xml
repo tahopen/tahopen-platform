@@ -4,15 +4,15 @@
   | Application context containing FilterChainProxy.
   +-->
 <beans xmlns="http://www.springframework.org/schema/beans"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xmlns:util="http://www.springframework.org/schema/util"
-       xmlns:sec="http://www.springframework.org/schema/security"
-       xmlns:pen="http://www.pentaho.com/schema/pentaho-system"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
-                           http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.3.xsd
-                           http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-5.4.xsd
-                           http://www.pentaho.com/schema/pentaho-system http://www.pentaho.com/schema/pentaho-system.xsd"
-       default-lazy-init="true">
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:util="http://www.springframework.org/schema/util"
+  xmlns:sec="http://www.springframework.org/schema/security"
+  xmlns:pen="http://www.pentaho.com/schema/pentaho-system"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+                      http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.3.xsd
+                      http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-5.4.xsd
+                      http://www.pentaho.com/schema/pentaho-system http://www.pentaho.com/schema/pentaho-system.xsd"
+  default-lazy-init="true">
 
   <!-- ======================== FILTER CHAIN ======================= -->
   <!--
@@ -23,11 +23,11 @@
     <constructor-arg>
       <util:list>
         <sec:filter-chain pattern="/api/csrf/token"
-                          filters="csrfGateFilter,
+          filters="csrfGateFilter,
                                    corsFilter" />
 
         <sec:filter-chain pattern="/webservices/**"
-                          filters="csrfGateFilter,
+          filters="csrfGateFilter,
                                    corsFilter,
                                    securityContextHolderAwareRequestFilterForWS,
                                    httpSessionPentahoSessionContextIntegrationFilter,
@@ -40,7 +40,7 @@
                                    filterInvocationInterceptorForWS" />
 
         <sec:filter-chain pattern="/api/repos/**"
-                          filters="csrfGateFilter,
+          filters="csrfGateFilter,
                                    corsFilter,
                                    securityContextHolderAwareRequestFilterForWS,
                                    httpSessionPentahoSessionContextIntegrationFilter,
@@ -55,7 +55,7 @@
                                    preFlightFilter" />
 
         <sec:filter-chain pattern="/api/**"
-                          filters="csrfGateFilter,
+          filters="csrfGateFilter,
                                    corsFilter,
                                    securityContextHolderAwareRequestFilterForWS,
                                    httpSessionPentahoSessionContextIntegrationFilter,
@@ -69,7 +69,7 @@
                                    filterInvocationInterceptorForWS" />
 
         <sec:filter-chain pattern="/plugin/reporting/api/jobs/**"
-                          filters="csrfGateFilter,
+          filters="csrfGateFilter,
                                    corsFilter,
                                    securityContextHolderAwareRequestFilterForWS,
                                    httpSessionPentahoSessionContextIntegrationFilter,
@@ -84,7 +84,7 @@
                                    preFlightFilter" />
 
         <sec:filter-chain pattern="/plugin/**"
-                          filters="csrfGateFilter,
+          filters="csrfGateFilter,
                                    corsFilter,
                                    securityContextHolderAwareRequestFilterForWS,
                                    httpSessionPentahoSessionContextIntegrationFilter,
@@ -98,7 +98,7 @@
                                    filterInvocationInterceptorForWS" />
 
         <sec:filter-chain pattern="/**"
-                          filters="csrfGateFilter,
+          filters="csrfGateFilter,
                                    corsFilter,
                                    securityContextHolderAwareRequestFilter,
                                    httpSessionPentahoSessionContextIntegrationFilter,
@@ -119,12 +119,14 @@
 
   <!-- ======================== AUTHENTICATION ======================= -->
 
-  <bean id="defaultAuthenticationEventPublisher" class="org.springframework.security.authentication.DefaultAuthenticationEventPublisher"/>
+  <bean id="defaultAuthenticationEventPublisher"
+    class="org.springframework.security.authentication.DefaultAuthenticationEventPublisher" />
 
-  <bean id="authenticationManager" class="org.springframework.security.authentication.ProviderManager">
+  <bean id="authenticationManager"
+    class="org.springframework.security.authentication.ProviderManager">
     <constructor-arg>
       <util:list>
-        <pen:bean class="org.springframework.security.authentication.AuthenticationProvider"/>
+        <pen:bean class="org.springframework.security.authentication.AuthenticationProvider" />
         <ref bean="anonymousAuthenticationProvider" />
       </util:list>
     </constructor-arg>
@@ -135,24 +137,26 @@
 
   <!-- Automatically receives AuthenticationEvent messages -->
   <bean id="loggerListener" class="org.pentaho.platform.engine.security.event.PentahoLoggerListener" />
-  <bean id="basicProcessingFilter" class="org.pentaho.platform.web.http.security.PentahoBasicProcessingFilter">
+  <bean id="basicProcessingFilter"
+    class="org.pentaho.platform.web.http.security.PentahoBasicProcessingFilter">
     <constructor-arg ref="authenticationManager" />
     <constructor-arg ref="basicProcessingFilterEntryPoint" />
   </bean>
   <bean id="basicAuthPostFilter"
-        class="org.pentaho.platform.web.http.security.PentahoBasicPostProcessingFilter">
+    class="org.pentaho.platform.web.http.security.PentahoBasicPostProcessingFilter">
   </bean>
 
 
   <bean id="basicProcessingFilterEntryPoint"
-        class="org.pentaho.platform.web.http.security.PentahoBasicAuthenticationEntryPoint">
-    <property name="realmName" value="Pentaho Realm" />
+    class="org.pentaho.platform.web.http.security.PentahoBasicAuthenticationEntryPoint">
+    <property name="realmName" value="Tahopen Realm" />
   </bean>
 
-  <!-- custom Pentaho begin -->
+  <!-- custom Tahopen begin -->
 
   <!-- replaces Spring's default ApplicationEventMulticaster; do not change bean id -->
-  <bean id="applicationEventMulticaster" class="org.pentaho.platform.engine.security.event.OrderedApplicationEventMulticaster">
+  <bean id="applicationEventMulticaster"
+    class="org.pentaho.platform.engine.security.event.OrderedApplicationEventMulticaster">
     <property name="taskExecutor">
       <bean class="org.springframework.core.task.SyncTaskExecutor" />
     </property>
@@ -160,17 +164,18 @@
 
   <!-- next two beans replace SecurityStartupFilter -->
   <bean class="org.pentaho.platform.engine.security.event.PentahoAuthenticationSuccessListener" />
-  <bean class="org.pentaho.platform.engine.security.event.PentahoSessionStartupAuthenticationSuccessListener" />
+  <bean
+    class="org.pentaho.platform.engine.security.event.PentahoSessionStartupAuthenticationSuccessListener" />
 
   <bean id="httpSessionReuseDetectionFilter"
-        class="org.pentaho.platform.web.http.security.HttpSessionReuseDetectionFilter">
+    class="org.pentaho.platform.web.http.security.HttpSessionReuseDetectionFilter">
     <property name="filterProcessesUrl" value="/j_spring_security_check" />
     <property name="sessionReuseDetectedUrl" value="/Login?login_error=2" />
   </bean>
 
 
   <bean id="requestParameterProcessingFilter"
-        class="org.pentaho.platform.web.http.security.RequestParameterAuthenticationFilter">
+    class="org.pentaho.platform.web.http.security.RequestParameterAuthenticationFilter">
     <property name="authenticationManager">
       <ref bean="authenticationManager" />
     </property>
@@ -179,13 +184,14 @@
     </property>
   </bean>
   <bean id="requestParameterProcessingFilterEntryPoint"
-        class="org.pentaho.platform.web.http.security.RequestParameterFilterEntryPoint" />
+    class="org.pentaho.platform.web.http.security.RequestParameterFilterEntryPoint" />
 
   <bean id="httpSessionPentahoSessionContextIntegrationFilter"
-        class="org.pentaho.platform.web.http.filters.HttpSessionPentahoSessionIntegrationFilter" />
+    class="org.pentaho.platform.web.http.filters.HttpSessionPentahoSessionIntegrationFilter" />
 
-  <!-- custom Pentaho end -->
-  <bean id="anonymousProcessingFilter" class="org.springframework.security.web.authentication.AnonymousAuthenticationFilter">
+  <!-- custom Tahopen end -->
+  <bean id="anonymousProcessingFilter"
+    class="org.springframework.security.web.authentication.AnonymousAuthenticationFilter">
     <constructor-arg value="foobar" />
     <constructor-arg value="anonymousUser" />
     <constructor-arg>
@@ -197,31 +203,38 @@
     </constructor-arg>
   </bean>
   <bean id="anonymousAuthenticationProvider"
-        class="org.springframework.security.authentication.AnonymousAuthenticationProvider">
+    class="org.springframework.security.authentication.AnonymousAuthenticationProvider">
     <constructor-arg value="foobar" />
   </bean>
   <bean id="httpSessionContextIntegrationFilter"
-        class="org.springframework.security.web.context.SecurityContextPersistenceFilter" />
-  <bean id="logoutFilter" class="org.springframework.security.web.authentication.logout.LogoutFilter">
+    class="org.springframework.security.web.context.SecurityContextPersistenceFilter" />
+  <bean id="logoutFilter"
+    class="org.springframework.security.web.authentication.logout.LogoutFilter">
     <constructor-arg value="/index.jsp" />
     <!-- URL redirected to after logout -->
     <constructor-arg>
       <util:list>
         <bean class="org.pentaho.platform.web.http.security.PentahoLogoutHandler" />
-        <bean class="org.springframework.security.web.authentication.logout.SecurityContextLogoutHandler" />
+        <bean
+          class="org.springframework.security.web.authentication.logout.SecurityContextLogoutHandler" />
       </util:list>
     </constructor-arg>
     <property name="filterProcessesUrl" value="/Logout" />
   </bean>
   <bean id="securityContextHolderAwareRequestFilter"
-        class="org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter" />
+    class="org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter" />
 
-  <bean id="securityContextHolderAwareRequestFilterForWS" class="org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter">
-    <!-- SecurityContextHolderAwareRequestFilter in latest spring security has 2 behaviours, for pre and post servlet 3: in pre-servlet 3,
-      the wrapper class used by default is SecurityContextHolderAwareRequestWrapper; this means we no longer need to set it as a 'wrapperClass'
+  <bean id="securityContextHolderAwareRequestFilterForWS"
+    class="org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter">
+    <!-- SecurityContextHolderAwareRequestFilter in latest spring security has 2 behaviours, for pre
+    and post servlet 3: in pre-servlet 3,
+      the wrapper class used by default is SecurityContextHolderAwareRequestWrapper; this means we no
+    longer need to set it as a 'wrapperClass'
       property ( this property no longer exists, anyway ) -->
-    <!-- hhttps://github.com/spring-projects/spring-security/blob/4.1.3.RELEASE/web/src/main/java/org/springframework/security/web/servletapi/SecurityContextHolderAwareRequestFilter.java#L45-L47 -->
-    <!-- <property name="wrapperClass" value="org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestWrapper" /> -->
+    <!--
+    hhttps://github.com/spring-projects/spring-security/blob/4.1.3.RELEASE/web/src/main/java/org/springframework/security/web/servletapi/SecurityContextHolderAwareRequestFilter.java#L45-L47 -->
+    <!-- <property name="wrapperClass"
+    value="org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestWrapper" /> -->
   </bean>
 
   <!-- Excel pre-flight filter -->
@@ -231,61 +244,69 @@
   <!--
       ===================== HTTP REQUEST SECURITY ====================
   -->
-  <bean id="exceptionTranslationFilter" class="org.springframework.security.web.access.ExceptionTranslationFilter">
-    <constructor-arg ref="authenticationProcessingFilterEntryPoint"/>
+  <bean id="exceptionTranslationFilter"
+    class="org.springframework.security.web.access.ExceptionTranslationFilter">
+    <constructor-arg ref="authenticationProcessingFilterEntryPoint" />
     <property name="accessDeniedHandler">
       <bean class="org.springframework.security.web.access.AccessDeniedHandlerImpl" />
     </property>
   </bean>
 
-  <bean id="exceptionTranslationFilterForWS" class="org.springframework.security.web.access.ExceptionTranslationFilter">
-    <constructor-arg ref="basicProcessingFilterEntryPoint"/>
+  <bean id="exceptionTranslationFilterForWS"
+    class="org.springframework.security.web.access.ExceptionTranslationFilter">
+    <constructor-arg ref="basicProcessingFilterEntryPoint" />
     <property name="accessDeniedHandler">
       <bean class="org.springframework.security.web.access.AccessDeniedHandlerImpl" />
     </property>
   </bean>
 
-  <bean id="sas" class="org.springframework.security.web.authentication.session.ChangeSessionIdAuthenticationStrategy" />
+  <bean id="sas"
+    class="org.springframework.security.web.authentication.session.ChangeSessionIdAuthenticationStrategy" />
 
-  <bean id="loginAttemptService" class="org.pentaho.platform.engine.security.LoginAttemptService" scope="singleton">
+  <bean id="loginAttemptService" class="org.pentaho.platform.engine.security.LoginAttemptService"
+    scope="singleton">
     <constructor-arg name="maxAttempt" value="10"></constructor-arg>
     <constructor-arg name="cacheMinutes" value="1440"></constructor-arg>
   </bean>
 
   <bean id="preventBruteForceAuthenticationFailureListener"
-        class="org.pentaho.platform.web.http.security.PreventBruteForceAuthenticationFailureListener" >
-    <constructor-arg ref="loginAttemptService"/>
+    class="org.pentaho.platform.web.http.security.PreventBruteForceAuthenticationFailureListener">
+    <constructor-arg ref="loginAttemptService" />
   </bean>
 
   <bean id="authenticationProcessingFilter"
-        class="org.pentaho.platform.web.http.security.PreventBruteForceUsernamePasswordAuthenticationFilter">
-    <constructor-arg ref="loginAttemptService"/>
+    class="org.pentaho.platform.web.http.security.PreventBruteForceUsernamePasswordAuthenticationFilter">
+    <constructor-arg ref="loginAttemptService" />
     <property name="authenticationManager">
       <ref bean="authenticationManager" />
     </property>
     <property name="authenticationSuccessHandler">
-      <bean class="org.pentaho.platform.web.http.security.PreventBruteForceSavedRequestAwareAuthenticationSuccessHandler">
-        <constructor-arg ref="loginAttemptService"/>
+      <bean
+        class="org.pentaho.platform.web.http.security.PreventBruteForceSavedRequestAwareAuthenticationSuccessHandler">
+        <constructor-arg ref="loginAttemptService" />
         <property name="defaultTargetUrl" value="/Home" />
       </bean>
     </property>
     <property name="authenticationFailureHandler">
-      <bean class="org.springframework.security.web.authentication.SimpleUrlAuthenticationFailureHandler">
+      <bean
+        class="org.springframework.security.web.authentication.SimpleUrlAuthenticationFailureHandler">
         <constructor-arg type="java.lang.String" value="/Login?login_error=1" />
       </bean>
     </property>
     <property name="filterProcessesUrl" value="/j_spring_security_check" />
     <property name="usernameParameter" value="j_username" />
     <property name="passwordParameter" value="j_password" />
-	<property name="sessionAuthenticationStrategy" ref="sas" />
+    <property name="sessionAuthenticationStrategy" ref="sas" />
   </bean>
 
-  <bean id="authenticationProcessingFilterEntryPoint" class="org.springframework.security.web.authentication.LoginUrlAuthenticationEntryPoint">
+  <bean id="authenticationProcessingFilterEntryPoint"
+    class="org.springframework.security.web.authentication.LoginUrlAuthenticationEntryPoint">
     <constructor-arg value="/Login" />
     <property name="forceHttps" value="false" />
   </bean>
 
-  <bean id="httpRequestAccessDecisionManager" class="org.springframework.security.access.vote.AffirmativeBased">
+  <bean id="httpRequestAccessDecisionManager"
+    class="org.springframework.security.access.vote.AffirmativeBased">
     <constructor-arg>
       <util:list>
         <ref bean="roleVoter" />
@@ -295,7 +316,8 @@
   </bean>
 
 
-  <bean id="filterInvocationInterceptor" class="org.springframework.security.web.access.intercept.FilterSecurityInterceptor">
+  <bean id="filterInvocationInterceptor"
+    class="org.springframework.security.web.access.intercept.FilterSecurityInterceptor">
     <property name="authenticationManager" ref="authenticationManager" />
     <property name="accessDecisionManager" ref="httpRequestAccessDecisionManager" />
 
@@ -305,23 +327,32 @@
         patterns not be available through a web call.
     -->
     <property name="securityMetadataSource">
-      <!-- http://stackoverflow.com/questions/30099851/spring-security-samples-preauth-xml-example-fails-to-run#answer-30105317 -->
+      <!--
+      http://stackoverflow.com/questions/30099851/spring-security-samples-preauth-xml-example-fails-to-run#answer-30105317 -->
       <sec:filter-security-metadata-source request-matcher="ciRegex" use-expressions="false">
         <sec:intercept-url pattern="\A/osgi/cxf/hadoop-cluster/runTests.*\Z" access="Authenticated" />
         <sec:intercept-url pattern="\A/osgi/cxf/hadoop-cluster/.*\Z" access="Administrator" />
-        <sec:intercept-url pattern="\A/content/common-ui/resources/web/(.+/)*.+\.js.*\Z" access="Anonymous,Authenticated" />
-        <sec:intercept-url pattern="\A/[^\?]*(require)(-js)?(-cfg)?.js(\?.*)?\Z" access="Anonymous,Authenticated" />
-        <sec:intercept-url pattern="\A/content/data-access/resources/gwt/.*css\Z" access="Anonymous,Authenticated" />
+        <sec:intercept-url pattern="\A/content/common-ui/resources/web/(.+/)*.+\.js.*\Z"
+          access="Anonymous,Authenticated" />
+        <sec:intercept-url pattern="\A/[^\?]*(require)(-js)?(-cfg)?.js(\?.*)?\Z"
+          access="Anonymous,Authenticated" />
+        <sec:intercept-url pattern="\A/content/data-access/resources/gwt/.*css\Z"
+          access="Anonymous,Authenticated" />
         <sec:intercept-url pattern="\A/webcontext.js.*\Z" access="Anonymous,Authenticated" />
-        <sec:intercept-url pattern="\A/content/common-ui/resources/web/cache/cache-service.js.*\Z" access="Anonymous,Authenticated" />
+        <sec:intercept-url pattern="\A/content/common-ui/resources/web/cache/cache-service.js.*\Z"
+          access="Anonymous,Authenticated" />
         <sec:intercept-url pattern="\A/cacheexpirationservice.*\Z" access="Anonymous,Authenticated" />
         <sec:intercept-url pattern="\A/js/theme.*\Z" access="Anonymous,Authenticated" />
-        <sec:intercept-url pattern="\A/content/common-ui/resources/themes/.*\Z" access="Anonymous,Authenticated" />
-        <sec:intercept-url pattern="\A/content/common-ui/resources/web/dojo/djconfig.js.*\Z" access="Anonymous,Authenticated" />
-        <sec:intercept-url pattern="\A/content/pentaho-mobile/resources/.*\Z" access="Anonymous,Authenticated" />
+        <sec:intercept-url pattern="\A/content/common-ui/resources/themes/.*\Z"
+          access="Anonymous,Authenticated" />
+        <sec:intercept-url pattern="\A/content/common-ui/resources/web/dojo/djconfig.js.*\Z"
+          access="Anonymous,Authenticated" />
+        <sec:intercept-url pattern="\A/content/pentaho-mobile/resources/.*\Z"
+          access="Anonymous,Authenticated" />
         <sec:intercept-url pattern="\A/docs/.*\Z" access="Anonymous,Authenticated" />
         <sec:intercept-url pattern="\A/mantlelogin/.*\Z" access="Anonymous,Authenticated" />
-        <sec:intercept-url pattern="\A/mantle/mantleloginservice/*\Z" access="Anonymous,Authenticated" />
+        <sec:intercept-url pattern="\A/mantle/mantleloginservice/*\Z"
+          access="Anonymous,Authenticated" />
         <sec:intercept-url pattern="\A/mantle/.*\Z" access="Authenticated" />
         <sec:intercept-url pattern="\A/welcome/.*\Z" access="Anonymous,Authenticated" />
         <sec:intercept-url pattern="\A/public/.*\Z" access="Anonymous,Authenticated" />
@@ -340,8 +371,12 @@
         <sec:intercept-url pattern="\A/scheduleradmin.*\Z" access="Admin" />
         <sec:intercept-url pattern="\A/publish.*\Z" access="Admin" />
         <sec:intercept-url pattern="\A/logout.*\Z" access="Anonymous" />
-        <sec:intercept-url pattern="\A/solutionrepositoryservice.*component=delete.*solution=system.*\Z" access="Nobody" />
-        <sec:intercept-url pattern="\A/solutionrepositoryservice.*solution=system.*component=delete.*\Z" access="Nobody" />
+        <sec:intercept-url
+          pattern="\A/solutionrepositoryservice.*component=delete.*solution=system.*\Z"
+          access="Nobody" />
+        <sec:intercept-url
+          pattern="\A/solutionrepositoryservice.*solution=system.*component=delete.*\Z"
+          access="Nobody" />
         <sec:intercept-url pattern=".*system.*pentaho.xml.*" access="Nobody" />
         <sec:intercept-url pattern=".*system.*applicationcontext.*.xml.*" access="Nobody" />
         <sec:intercept-url pattern=".*system.*pentahoobjects.spring.xml.*" access="Nobody" />
@@ -363,38 +398,57 @@
         <sec:intercept-url pattern=".*system.*smtp-email/.*" access="Nobody" />
         <sec:intercept-url pattern=".*system.*ui/.*" access="Nobody" />
         <sec:intercept-url pattern=".*system.*\.\./.*" access="Nobody" />
-        <sec:intercept-url pattern="\A/plugin/reporting/api/jobs/.*\Z" access="Anonymous,Authenticated" method="OPTIONS" />
-        <sec:intercept-url pattern="\A/plugin/reporting/api/jobs/.*\Z" access="Anonymous,Authenticated" method="HEAD" />
-        <sec:intercept-url pattern="\A/api/repos/.*\Z" access="Anonymous,Authenticated" method="OPTIONS" />
-        <sec:intercept-url pattern="\A/api/repos/.*\Z" access="Anonymous,Authenticated" method="HEAD" />
+        <sec:intercept-url pattern="\A/plugin/reporting/api/jobs/.*\Z"
+          access="Anonymous,Authenticated" method="OPTIONS" />
+        <sec:intercept-url pattern="\A/plugin/reporting/api/jobs/.*\Z"
+          access="Anonymous,Authenticated" method="HEAD" />
+        <sec:intercept-url pattern="\A/api/repos/.*\Z" access="Anonymous,Authenticated"
+          method="OPTIONS" />
+        <sec:intercept-url pattern="\A/api/repos/.*\Z" access="Anonymous,Authenticated"
+          method="HEAD" />
         <sec:intercept-url pattern="\A/.*\Z" access="Authenticated" />
       </sec:filter-security-metadata-source>
     </property>
   </bean>
 
 
-  <bean id="filterInvocationInterceptorForWS" class="org.springframework.security.web.access.intercept.FilterSecurityInterceptor">
+  <bean id="filterInvocationInterceptorForWS"
+    class="org.springframework.security.web.access.intercept.FilterSecurityInterceptor">
     <property name="authenticationManager" ref="authenticationManager" />
     <property name="accessDecisionManager" ref="httpRequestAccessDecisionManager" />
 
     <!-- allow anyone to see the wsdl of various services -->
     <property name="securityMetadataSource">
-      <!-- http://stackoverflow.com/questions/30099851/spring-security-samples-preauth-xml-example-fails-to-run#answer-30105317 -->
+      <!--
+      http://stackoverflow.com/questions/30099851/spring-security-samples-preauth-xml-example-fails-to-run#answer-30105317 -->
       <sec:filter-security-metadata-source request-matcher="ciRegex" use-expressions="false">
-        <sec:intercept-url pattern="\A/webservices/unifiedrepository\?wsdl.*\Z" access="Anonymous,Authenticated" />
-        <sec:intercept-url pattern="\A/webservices/userrolelistservice\?wsdl.*\Z" access="Anonymous,Authenticated" />
-        <sec:intercept-url pattern="\A/webservices/userroleservice\?wsdl.*\Z" access="Anonymous,Authenticated" />
-        <sec:intercept-url pattern="\A/webservices/authorizationpolicy\?wsdl.*\Z" access="Anonymous,Authenticated" />
-        <sec:intercept-url pattern="\A/webservices/rolebindingdao\?wsdl.*\Z" access="Anonymous,Authenticated" />
-        <sec:intercept-url pattern="\A/webservices/scheduler\?wsdl.*\Z" access="Anonymous,Authenticated" />
-        <sec:intercept-url pattern="\A/webservices/repositorysync\?wsdl.*\Z" access="Anonymous,Authenticated" />
-        <sec:intercept-url pattern="\A/webservices/datasourcemgmtservice\?wsdl.*\Z" access="Anonymous,Authenticated" />
+        <sec:intercept-url pattern="\A/webservices/unifiedrepository\?wsdl.*\Z"
+          access="Anonymous,Authenticated" />
+        <sec:intercept-url pattern="\A/webservices/userrolelistservice\?wsdl.*\Z"
+          access="Anonymous,Authenticated" />
+        <sec:intercept-url pattern="\A/webservices/userroleservice\?wsdl.*\Z"
+          access="Anonymous,Authenticated" />
+        <sec:intercept-url pattern="\A/webservices/authorizationpolicy\?wsdl.*\Z"
+          access="Anonymous,Authenticated" />
+        <sec:intercept-url pattern="\A/webservices/rolebindingdao\?wsdl.*\Z"
+          access="Anonymous,Authenticated" />
+        <sec:intercept-url pattern="\A/webservices/scheduler\?wsdl.*\Z"
+          access="Anonymous,Authenticated" />
+        <sec:intercept-url pattern="\A/webservices/repositorysync\?wsdl.*\Z"
+          access="Anonymous,Authenticated" />
+        <sec:intercept-url pattern="\A/webservices/datasourcemgmtservice\?wsdl.*\Z"
+          access="Anonymous,Authenticated" />
         <sec:intercept-url pattern="\A/webservices/.*\Z" access="Authenticated" />
-        <sec:intercept-url pattern="\A/plugin/reporting/api/jobs/.*\Z" access="Anonymous,Authenticated" method="OPTIONS" />
-        <sec:intercept-url pattern="\A/plugin/reporting/api/jobs/.*\Z" access="Anonymous,Authenticated" method="HEAD" />
-        <sec:intercept-url pattern="\A/api/repos/.*\Z" access="Anonymous,Authenticated" method="OPTIONS" />
-        <sec:intercept-url pattern="\A/api/repos/.*\Z" access="Anonymous,Authenticated" method="HEAD" />
-        <sec:intercept-url pattern="\A/api/[^\?]*(require)(-js)?(-cfg)?.js(\?.*)?\Z" access="Anonymous,Authenticated" />
+        <sec:intercept-url pattern="\A/plugin/reporting/api/jobs/.*\Z"
+          access="Anonymous,Authenticated" method="OPTIONS" />
+        <sec:intercept-url pattern="\A/plugin/reporting/api/jobs/.*\Z"
+          access="Anonymous,Authenticated" method="HEAD" />
+        <sec:intercept-url pattern="\A/api/repos/.*\Z" access="Anonymous,Authenticated"
+          method="OPTIONS" />
+        <sec:intercept-url pattern="\A/api/repos/.*\Z" access="Anonymous,Authenticated"
+          method="HEAD" />
+        <sec:intercept-url pattern="\A/api/[^\?]*(require)(-js)?(-cfg)?.js(\?.*)?\Z"
+          access="Anonymous,Authenticated" />
         <sec:intercept-url pattern="\A/api/.*\Z" access="Authenticated" />
         <sec:intercept-url pattern="\A/plugin/.*\Z" access="Authenticated" />
       </sec:filter-security-metadata-source>
@@ -420,14 +474,17 @@
     </property>
   </bean>
 
-  <bean id="preAuthenticatedSecurityFilter" class="org.pentaho.platform.web.http.security.PreAuthenticatedFilter">
-    <constructor-arg ref="PreAuthenticatedSessionHolder"/>
+  <bean id="preAuthenticatedSecurityFilter"
+    class="org.pentaho.platform.web.http.security.PreAuthenticatedFilter">
+    <constructor-arg ref="PreAuthenticatedSessionHolder" />
   </bean>
 
-  <bean id="httpSessionSecurityContextRepository" class="org.springframework.security.web.context.HttpSessionSecurityContextRepository"/>
-  <bean id="sessionMgmtFilter" class="org.springframework.security.web.session.SessionManagementFilter">
-    <constructor-arg ref="httpSessionSecurityContextRepository"/>
-    <constructor-arg ref="sas"/>
+  <bean id="httpSessionSecurityContextRepository"
+    class="org.springframework.security.web.context.HttpSessionSecurityContextRepository" />
+  <bean id="sessionMgmtFilter"
+    class="org.springframework.security.web.session.SessionManagementFilter">
+    <constructor-arg ref="httpSessionSecurityContextRepository" />
+    <constructor-arg ref="sas" />
   </bean>
 
   <bean id="mdcFilter" class="org.pentaho.platform.web.http.filters.PentahoMDCFilter" />

@@ -54,7 +54,7 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * An implementation of {@link IPluginProvider} that searches for plugin.xml files in the Pentaho system path and
+ * An implementation of {@link IPluginProvider} that searches for plugin.xml files in the Tahopen system path and
  * instantiates {@link IPlatformPlugin}s from the information in those files.
  * 
  * @author aphillips

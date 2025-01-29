@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<project
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+  xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>pentaho</groupId>
@@ -18,7 +20,7 @@
     <maven-war-plugin.version>3.0.0</maven-war-plugin.version>
     <plugins.directory>plugins</plugins.directory>
     <pentaho-server.solutions.directory>${pentaho-server.directory}/pentaho-solutions</pentaho-server.solutions.directory>
-    <impl.title>Pentaho BI Platform Community Edition</impl.title>
+    <impl.title>Tahopen BI Platform Community Edition</impl.title>
     <pentaho-server.system.directory>${pentaho-server.solutions.directory}/system</pentaho-server.system.directory>
     <pentaho-server.plugins.directory>${pentaho-server.system.directory}</pentaho-server.plugins.directory>
     <pentaho-server.kettle.plugins.directory>${pentaho-server.system.directory}/kettle/plugins</pentaho-server.kettle.plugins.directory>

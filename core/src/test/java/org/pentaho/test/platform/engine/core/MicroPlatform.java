@@ -141,7 +141,7 @@ public class MicroPlatform extends PentahoSystemBoot {
   }
 
   /**
-   * Sets the StandaloneSpringPentahoObjectFactory for the Pentaho platform by xml path
+   * Sets the StandaloneSpringPentahoObjectFactory for the Tahopen platform by xml path
    * 
    * @return
    */

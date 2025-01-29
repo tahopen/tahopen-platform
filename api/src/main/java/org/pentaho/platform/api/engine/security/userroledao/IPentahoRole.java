@@ -25,7 +25,7 @@ import org.pentaho.platform.api.mt.ITenant;
 import java.io.Serializable;
 
 /**
- * A role in the Pentaho platform. Contains a set of users to which the role is assigned. A role is also known as
+ * A role in the Tahopen platform. Contains a set of users to which the role is assigned. A role is also known as
  * an authority.
  * 
  * @author mlowery

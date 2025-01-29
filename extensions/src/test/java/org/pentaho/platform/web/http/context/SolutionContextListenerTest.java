@@ -148,12 +148,12 @@ public class SolutionContextListenerTest {
 
       solutionContextListener.showInitializationMessage( true, "http://localhost:8080/pentaho" );
       assertTrue( captureStdOut.toString()
-        .contains( "Pentaho BI Platform server is ready. (version info) Fully Qualified Server Url = "
+        .contains( "Tahopen BI Platform server is ready. (version info) Fully Qualified Server Url = "
           + "http://localhost:8080/pentaho, Solution Path = solution-path" ) );
 
       solutionContextListener.showInitializationMessage( false, "http://localhost:8080/pentaho" );
       assertTrue( captureStdErr.toString().contains(
-        "Pentaho BI Platform server failed to properly initialize. The system will not be available for requests. "
+        "Tahopen BI Platform server failed to properly initialize. The system will not be available for requests. "
           + "(version info) Fully Qualified Server Url = http://localhost:8080/pentaho, Solution Path = solution-path" ) );
     } finally {
       LocaleHelper.setThreadLocaleOverride( null );

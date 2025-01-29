@@ -372,7 +372,7 @@ public class CommandLineProcessor {
   /**
    * Used only for REST Jersey calls
    *
-   * @param contextURL The Pentaho server web application base URL.
+   * @param contextURL The Tahopen server web application base URL.
    */
   private void initRestService( String contextURL ) throws ParseException, KettleException, URISyntaxException {
 

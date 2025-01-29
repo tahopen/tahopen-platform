@@ -345,7 +345,7 @@ public class HttpSessionPentahoSessionIntegrationFilter implements Filter, Initi
    *
    * @param pentahoSession
    *          the Hitachi Vantara session obtained from the PentahoSessionHolder after the request has been processed by the
-   *          filter chain. PentahoSessionHolder.getSession() cannot be used to obtain the Pentaho session as it has
+   *          filter chain. PentahoSessionHolder.getSession() cannot be used to obtain the Tahopen session as it has
    *          already been cleared by the time this method is called.
    * @param request
    *          the request object (used to obtain the session, if one exists).
@@ -372,19 +372,19 @@ public class HttpSessionPentahoSessionIntegrationFilter implements Filter, Initi
           if ( logger.isDebugEnabled() ) {
             logger.debug( "The HttpSession is currently null, and the " + this.getClass().getSimpleName()
               + " is prohibited from creating an HttpSession "
-              + "(because the allowSessionCreation property is false) - Pentaho session thus not "
+              + "(because the allowSessionCreation property is false) - Tahopen session thus not "
               + "stored for next request" );
           }
         } else if ( pentahoSession != null ) {
           if ( logger.isDebugEnabled() ) {
-            logger.debug( "HttpSession being created as Pentaho session is non-null" );
+            logger.debug( "HttpSession being created as Tahopen session is non-null" );
           }
 
           httpSession = safeGetSession( request, true );
 
         } else {
           if ( logger.isDebugEnabled() ) {
-            logger.debug( "HttpSession is null, and Pentaho session is null; "
+            logger.debug( "HttpSession is null, and Tahopen session is null; "
               + "not creating HttpSession or storing SecurityContextHolder contents" );
           }
         }
@@ -398,7 +398,7 @@ public class HttpSessionPentahoSessionIntegrationFilter implements Filter, Initi
       httpSession.setAttribute( PentahoSystem.PENTAHO_SESSION_KEY, pentahoSession );
 
       if ( logger.isDebugEnabled() ) {
-        logger.debug( "Pentaho session stored to HttpSession: '" + pentahoSession + "'" );
+        logger.debug( "Tahopen session stored to HttpSession: '" + pentahoSession + "'" );
       }
 
     }

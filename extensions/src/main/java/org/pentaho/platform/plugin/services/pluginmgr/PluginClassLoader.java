@@ -35,7 +35,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * A custom implementation of {@link URLClassLoader} for Pentaho Platform Plugins. It is used to load plugin jars and
+ * A custom implementation of {@link URLClassLoader} for Tahopen Platform Plugins. It is used to load plugin jars and
  * classes and aids in retrieving resources by providing a root directory to search for resources related to plugins.
  * <p>
  * Note: {@link PluginClassLoader} will search for jar files in a 'lib' subdirectory under the pluginDir provided in the

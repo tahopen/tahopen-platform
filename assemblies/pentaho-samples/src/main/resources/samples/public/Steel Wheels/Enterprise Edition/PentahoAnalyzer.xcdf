@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <cdf>
-	<title>Pentaho Analyzer</title>
+	<title>Tahopen Analyzer</title>
 	<author>Pentaho</author>
-	<description>Pentaho Analyzer description</description>
+	<description>Tahopen Analyzer description</description>
 	<icon></icon>
 	<template>PentahoAnalyzer.html</template>
 	<style>clean</style>

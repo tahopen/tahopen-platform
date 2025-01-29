@@ -32,7 +32,7 @@ import java.util.regex.Pattern;
 import static org.pentaho.platform.plugin.services.importexport.PentahoMetadataFileInfo.FileType.UNKNOWN;
 
 /**
- * Parser for potential Pentaho Metadata Filenames from the old repository
+ * Parser for potential Tahopen Metadata Filenames from the old repository
  * 
  * @author <a href="mailto:dkincade@pentaho.com">David M. Kincade</a>
  */

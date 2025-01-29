@@ -313,7 +313,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 <!--Header-->
   <div id="header">
     <div id="title"><%=Messages.getInstance().getString("UI.PUC.DOCS.HEADER.TITLE")%></div>
-    <div id="logo"><a href="http://www.pentaho.com"><img src="logo.png" alt="Pentaho Logo" border="0"/></a></div>
+    <div id="logo"><a href="http://www.pentaho.com"><img src="logo.png" alt="Tahopen Logo" border="0"/></a></div>
   </div>
 
   <!--Featured Content-->
@@ -325,7 +325,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
           <td><%=Messages.getInstance().getString("UI.PUC.DOCS.HEADER")%></td>
         </tr>
         <tr>
-          <td valign="top" class="bannercontent"><%=Messages.getInstance().getString("UI.PUC.DOCS.HEADER.VISIT_INFO", "<a href=\"${doc.base.url}\" target=\"_blank\">Pentaho InfoCenter</a>")%><br /></td>
+          <td valign="top" class="bannercontent"><%=Messages.getInstance().getString("UI.PUC.DOCS.HEADER.VISIT_INFO", "<a href=\"${doc.base.url}\" target=\"_blank\">Tahopen InfoCenter</a>")%><br /></td>
         </tr>
       </table>
     </div>

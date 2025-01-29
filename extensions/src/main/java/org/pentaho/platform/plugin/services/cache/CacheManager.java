@@ -213,7 +213,7 @@ public class CacheManager implements ICacheManager {
    * Populates the properties object from the pentaho.xml
    * 
    * @param settings
-   *          The Pentaho ISystemSettings object
+   *          The Tahopen ISystemSettings object
    */
   private Properties getCacheProperties( final ISystemSettings settings ) {
     Properties cacheProperties = new Properties();

@@ -37,7 +37,7 @@ import java.util.Map;
 import java.util.Properties;
 
 /**
- * This is the BI Platform Pojo Component for Pentaho Metadata Queries. It currently supports executing the inline etl
+ * This is the BI Platform Pojo Component for Tahopen Metadata Queries. It currently supports executing the inline etl
  * and sql physical models.
  * 
  * 

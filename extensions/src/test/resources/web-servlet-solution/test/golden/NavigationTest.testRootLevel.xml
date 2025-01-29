@@ -4,7 +4,8 @@
         <filename>Portal.url</filename>
         <title>Portal demo</title>
         <target>pentaho_portal</target>
-        <description>Try the Pentaho Portal Demo which includes all the samples available here and some additional
+        <description>Try the Tahopen Portal Demo which includes all the samples available here and
+            some additional
             dashboard ones
         </description>
         <icon>getImage?image=icons/url.png</icon>
@@ -19,7 +20,8 @@
             <filename>PropertyEditor.url</filename>
             <title>Permissions</title>
             <target>.</target>
-            <description>This page allows you to set execute and overwrite permissions for content for users and roles
+            <description>This page allows you to set execute and overwrite permissions for content
+                for users and roles
             </description>
             <icon>getImage?image=icons/btn_subscriptions.png</icon>
             <url>/pentaho/PropertiesEditor</url>
@@ -68,10 +70,13 @@
             <solution>admin</solution>
         </file>
     </file>
-    <title>Pentaho Solution Browser</title>
-    <description>Below lists collections of logically grouped Pentaho folders and documents called Solutions. By
-        default, the "Sample" Solution is installed and contains working examples demonstrating the functionality of the
-        platform. Once a Solution is chosen, use the file browser to locate and launch a document. To learn more about
+    <title>Tahopen Solution Browser</title>
+    <description>Below lists collections of logically grouped Tahopen folders and documents called
+        Solutions. By
+        default, the "Sample" Solution is installed and contains working examples demonstrating the
+        functionality of the
+        platform. Once a Solution is chosen, use the file browser to locate and launch a document.
+        To learn more about
         how to modify the examples or build a Solution, read the &lt;a
         href="https://pentaho-community.atlassian.net/wiki/spaces/ServerDoc2x/pages/1497891152/Creating+Pentaho+Solutions"
         target="sf"&gt;'Creating Pentaho
@@ -82,7 +87,8 @@
     <solution></solution>
     <file type="FILE.FOLDER" name="samples" path="" visible="true" displaytype="icons">
         <title>Samples</title>
-        <description>A collection of examples showing features that are ready for use in the Pentaho BI Platform
+        <description>A collection of examples showing features that are ready for use in the Tahopen
+            BI Platform
         </description>
         <icon>getImage?image=icons/samples.png</icon>
         <solution>samples</solution>
@@ -115,7 +121,8 @@
                 <title>Web Service Example</title>
                 <description>This action runs an example web service and returns a SOAP response</description>
                 <icon>getImage?image=icons/WebServiceExample.png</icon>
-                <url>ServiceAction?solution=samples&amp;path=rules&amp;action=CurrentPositionTitles.xaction</url>
+                <url>
+                    ServiceAction?solution=samples&amp;path=rules&amp;action=CurrentPositionTitles.xaction</url>
             </file>
             <file type="FILE.ACTIVITY" visible="false">
                 <filename>report1.xaction</filename>
@@ -124,9 +131,11 @@
                 <title>JFreeReport HTML Example</title>
                 <description>
                     This is an example of an HTML report produced by JFreeReport.
-                    &lt;p/&gt; It shows the actual headcount cost, budgeted headcount cost, and variance for every
+                    &lt;p/&gt; It shows the actual headcount cost, budgeted headcount cost, and
+                    variance for every
                     position, department and region
-                    &lt;p/&gt; It demostrates using colors and styles for headers and groupings. It also shows
+                    &lt;p/&gt; It demostrates using colors and styles for headers and groupings. It
+                    also shows
                     sub-totals.
                 </description>
                 <author>James Dixon</author>
@@ -139,19 +148,23 @@
                 <title>JFreeReport HTML Example</title>
                 <description>
                     This is an example of an HTML report produced by JFreeReport.
-                    &lt;p/&gt; It shows the actual headcount cost, budgeted headcount cost, and variance for every
+                    &lt;p/&gt; It shows the actual headcount cost, budgeted headcount cost, and
+                    variance for every
                     position, department and region
-                    &lt;p/&gt; It demostrates using colors and styles for headers and groupings. It also shows
+                    &lt;p/&gt; It demostrates using colors and styles for headers and groupings. It
+                    also shows
                     sub-totals.
                 </description>
                 <author>James Dixon</author>
                 <properties>subscribable=false</properties>
             </file>
         </file>
-        <file type="FILE.FOLDER" name="datasources" path="datasources" visible="true" displaytype="list">
+        <file type="FILE.FOLDER" name="datasources" path="datasources" visible="true"
+            displaytype="list">
             <path>datasources</path>
             <title>6. DataSource Examples</title>
-            <description>Examples of data sets being returned from different OLAP and RDBMS data sources.</description>
+            <description>Examples of data sets being returned from different OLAP and RDBMS data
+                sources.</description>
             <icon>getImage?image=icons/datasources.png</icon>
             <solution>samples</solution>
             <file type="FILE.ACTIVITY" visible="true" displaytype="rule">
@@ -159,7 +172,8 @@
                 <path>datasources</path>
                 <solution>samples</solution>
                 <title>HQL Query using Hibernate</title>
-                <description>This rule uses the Hibernate Query Language (HQL) to return data for ContentItems. If no
+                <description>This rule uses the Hibernate Query Language (HQL) to return data for
+                    ContentItems. If no
                     data is returned, then there is no data in hibernate for ContentItem.
                 </description>
                 <author>Michael D'Amour</author>
@@ -171,7 +185,8 @@
                 <path>datasources</path>
                 <solution>samples</solution>
                 <title>MDX Query of an OLAP Datasource</title>
-                <description>This rule uses an MDX multidimensional query to return Actual and Budget for all Regions.&lt;p&gt;The
+                <description>This rule uses an MDX multidimensional query to return Actual and
+                    Budget for all Regions.&lt;p&gt;The
                     data source is a Mondrian OLAP cube.
                 </description>
                 <author>William Seyler</author>
@@ -183,7 +198,8 @@
                 <path>datasources</path>
                 <solution>samples</solution>
                 <title>XQuery Query of an XML Datasource</title>
-                <description>This rule uses an XML query to return a List of Books.&lt;p&gt;The data source is an XML
+                <description>This rule uses an XML query to return a List of Books.&lt;p&gt;The data
+                    source is an XML
                     Document.
                 </description>
                 <author>William Seyler</author>
@@ -195,7 +211,8 @@
                 <path>datasources</path>
                 <solution>samples</solution>
                 <title>SQL Query of Managers for Departments</title>
-                <description>This rule uses a SQL database query to determine the manager for each region.&lt;p&gt;See
+                <description>This rule uses a SQL database query to determine the manager for each
+                    region.&lt;p&gt;See
                     the Quick Start Guide for how to customize this data.
                 </description>
                 <author>James Dixon</author>
@@ -214,8 +231,10 @@
                 <path>svg</path>
                 <solution>samples</solution>
                 <title>European Map</title>
-                <description>example of using an SVG template and a datasource to create a graphical representation of
-                    data. &lt;p/&gt;To see this you need to use Firefox 1.5, Opera 8, or the Adobe SVG viewer plug-in
+                <description>example of using an SVG template and a datasource to create a graphical
+                    representation of
+                    data. &lt;p/&gt;To see this you need to use Firefox 1.5, Opera 8, or the Adobe
+                    SVG viewer plug-in
                     for Microsoft IE.
                 </description>
                 <author>James Dixon</author>
@@ -251,9 +270,11 @@
                 <title>JFreeReport HTML Example</title>
                 <description>
                     This is an example of an HTML report produced by JFreeReport.
-                    &lt;p/&gt; It shows the actual headcount cost, budgeted headcount cost, and variance for every
+                    &lt;p/&gt; It shows the actual headcount cost, budgeted headcount cost, and
+                    variance for every
                     position, department and region
-                    &lt;p/&gt; It demostrates using colors and styles for headers and groupings. It also shows
+                    &lt;p/&gt; It demostrates using colors and styles for headers and groupings. It
+                    also shows
                     sub-totals.
                 </description>
                 <author>Marc Batchelor</author>
@@ -282,7 +303,8 @@
         <file type="FILE.FOLDER" name="dashboard" path="dashboard" visible="true" displaytype="list">
             <path>dashboard</path>
             <title>Dashboards</title>
-            <description>This uses Pentaho UI to build an interactive dashboard with a JSP page. The 'Dashboard Building
+            <description>This uses Tahopen UI to build an interactive dashboard with a JSP page. The
+                'Dashboard Building
                 Guide' explains the workings of this dashboard in detail.
             </description>
             <icon>getImage?image=icons/dashboard.jpg</icon>
@@ -292,7 +314,8 @@
                 <path>dashboard</path>
                 <solution>samples</solution>
                 <title>Regions and departments</title>
-                <description>Return the variance between headcount actual and budget for every department in the
+                <description>Return the variance between headcount actual and budget for every
+                    department in the
                     specified region
                 </description>
                 <author>James Dixon</author>
@@ -310,7 +333,8 @@
             <file type="FILE.URL" visible="true" displaytype="url">
                 <filename>dashboard.url</filename>
                 <title>JSP Dashboard</title>
-                <description>This uses Pentaho UI to build an interactive dashboard with a JSP page. The 'Dashboard
+                <description>This uses Tahopen UI to build an interactive dashboard with a JSP page.
+                    The 'Dashboard
                     Building Guide' explains the workings of this dashboard in detail.
                 </description>
                 <icon>getImage?image=icons/dashboard.jpg</icon>
@@ -319,7 +343,8 @@
             <file type="FILE.URL" visible="true" displaytype="url">
                 <filename>flashdashboard.url</filename>
                 <title>Flash Dashboard</title>
-                <description>This uses Pentaho UI Components to build an interactive dashboard with a JSP page and Flash
+                <description>This uses Tahopen UI Components to build an interactive dashboard with
+                    a JSP page and Flash
                     charting.
                 </description>
                 <icon>getImage?image=icons/dashboard.jpg</icon>
@@ -367,7 +392,8 @@
         <file type="FILE.FOLDER" name="rules" path="rules" visible="true" displaytype="list">
             <path>rules</path>
             <title>3. Business Rules Examples</title>
-            <description>Examples of business rules using scripting and database tables.&lt;br/&gt;Rules are used as
+            <description>Examples of business rules using scripting and database
+                tables.&lt;br/&gt;Rules are used as
                 part of business intelligence process, but here you can run them individually
             </description>
             <icon>getImage?image=icons/rules.png</icon>
@@ -377,8 +403,10 @@
                 <path>rules</path>
                 <solution>samples</solution>
                 <title>Manager for Departments</title>
-                <description>This rule uses a database query to determine the manager for each region&lt;p&gt;This rule
-                    is used in the Bursting Examples. See the Quick Start Guide for how to customize this data.
+                <description>This rule uses a database query to determine the manager for each
+                    region&lt;p&gt;This rule
+                    is used in the Bursting Examples. See the Quick Start Guide for how to customize
+                    this data.
                 </description>
                 <author>James Dixon</author>
                 <icon>getImage?image=icons/department_managers.png</icon>
@@ -399,11 +427,14 @@
                 <path>rules</path>
                 <solution>samples</solution>
                 <title>Current Position Titles</title>
-                <description>This rule uses a database query to determine valid job positions for a given department.&lt;p&gt;You
+                <description>This rule uses a database query to determine valid job positions for a
+                    given department.&lt;p&gt;You
                     can pass it different departments on the URL. try these &lt;a
                     href="/pentaho/ViewAction?solution=samples&amp;path=rules&amp;action=CurrentPositionTitles.xaction&amp;dept=Finance"
-                    target="pentaho_action"&gt;Finance&lt;/a&gt;, &lt;a href="/pentaho/ViewAction?solution=samples&amp;path=rules&amp;action=CurrentPositionTitles.xaction&amp;dept=Sales"
-                    target="pentaho_action"&gt;Sales&lt;/a&gt;, &lt;a href="/pentaho/ViewAction?solution=samples&amp;path=rules&amp;action=CurrentPositionTitles.xaction&amp;dept=Human%20Resource"
+                    target="pentaho_action"&gt;Finance&lt;/a&gt;, &lt;a
+                    href="/pentaho/ViewAction?solution=samples&amp;path=rules&amp;action=CurrentPositionTitles.xaction&amp;dept=Sales"
+                    target="pentaho_action"&gt;Sales&lt;/a&gt;, &lt;a
+                    href="/pentaho/ViewAction?solution=samples&amp;path=rules&amp;action=CurrentPositionTitles.xaction&amp;dept=Human%20Resource"
                     target="pentaho_action"&gt;Human Resource&lt;/a&gt;</description>
                 <author>James Dixon</author>
                 <icon>getImage?image=icons/CurrentPositionTitles.png</icon>
@@ -430,7 +461,8 @@
                 <path>etl</path>
                 <solution>samples</solution>
                 <title>1. Hello ETL</title>
-                <description>This runs a simple Kettle transformation filtering records from the Quandrant_Actuals
+                <description>This runs a simple Kettle transformation filtering records from the
+                    Quandrant_Actuals
                     sample data table, and sending a Hello message to each position.
                 </description>
                 <author>Gretchen Moran</author>
@@ -438,10 +470,12 @@
                 <properties>subscribable=false</properties>
             </file>
         </file>
-        <file type="FILE.FOLDER" name="getting-started" path="getting-started" visible="true" displaytype="list">
+        <file type="FILE.FOLDER" name="getting-started" path="getting-started" visible="true"
+            displaytype="list">
             <path>getting-started</path>
             <title>1. Getting Started</title>
-            <description>A collection of examples to verify that your Pentaho BI Platform is installed correctly.
+            <description>A collection of examples to verify that your Tahopen BI Platform is
+                installed correctly.
             </description>
             <icon>getImage?image=icons/GettingStarted.png</icon>
             <solution>samples</solution>
@@ -460,7 +494,8 @@
                 <path>getting-started</path>
                 <solution>samples</solution>
                 <title>3. Sample Data</title>
-                <description>This runs a business rule against the sample database to find out what regions exist.
+                <description>This runs a business rule against the sample database to find out what
+                    regions exist.
                 </description>
                 <author>James Dixon</author>
                 <icon>getImage?image=icons/SampleDataQuery.png</icon>
@@ -471,7 +506,8 @@
                 <path>getting-started</path>
                 <solution>samples</solution>
                 <title>Rule and Email</title>
-                <description>Call a JavaScript rule to determine the email address of the passed in region and send an
+                <description>Call a JavaScript rule to determine the email address of the passed in
+                    region and send an
                     email to that manager
                 </description>
                 <author>Admin Pentaho</author>
@@ -482,20 +518,22 @@
                 <path>getting-started</path>
                 <solution>samples</solution>
                 <title>1. Hello World</title>
-                <description>Verify that your Pentaho BI Platform is working.</description>
+                <description>Verify that your Tahopen BI Platform is working.</description>
                 <author>Admin Pentaho</author>
                 <icon>getImage?image=icons/HelloWorld.png</icon>
                 <properties>subscribable=false</properties>
             </file>
         </file>
-        <file type="FILE.FOLDER" name="steel-wheels" path="steel-wheels" visible="true" displaytype="icons">
+        <file type="FILE.FOLDER" name="steel-wheels" path="steel-wheels" visible="true"
+            displaytype="icons">
             <path>steel-wheels</path>
             <title>0. Steel Wheels</title>
             <description>Reporting, Analysis, and Dashboarding Samples for Steel Wheels, Inc.</description>
             <solution>samples</solution>
-            <file type="FILE.FOLDER" name="dashboards" path="steel-wheels/dashboards" visible="true" displaytype="list">
+            <file type="FILE.FOLDER" name="dashboards" path="steel-wheels/dashboards" visible="true"
+                displaytype="list">
                 <path>steel-wheels/dashboards</path>
-                <title>3. Pentaho Dashboards</title>
+                <title>3. Tahopen Dashboards</title>
                 <description>Steel Wheels Dashboard Samples</description>
                 <solution>samples</solution>
                 <file type="FILE.URL" visible="true" displaytype="url">
@@ -519,7 +557,8 @@
                     <path>steel-wheels/dashboards</path>
                     <solution>samples</solution>
                     <title>06. SALES BY PRODUCTLINE</title>
-                    <description>List of Product Lines sorted by Sales. Select date range (Jan 2003 through May 2005).
+                    <description>List of Product Lines sorted by Sales. Select date range (Jan 2003
+                        through May 2005).
                         Includes chart.
                     </description>
                     <author>Kurtis Cruzada</author>
@@ -540,7 +579,8 @@
                     <path>steel-wheels/dashboards</path>
                     <solution>samples</solution>
                     <title>06. SALES BY PRODUCTLINE</title>
-                    <description>List of Product Lines sorted by Sales. Select date range (Jan 2003 through May 2005).
+                    <description>List of Product Lines sorted by Sales. Select date range (Jan 2003
+                        through May 2005).
                         Includes chart.
                     </description>
                     <author>Kurtis Cruzada</author>
@@ -552,7 +592,8 @@
                     <path>steel-wheels/dashboards</path>
                     <solution>samples</solution>
                     <title>05. SALES BY TERRITORY</title>
-                    <description>List of Territories sorted by Sales. Select date range (Jan 2003 through May 2005).
+                    <description>List of Territories sorted by Sales. Select date range (Jan 2003
+                        through May 2005).
                         Includes chart.
                     </description>
                     <author>Kurtis Cruzada</author>
@@ -563,7 +604,8 @@
                     <filename>google_map.url</filename>
                     <title>Google Maps</title>
                     <target>google_map</target>
-                    <description>This uses Pentaho UI to build an interactive dashboard with Google Maps.</description>
+                    <description>This uses Tahopen UI to build an interactive dashboard with Google
+                        Maps.</description>
                     <icon>getImage?image=icons/dashboard.jpg</icon>
                     <url>/pentaho/Map</url>
                 </file>
@@ -586,8 +628,9 @@
                     </file>
                 </file>
             </file>
-            <file type="FILE.FOLDER" name="homeDashboard" path="steel-wheels/homeDashboard" visible="false"
-                  displaytype="list">
+            <file type="FILE.FOLDER" name="homeDashboard" path="steel-wheels/homeDashboard"
+                visible="false"
+                displaytype="list">
                 <path>steel-wheels/homeDashboard</path>
                 <title>3. Steel Wheels Home Dashboard</title>
                 <description>Steel Wheels Home Dashboard Samples</description>
@@ -614,7 +657,8 @@
                     <path>steel-wheels/homeDashboard</path>
                     <solution>samples</solution>
                     <title>06. SALES BY PRODUCTLINE</title>
-                    <description>List of Product Lines sorted by Sales. Select date range (Jan 2003 through May 2005).
+                    <description>List of Product Lines sorted by Sales. Select date range (Jan 2003
+                        through May 2005).
                         Includes chart.
                     </description>
                     <author>Kurtis Cruzada</author>
@@ -627,7 +671,8 @@
                     <path>steel-wheels/homeDashboard</path>
                     <solution>samples</solution>
                     <title>06. SALES BY PRODUCTLINE</title>
-                    <description>List of Product Lines sorted by Sales. Select date range (Jan 2003 through May 2005).
+                    <description>List of Product Lines sorted by Sales. Select date range (Jan 2003
+                        through May 2005).
                         Includes chart.
                     </description>
                     <author>Kurtis Cruzada</author>
@@ -640,7 +685,8 @@
                     <path>steel-wheels/homeDashboard</path>
                     <solution>samples</solution>
                     <title>05. SALES BY TERRITORY</title>
-                    <description>List of Territories sorted by Sales. Select date range (Jan 2003 through May 2005).
+                    <description>List of Territories sorted by Sales. Select date range (Jan 2003
+                        through May 2005).
                         Includes chart.
                     </description>
                     <author>Kurtis Cruzada</author>
@@ -649,9 +695,10 @@
                     <properties>subscribable=false</properties>
                 </file>
             </file>
-            <file type="FILE.FOLDER" name="reports" path="steel-wheels/reports" visible="true" displaytype="list">
+            <file type="FILE.FOLDER" name="reports" path="steel-wheels/reports" visible="true"
+                displaytype="list">
                 <path>steel-wheels/reports</path>
-                <title>1. Pentaho Reporting</title>
+                <title>1. Tahopen Reporting</title>
                 <description>Steel Wheels Reporting Samples</description>
                 <solution>samples</solution>
                 <file type="FILE.ACTIVITY" visible="true" displaytype="report">
@@ -670,7 +717,8 @@
                     <path>steel-wheels/reports</path>
                     <solution>samples</solution>
                     <title>09. BURST - SALES BY CUSTOMER FOR EACH ACCOUNT MANAGER</title>
-                    <description>Burst Customer Sales Report to each Account Manager. MUST HAVE EMAIL CONFIGURED ON
+                    <description>Burst Customer Sales Report to each Account Manager. MUST HAVE
+                        EMAIL CONFIGURED ON
                         PENTAHO SERVER.
                     </description>
                     <author>Kurtis Cruzada</author>
@@ -682,7 +730,8 @@
                     <path>steel-wheels/reports</path>
                     <solution>samples</solution>
                     <title>11. INVENTORY ON-HAND REPORT (Subscriptions)</title>
-                    <description>Subscribing to this report will deliver it via email with your saved parameters.
+                    <description>Subscribing to this report will deliver it via email with your
+                        saved parameters.
                     </description>
                     <author>Michael D'Amour</author>
                     <icon>getImage?image=icons/inventory.png</icon>
@@ -693,7 +742,8 @@
                     <path>steel-wheels/reports</path>
                     <solution>samples</solution>
                     <title>08. SALES BY ACCOUNT MANAGER</title>
-                    <description>List of Account Managers sorted by Sales. Select date range (Jan 2003 through May
+                    <description>List of Account Managers sorted by Sales. Select date range (Jan
+                        2003 through May
                         2005). Includes chart.
                     </description>
                     <author>Kurtis Cruzada</author>
@@ -705,7 +755,8 @@
                     <path>steel-wheels/reports</path>
                     <solution>samples</solution>
                     <title>02. BILLING STATEMENTS</title>
-                    <description>Choose from a list of customers to view Billing Statements and have them outputted to
+                    <description>Choose from a list of customers to view Billing Statements and have
+                        them outputted to
                         PDF, HTML, Excel, or Word.
                     </description>
                     <author>Kurtis Cruzada</author>
@@ -727,7 +778,8 @@
                     <path>steel-wheels/reports</path>
                     <solution>samples</solution>
                     <title>03. INCOME STATEMENT - FINANCIAL RESULTS</title>
-                    <description>Financial results for the period from January 1 through June 30, 2005. Place and format
+                    <description>Financial results for the period from January 1 through June 30,
+                        2005. Place and format
                         based a field.
                     </description>
                     <author>Michael D'Amour</author>
@@ -739,7 +791,8 @@
                     <path>steel-wheels/reports</path>
                     <solution>samples</solution>
                     <title>01. DETAILED INVENTORY REPORT</title>
-                    <description>Detail Listing of Inventory. Shows key values of COST, MSRP and QUANTITY ON HAND.
+                    <description>Detail Listing of Inventory. Shows key values of COST, MSRP and
+                        QUANTITY ON HAND.
                     </description>
                     <author>Kurtis Cruzada</author>
                     <icon>getImage?image=icons/inventory.png</icon>
@@ -750,7 +803,8 @@
                     <path>steel-wheels/reports</path>
                     <solution>samples</solution>
                     <title>04. SALES BY PRODUCT</title>
-                    <description>List of Products sorted by Sales. Select date range (Jan 2003 through May 2005).
+                    <description>List of Products sorted by Sales. Select date range (Jan 2003
+                        through May 2005).
                     </description>
                     <author>Kurtis Cruzada</author>
                     <icon>getImage?image=icons/salerep.png</icon>
@@ -761,7 +815,8 @@
                     <path>steel-wheels/reports</path>
                     <solution>samples</solution>
                     <title>06. SALES BY PRODUCTLINE</title>
-                    <description>List of Product Lines sorted by Sales. Select date range (Jan 2003 through May 2005).
+                    <description>List of Product Lines sorted by Sales. Select date range (Jan 2003
+                        through May 2005).
                         Includes chart.
                     </description>
                     <author>Kurtis Cruzada</author>
@@ -773,7 +828,8 @@
                     <path>steel-wheels/reports</path>
                     <solution>samples</solution>
                     <title>04. SALES BY CUSTOMER</title>
-                    <description>List of Customer sorted by Sales. Select date range (Jan 2003 through May 2005).
+                    <description>List of Customer sorted by Sales. Select date range (Jan 2003
+                        through May 2005).
                         Includes chart.
                     </description>
                     <author>Kurtis Cruzada</author>
@@ -785,7 +841,8 @@
                     <path>steel-wheels/reports</path>
                     <solution>samples</solution>
                     <title>05. SALES BY TERRITORY</title>
-                    <description>List of Territories sorted by Sales. Select date range (Jan 2003 through May 2005).
+                    <description>List of Territories sorted by Sales. Select date range (Jan 2003
+                        through May 2005).
                         Includes chart.
                     </description>
                     <author>Kurtis Cruzada</author>
@@ -797,7 +854,8 @@
                     <path>steel-wheels/reports</path>
                     <solution>samples</solution>
                     <title>07. SALES BY SUPPLIER</title>
-                    <description>List of Suppliers sorted by Sales. Select date range (Jan 2003 through May 2005).
+                    <description>List of Suppliers sorted by Sales. Select date range (Jan 2003
+                        through May 2005).
                         Includes chart.
                     </description>
                     <author>Kurtis Cruzada</author>
@@ -805,9 +863,10 @@
                     <properties>subscribable=false</properties>
                 </file>
             </file>
-            <file type="FILE.FOLDER" name="analysis" path="steel-wheels/analysis" visible="true" displaytype="list">
+            <file type="FILE.FOLDER" name="analysis" path="steel-wheels/analysis" visible="true"
+                displaytype="list">
                 <path>steel-wheels/analysis</path>
-                <title>2. Pentaho Analysis</title>
+                <title>2. Tahopen Analysis</title>
                 <description>Steel Wheels Analysis Samples</description>
                 <solution>samples</solution>
                 <file type="FILE.ACTIVITY" visible="true" displaytype="report">
@@ -815,7 +874,7 @@
                     <path>steel-wheels/analysis</path>
                     <solution>samples</solution>
                     <title>02. Product Line Analysis</title>
-                    <description>Steel Wheels featuring Pentaho Analysis</description>
+                    <description>Steel Wheels featuring Tahopen Analysis</description>
                     <author>Kurtis Cruzada</author>
                     <icon>getImage?image=icons/analysis_productline.png</icon>
                     <properties>subscribable=false</properties>
@@ -825,7 +884,7 @@
                     <path>steel-wheels/analysis</path>
                     <solution>samples</solution>
                     <title>03. Steel Wheels Analysis</title>
-                    <description>Steel Wheels featuring Pentaho Analysis</description>
+                    <description>Steel Wheels featuring Tahopen Analysis</description>
                     <author>Kurtis Cruzada</author>
                     <icon>getImage?image=icons/analysis_default.png</icon>
                     <properties>subscribable=true</properties>
@@ -835,7 +894,7 @@
                     <path>steel-wheels/analysis</path>
                     <solution>samples</solution>
                     <title>01. Territory Analysis by Year</title>
-                    <description>Steel Wheels featuring Pentaho Analysis</description>
+                    <description>Steel Wheels featuring Tahopen Analysis</description>
                     <author>Kurtis Cruzada</author>
                     <icon>getImage?image=icons/analysis_customer.png</icon>
                     <properties>subscribable=false</properties>
@@ -858,7 +917,8 @@
             <file type="FILE.URL" visible="true" displaytype="url">
                 <filename>widgets1.url</filename>
                 <title>Dial Sample</title>
-                <description>These dials can be used to build dashboards. &lt;p/&gt;The 'Dashboard' page in the Portal
+                <description>These dials can be used to build dashboards. &lt;p/&gt;The 'Dashboard'
+                    page in the Portal
                     Demo shows another example where you can drill down on the dials.&lt;p/&gt;</description>
                 <icon>getImage?image=icons/widgets.png</icon>
                 <url>./Widgets</url>
@@ -873,7 +933,8 @@
             <file type="FILE.URL" visible="true" displaytype="url">
                 <filename>PieChart.url</filename>
                 <title>Pie Chart Sample</title>
-                <description>This chart displays the amount of the total budget spent on each job title.</description>
+                <description>This chart displays the amount of the total budget spent on each job
+                    title.</description>
                 <icon>getImage?image=icons/PieChart.png</icon>
                 <url>./PieChart</url>
             </file>
@@ -948,9 +1009,12 @@
                 <path>reporting</path>
                 <solution>samples</solution>
                 <title>JFreeReport HTML Example</title>
-                <description>This is an example of an HTML report produced by JFreeReport. &lt;p/&gt; It shows the
-                    actual headcount cost, budgeted headcount cost, and variance for every position, department and
-                    region&lt;p/&gt; It demostrates using colors and styles for headers and groupings. It also shows
+                <description>This is an example of an HTML report produced by JFreeReport.
+                    &lt;p/&gt; It shows the
+                    actual headcount cost, budgeted headcount cost, and variance for every position,
+                    department and
+                    region&lt;p/&gt; It demostrates using colors and styles for headers and
+                    groupings. It also shows
                     sub-totals.
                 </description>
                 <author>Angelo Rodriguez</author>
@@ -962,7 +1026,8 @@
                 <path>reporting</path>
                 <solution>samples</solution>
                 <title>Parameter Page Customization Example</title>
-                <description>This shows an example of a custom parameter page based on an HTML template</description>
+                <description>This shows an example of a custom parameter page based on an HTML
+                    template</description>
                 <author>Angelo Rodriguez</author>
                 <icon>getImage?image=icons/JFree-quadrant-budget-hsql.png</icon>
                 <properties>subscribable=false</properties>
@@ -972,8 +1037,10 @@
                 <path>reporting</path>
                 <solution>samples</solution>
                 <title>OLAP Crosstab Report</title>
-                <description>A cross tab report that shows actual and budget data for every department across every
-                    region. The report queries a Mondrian OLAP server and uses JFreeReport to generate the page
+                <description>A cross tab report that shows actual and budget data for every
+                    department across every
+                    region. The report queries a Mondrian OLAP server and uses JFreeReport to
+                    generate the page
                 </description>
                 <author>William Seyler</author>
                 <icon>getImage?image=icons/MDX_report.png</icon>
@@ -984,8 +1051,10 @@
                 <path>reporting</path>
                 <solution>samples</solution>
                 <title>JFreeReport with Pie Charts</title>
-                <description>Generates a PDF containing a Pie Chart based on a different SQL query than the report
-                    itself. The pie chart is created using the ChartComponent and is passed to JFreeReport as a
+                <description>Generates a PDF containing a Pie Chart based on a different SQL query
+                    than the report
+                    itself. The pie chart is created using the ChartComponent and is passed to
+                    JFreeReport as a
                     parameter.
                 </description>
                 <author>Michael D'Amour</author>
@@ -997,7 +1066,8 @@
                 <path>reporting</path>
                 <solution>samples</solution>
                 <title>JFree XQuery Report</title>
-                <description>Runs a JFreeReport against data stored in an XML document. The data is retrieved using an
+                <description>Runs a JFreeReport against data stored in an XML document. The data is
+                    retrieved using an
                     XQueryLookupRule.
                 </description>
                 <author>Michael D'Amour</author>
@@ -1009,8 +1079,10 @@
                 <path>reporting</path>
                 <solution>samples</solution>
                 <title>OLAP Crosstab Spreadsheet</title>
-                <description>A spreadsheet that shows actual and budget data for every department across every region.
-                    The report queries a Mondrian OLAP server and uses JFreeReport to generate the XLS file.
+                <description>A spreadsheet that shows actual and budget data for every department
+                    across every region.
+                    The report queries a Mondrian OLAP server and uses JFreeReport to generate the
+                    XLS file.
                 </description>
                 <author>William Seyler</author>
                 <icon>getImage?image=icons/MDX_report.png</icon>
@@ -1030,14 +1102,16 @@
                 <path>reporting</path>
                 <solution>samples</solution>
                 <title>JFreeReport with Bar Chart</title>
-                <description>Runs a JFreeReport against data stored in an XML document and produces a Bar Chart using
+                <description>Runs a JFreeReport against data stored in an XML document and produces
+                    a Bar Chart using
                     JFreeChart.
                 </description>
                 <author>Michael D'Amour</author>
                 <icon>getImage?image=icons/JFreeReport_WithChart.png</icon>
                 <properties>subscribable=false</properties>
             </file>
-            <file type="FILE.FOLDER" name="dep-param" path="reporting/dep-param" visible="true" displaytype="list">
+            <file type="FILE.FOLDER" name="dep-param" path="reporting/dep-param" visible="true"
+                displaytype="list">
                 <path>reporting/dep-param</path>
                 <title>Dependent Parameter Examples</title>
                 <description>Dynamic Dependent Parameter Examples using AJAX</description>
@@ -1048,11 +1122,15 @@
                     <path>reporting/dep-param</path>
                     <solution>samples</solution>
                     <title>Current Position Titles</title>
-                    <description>This rule uses a database query to determine valid job positions for a given
-                        department.&lt;p&gt;You can pass it different departments on the URL. try these &lt;a
+                    <description>This rule uses a database query to determine valid job positions
+                        for a given
+                        department.&lt;p&gt;You can pass it different departments on the URL. try
+                        these &lt;a
                         href="/pentaho/ViewAction?solution=samples&amp;path=rules&amp;action=CurrentPositionTitles.xaction&amp;dept=Finance"
-                        target="pentaho_action"&gt;Finance&lt;/a&gt;, &lt;a href="/pentaho/ViewAction?solution=samples&amp;path=rules&amp;action=CurrentPositionTitles.xaction&amp;dept=Sales"
-                        target="pentaho_action"&gt;Sales&lt;/a&gt;, &lt;a href="/pentaho/ViewAction?solution=samples&amp;path=rules&amp;action=CurrentPositionTitles.xaction&amp;dept=Human%20Resource"
+                        target="pentaho_action"&gt;Finance&lt;/a&gt;, &lt;a
+                        href="/pentaho/ViewAction?solution=samples&amp;path=rules&amp;action=CurrentPositionTitles.xaction&amp;dept=Sales"
+                        target="pentaho_action"&gt;Sales&lt;/a&gt;, &lt;a
+                        href="/pentaho/ViewAction?solution=samples&amp;path=rules&amp;action=CurrentPositionTitles.xaction&amp;dept=Human%20Resource"
                         target="pentaho_action"&gt;Human Resource&lt;/a&gt;</description>
                     <author>Michael D'Amour</author>
                     <icon>CurrentPositionTitles.png</icon>
@@ -1063,11 +1141,15 @@
                     <path>reporting/dep-param</path>
                     <solution>samples</solution>
                     <title>Current Position Titles</title>
-                    <description>This rule uses a database query to determine valid job positions for a given
-                        department.&lt;p&gt;You can pass it different departments on the URL. try these &lt;a
+                    <description>This rule uses a database query to determine valid job positions
+                        for a given
+                        department.&lt;p&gt;You can pass it different departments on the URL. try
+                        these &lt;a
                         href="/pentaho/ViewAction?solution=samples&amp;path=rules&amp;action=CurrentPositionTitles.xaction&amp;dept=Finance"
-                        target="pentaho_action"&gt;Finance&lt;/a&gt;, &lt;a href="/pentaho/ViewAction?solution=samples&amp;path=rules&amp;action=CurrentPositionTitles.xaction&amp;dept=Sales"
-                        target="pentaho_action"&gt;Sales&lt;/a&gt;, &lt;a href="/pentaho/ViewAction?solution=samples&amp;path=rules&amp;action=CurrentPositionTitles.xaction&amp;dept=Human%20Resource"
+                        target="pentaho_action"&gt;Finance&lt;/a&gt;, &lt;a
+                        href="/pentaho/ViewAction?solution=samples&amp;path=rules&amp;action=CurrentPositionTitles.xaction&amp;dept=Sales"
+                        target="pentaho_action"&gt;Sales&lt;/a&gt;, &lt;a
+                        href="/pentaho/ViewAction?solution=samples&amp;path=rules&amp;action=CurrentPositionTitles.xaction&amp;dept=Human%20Resource"
                         target="pentaho_action"&gt;Human Resource&lt;/a&gt;</description>
                     <author>James Dixon</author>
                     <icon>CurrentPositionTitles.png</icon>
@@ -1078,14 +1160,16 @@
                     <path>reporting/dep-param</path>
                     <solution>samples</solution>
                     <title>Dynamic Dependent Parameter Page</title>
-                    <description>Dynamic dependent parameter page example using AJAX and an HTML template</description>
+                    <description>Dynamic dependent parameter page example using AJAX and an HTML
+                        template</description>
                     <author>Michael D'Amour</author>
                     <icon>JFree-quadrant-budget-hsql.png</icon>
                     <properties>subscribable=false</properties>
                 </file>
             </file>
-            <file type="FILE.FOLDER" name="dynamic-reports" path="reporting/dynamic-reports" visible="true"
-                  displaytype="list">
+            <file type="FILE.FOLDER" name="dynamic-reports" path="reporting/dynamic-reports"
+                visible="true"
+                displaytype="list">
                 <path>reporting/dynamic-reports</path>
                 <title>Dynamic Reporting</title>
                 <description>Dynamic Reporting Examples</description>
@@ -1096,9 +1180,12 @@
                     <path>reporting/dynamic-reports</path>
                     <solution>samples</solution>
                     <title>Programmatic Quadrant Report with Group Level Bar Charts</title>
-                    <description>This action sequence executes a SQL query and then programmatically builds a ReportSpec
-                        object model which is used to generate a JFreeReport definition with a Bar Chart for each group
-                        run. The report definition is passed to JFreeReport and a formatted report is generated.
+                    <description>This action sequence executes a SQL query and then programmatically
+                        builds a ReportSpec
+                        object model which is used to generate a JFreeReport definition with a Bar
+                        Chart for each group
+                        run. The report definition is passed to JFreeReport and a formatted report
+                        is generated.
                     </description>
                     <author>Michael D'Amour</author>
                     <icon>JFree-quadrant-budget-hsql.png</icon>
@@ -1109,8 +1196,10 @@
                     <path>reporting/dynamic-reports</path>
                     <solution>samples</solution>
                     <title>Programmatic Quadrant Report</title>
-                    <description>This action sequence executes a SQL query and then programmatically builds a ReportSpec
-                        object model which is used to generate a JFreeReport definition. The report definition is passed
+                    <description>This action sequence executes a SQL query and then programmatically
+                        builds a ReportSpec
+                        object model which is used to generate a JFreeReport definition. The report
+                        definition is passed
                         to JFreeReport and a formatted report is generated.
                     </description>
                     <author>Michael D'Amour</author>
@@ -1122,8 +1211,10 @@
                     <path>reporting/dynamic-reports</path>
                     <solution>samples</solution>
                     <title>Programmatic Quadrant Report with Pie Chart</title>
-                    <description>This action sequence executes a SQL query and then programmatically builds a ReportSpec
-                        object model which is used to generate a JFreeReport definition with a Pie Chart. The report
+                    <description>This action sequence executes a SQL query and then programmatically
+                        builds a ReportSpec
+                        object model which is used to generate a JFreeReport definition with a Pie
+                        Chart. The report
                         definition is passed to JFreeReport and a formatted report is generated.
                     </description>
                     <author>Michael D'Amour</author>
@@ -1135,8 +1226,10 @@
                     <path>reporting/dynamic-reports</path>
                     <solution>samples</solution>
                     <title>Fully Dynamic Quadrant Report</title>
-                    <description>This action sequence executes a SQL query and then dynamically builds a ReportSpec
-                        object model which is used to generate a JFreeReport definition. The report definition is passed
+                    <description>This action sequence executes a SQL query and then dynamically
+                        builds a ReportSpec
+                        object model which is used to generate a JFreeReport definition. The report
+                        definition is passed
                         to JFreeReport and a formatted report is generated.
                     </description>
                     <author>Michael D'Amour</author>
@@ -1148,8 +1241,10 @@
                     <path>reporting/dynamic-reports</path>
                     <solution>samples</solution>
                     <title>Fully Dynamic Quadrant Report with Bar Chart</title>
-                    <description>This action sequence executes a SQL query and then dynamically builds a ReportSpec
-                        object model which is used to generate a JFreeReport definition with a Chart. The report
+                    <description>This action sequence executes a SQL query and then dynamically
+                        builds a ReportSpec
+                        object model which is used to generate a JFreeReport definition with a
+                        Chart. The report
                         definition is passed to JFreeReport and a formatted report is generated.
                     </description>
                     <author>Michael D'Amour</author>
@@ -1161,8 +1256,10 @@
         <file type="FILE.FOLDER" name="secure" path="secure" visible="true" displaytype="list">
             <path>secure</path>
             <title>8. Secure Filters Examples (Portal only)</title>
-            <description>Examples of using session based filters and queries to determine the selections that users may
-                pick based on their user id&lt;p/&gt;&lt;FONT color="red"&gt;These examples require a user id and only
+            <description>Examples of using session based filters and queries to determine the
+                selections that users may
+                pick based on their user id&lt;p/&gt;&lt;FONT color="red"&gt;These examples require
+                a user id and only
                 show data when logged in.&lt;/FONT&gt; </description>
             <icon>getImage?image=icons/security.png</icon>
             <solution>samples</solution>
@@ -1171,11 +1268,16 @@
                 <path>secure</path>
                 <solution>samples</solution>
                 <title>Secure Session and Global Filters</title>
-                <description>This is an example of using a global filter and a session filter. &lt;p/&gt;The global
-                    filter is DEPARTMENT_LIST which provides values for the DEPARTMENT parameter. DEPARTMENT_LIST is
-                    generated by doing an SQL 'select distinct' on the departments column. Being a global filter, the
-                    query is executed only once and available to all users. &lt;p/&gt;The session filter REGION_FILTER
-                    is generated by a rule that is executed for each user that logs in. The values are stored in the
+                <description>This is an example of using a global filter and a session filter.
+                    &lt;p/&gt;The global
+                    filter is DEPARTMENT_LIST which provides values for the DEPARTMENT parameter.
+                    DEPARTMENT_LIST is
+                    generated by doing an SQL 'select distinct' on the departments column. Being a
+                    global filter, the
+                    query is executed only once and available to all users. &lt;p/&gt;The session
+                    filter REGION_FILTER
+                    is generated by a rule that is executed for each user that logs in. The values
+                    are stored in the
                     user's session and is available as long as the user remains logged in.
                 </description>
                 <author>Doug Moran</author>
@@ -1197,9 +1299,12 @@
                 <path>secure</path>
                 <solution>samples</solution>
                 <title>Two filter sets, secure and hard coded</title>
-                <description>This is an example of a report that requires 2 parameters; Region and Department.&lt;p/&gt;The
-                    Region selections are defined by a business rule executed during login and saved in the user's
-                    session.&lt;p/&gt;The Department values are hard coded in the Action Sequence document.
+                <description>This is an example of a report that requires 2 parameters; Region and
+                    Department.&lt;p/&gt;The
+                    Region selections are defined by a business rule executed during login and saved
+                    in the user's
+                    session.&lt;p/&gt;The Department values are hard coded in the Action Sequence
+                    document.
                 </description>
                 <author>Doug Moran</author>
                 <icon>getImage?image=icons/secure-sample.png</icon>
@@ -1210,7 +1315,8 @@
                 <path>secure</path>
                 <solution>samples</solution>
                 <title>Department list for global parameters</title>
-                <description>Does a SQL query for the list of departments and saves the list into the global parameter
+                <description>Does a SQL query for the list of departments and saves the list into
+                    the global parameter
                     provider
                 </description>
                 <author>Doug Moran</author>
@@ -1221,10 +1327,14 @@
                 <path>secure</path>
                 <solution>samples</solution>
                 <title>Secured PDF Example</title>
-                <description>This is an example of a secure parameterized PDF report.&lt;p&gt;Valid entries are defined
-                    by a business rule executed during login and saved in the user's session.&lt;p&gt;If you are logged
-                    in as 'Suzy', you will be prompted to select a region filtered for her - 'Eastern', 'Western' and
-                    'Southern'. Log in as 'Admin' who only has permission for 'Central' and you will not be prompted
+                <description>This is an example of a secure parameterized PDF report.&lt;p&gt;Valid
+                    entries are defined
+                    by a business rule executed during login and saved in the user's
+                    session.&lt;p&gt;If you are logged
+                    in as 'Suzy', you will be prompted to select a region filtered for her -
+                    'Eastern', 'Western' and
+                    'Southern'. Log in as 'Admin' who only has permission for 'Central' and you will
+                    not be prompted
                 </description>
                 <author>Doug Moran</author>
                 <icon>getImage?image=icons/quadrant-budget-for-region-session.png</icon>
@@ -1234,9 +1344,12 @@
         <file type="FILE.FOLDER" name="bursting" path="bursting" visible="true" displaytype="list">
             <path>bursting</path>
             <title>5. Bursting Examples</title>
-            <description>Bursting allows you to break a large task, like delivering reports to department managers, into
-                a simple process that is repeated for each individual case.&lt;br/&gt;The rules that determine the
-                cases, and the processes for creating the content and delivering it can be customized to meet the
+            <description>Bursting allows you to break a large task, like delivering reports to
+                department managers, into
+                a simple process that is repeated for each individual case.&lt;br/&gt;The rules that
+                determine the
+                cases, and the processes for creating the content and delivering it can be
+                customized to meet the
                 requirements.
             </description>
             <icon>getImage?image=icons/burst.png</icon>
@@ -1256,7 +1369,8 @@
                 <path>bursting</path>
                 <solution>samples</solution>
                 <title>4. The report used in bursting examples</title>
-                <description>Parameterized PDF report produced by JFreeReport for bursting example. Requires a region,
+                <description>Parameterized PDF report produced by JFreeReport for bursting example.
+                    Requires a region,
                     valid entries are 'Eastern', 'Western', 'Southern' and 'Central'
                 </description>
                 <author>Doug Moran</author>
@@ -1266,8 +1380,10 @@
                 <filename>setup.url</filename>
                 <title>1. Setup</title>
                 <target>setup</target>
-                <description>Edit the database table that stores the destination email addresses for each region in the
-                    sample data.&lt;p/&gt;This data is queried during the bursting examples and used to deliver custom
+                <description>Edit the database table that stores the destination email addresses for
+                    each region in the
+                    sample data.&lt;p/&gt;This data is queried during the bursting examples and used
+                    to deliver custom
                     reports.
                 </description>
                 <icon>getImage?image=icons/setup.png</icon>
@@ -1278,9 +1394,12 @@
                 <path>bursting</path>
                 <solution>samples</solution>
                 <title>2. Burst Using Action Sequence Document</title>
-                <description>This sample executes a burst that is defined in a single Action Sequence XML document. &lt;p
-                    align="left"/&gt;Execute an SQL rule to get the list of managers and regions&lt;br/&gt;&lt;br/&gt;Generate
-                    the regional report for each manager using JFreeReport&lt;br/&gt;&lt;br/&gt;Deliver the report to
+                <description>This sample executes a burst that is defined in a single Action
+                    Sequence XML document. &lt;p
+                    align="left"/&gt;Execute an SQL rule to get the list of managers and
+                    regions&lt;br/&gt;&lt;br/&gt;Generate
+                    the regional report for each manager using
+                    JFreeReport&lt;br/&gt;&lt;br/&gt;Deliver the report to
                     the manager in Excel format as an email attachment
                 </description>
                 <author>Doug Moran</author>
@@ -1292,9 +1411,11 @@
                 <path>bursting</path>
                 <solution>samples</solution>
                 <title>5. Scheduled Bursting</title>
-                <description>This creates a scheduled job for triggering example 2 above. &lt;p&gt;The burst is
+                <description>This creates a scheduled job for triggering example 2 above.
+                    &lt;p&gt;The burst is
                     triggered 3 times, two minutes apart &lt;p&gt;After starting this example &lt;a
-                    href="/pentaho/SchedulerAdmin" target="pentaho_popup"&gt;click here&lt;/a&gt; to view the Scheduler
+                    href="/pentaho/SchedulerAdmin" target="pentaho_popup"&gt;click here&lt;/a&gt; to
+                    view the Scheduler
                     Admin page
                 </description>
                 <author>Doug Moran</author>
@@ -1315,9 +1436,12 @@
                 <path>bursting</path>
                 <solution>samples</solution>
                 <title>3. Burst Using Workflow</title>
-                <description>This sample executes a burst that is defined in a workflow&lt;p align="left"/&gt;Execute an
-                    SQL rule to get the list of managers and regions&lt;br/&gt;&lt;br/&gt;Generate the regional report
-                    for each manager using JFreeReport&lt;br/&gt;&lt;br/&gt;Deliver the report to the manager in PDF
+                <description>This sample executes a burst that is defined in a workflow&lt;p
+                    align="left"/&gt;Execute an
+                    SQL rule to get the list of managers and regions&lt;br/&gt;&lt;br/&gt;Generate
+                    the regional report
+                    for each manager using JFreeReport&lt;br/&gt;&lt;br/&gt;Deliver the report to
+                    the manager in PDF
                     format as an email attachment
                 </description>
                 <author>Doug Moran</author>
@@ -1332,7 +1456,7 @@
     </file>
     <file type="FILE.FOLDER" name="test" path="" visible="false" displaytype="icons">
         <title>Testing Samples</title>
-        <description>Actions and resources used to test the components of the Pentaho BI Platform</description>
+        <description>Actions and resources used to test the components of the Tahopen BI Platform</description>
         <icon>getImage?image=icons/testing.png</icon>
         <solution>test</solution>
         <file type="FILE.FOLDER" visible="false" name="datasources">
@@ -1421,7 +1545,8 @@
                 <path>rules</path>
                 <solution>test</solution>
                 <title>Test SQL Execute Error 2</title>
-                <description>This tests the SQL Execute rule to make sure that it errors properly with semi-colons in
+                <description>This tests the SQL Execute rule to make sure that it errors properly
+                    with semi-colons in
                     the sql.
                 </description>
                 <author>Marc Batchelor</author>
@@ -1450,7 +1575,8 @@
                 <path>rules</path>
                 <solution>test</solution>
                 <title>Cross Tab Test</title>
-                <description>This action sequence demonstrates the capabilities of the cross-tab feature of the SQL
+                <description>This action sequence demonstrates the capabilities of the cross-tab
+                    feature of the SQL
                     Component
                 </description>
                 <author>Marc Batchelor</author>
@@ -1470,7 +1596,8 @@
                 <path>rules</path>
                 <solution>test</solution>
                 <title>Test SQL Execute Error 3</title>
-                <description>This tests the SQL Execute rule to make sure that it errors properly when forced to
+                <description>This tests the SQL Execute rule to make sure that it errors properly
+                    when forced to
                     single-line.
                 </description>
                 <author>Marc Batchelor</author>
@@ -1499,7 +1626,8 @@
                 <path>rules</path>
                 <solution>test</solution>
                 <title>Test SQL Execute 1</title>
-                <description>This tests the SQL Execute rule to make sure that single-statements work.</description>
+                <description>This tests the SQL Execute rule to make sure that single-statements
+                    work.</description>
                 <author>Marc Batchelor</author>
                 <properties>subscribable=false</properties>
             </file>
@@ -1545,7 +1673,8 @@
                 <path>rules</path>
                 <solution>test</solution>
                 <title>Security Tests</title>
-                <description>This action sequence demonstrates using security information from an action sequence
+                <description>This action sequence demonstrates using security information from an
+                    action sequence
                     document
                 </description>
                 <author>Marc Batchelor</author>
@@ -1574,7 +1703,8 @@
                 <path>rules</path>
                 <solution>test</solution>
                 <title>Test SQL Execute Rule 3</title>
-                <description>This tests the SQL Execute rule to make sure that it responds properly to the
+                <description>This tests the SQL Execute rule to make sure that it responds properly
+                    to the
                     force_single_statement.
                 </description>
                 <author>Marc Batchelor</author>
@@ -1612,7 +1742,8 @@
                 <path>rules</path>
                 <solution>test</solution>
                 <title>Test SQL Execute 2</title>
-                <description>This tests the SQL Execute rule to make sure that multiple-statements work.</description>
+                <description>This tests the SQL Execute rule to make sure that multiple-statements
+                    work.</description>
                 <author>Marc Batchelor</author>
                 <properties>subscribable=false</properties>
             </file>
@@ -1648,7 +1779,8 @@
                 <path>rules</path>
                 <solution>test</solution>
                 <title>Test SQL Execute 4</title>
-                <description>This tests the SQL Execute rule to make sure that multiple-statements work with a different
+                <description>This tests the SQL Execute rule to make sure that multiple-statements
+                    work with a different
                     multi-line separator.
                 </description>
                 <author>Marc Batchelor</author>
@@ -1940,7 +2072,8 @@
             <path>tmp</path>
             <title>tmp</title>
         </file>
-        <file type="FILE.FOLDER" name="email-attachments" path="email-attachments" visible="false" displaytype="icons">
+        <file type="FILE.FOLDER" name="email-attachments" path="email-attachments" visible="false"
+            displaytype="icons">
             <path>email-attachments</path>
             <title>Emailing Examples</title>
             <description>Actions and resources used to test email features</description>
@@ -1995,7 +2128,8 @@
                 <path>ipreparedcomponents</path>
                 <solution>test</solution>
                 <title>IPreparedComponent Available Test</title>
-                <description>This tests the SQLBaseComponent's implementation of the IPreparedComponent interface,
+                <description>This tests the SQLBaseComponent's implementation of the
+                    IPreparedComponent interface,
                     verifying that we can gain access to the component
                 </description>
                 <author>Will Gorman</author>
@@ -2024,7 +2158,8 @@
                 <path>ipreparedcomponents</path>
                 <solution>test</solution>
                 <title>IPreparedComponent Available Test</title>
-                <description>This tests the XQueryBaseComponent's implementation of the IPreparedComponent interface,
+                <description>This tests the XQueryBaseComponent's implementation of the
+                    IPreparedComponent interface,
                     verifying that we can gain access to the component
                 </description>
                 <author>Will Gorman</author>
@@ -2053,7 +2188,8 @@
                 <path>ipreparedcomponents</path>
                 <solution>test</solution>
                 <title>IPreparedComponent HQL Available Test</title>
-                <description>This tests the HQLBaseComponent's implementation of IPreparedComponent to see if it's
+                <description>This tests the HQLBaseComponent's implementation of IPreparedComponent
+                    to see if it's
                     available after executing
                 </description>
                 <author>Will Gorman</author>
@@ -2064,7 +2200,8 @@
                 <path>ipreparedcomponents</path>
                 <solution>test</solution>
                 <title>IPreparedComponent Available Test</title>
-                <description>This tests the SQLBaseComponent's implementation of the IPreparedComponent interface,
+                <description>This tests the SQLBaseComponent's implementation of the
+                    IPreparedComponent interface,
                     verifying that we can gain access to the component
                 </description>
                 <author>Will Gorman</author>
@@ -2075,7 +2212,8 @@
                 <path>ipreparedcomponents</path>
                 <solution>test</solution>
                 <title>IPreparedComponent XQuery Share Connection Test</title>
-                <description>This tests the XQueryBaseComponent's implementation of the IPreparedComponent interface,
+                <description>This tests the XQueryBaseComponent's implementation of the
+                    IPreparedComponent interface,
                     verifying that we can share a connection across components
                 </description>
                 <author>Will Gorman</author>
@@ -2086,7 +2224,8 @@
                 <path>ipreparedcomponents</path>
                 <solution>test</solution>
                 <title>IPreparedComponent MDX Available Test</title>
-                <description>This tests the MDXBaseComponent's implementation of IPreparedComponent to see if it's
+                <description>This tests the MDXBaseComponent's implementation of IPreparedComponent
+                    to see if it's
                     available after executing
                 </description>
                 <author>Will Gorman</author>
@@ -2097,7 +2236,8 @@
                 <path>ipreparedcomponents</path>
                 <solution>test</solution>
                 <title>IPreparedComponent Test Temp Tables</title>
-                <description>This tests the SQLBaseComponent's implementation of the IPreparedComponent interface,
+                <description>This tests the SQLBaseComponent's implementation of the
+                    IPreparedComponent interface,
                     verifying that sql connections are shared across components
                 </description>
                 <author>Will Gorman</author>
@@ -2108,7 +2248,8 @@
                 <path>ipreparedcomponents</path>
                 <solution>test</solution>
                 <title>IPreparedComponent Available Test</title>
-                <description>This tests the XQueryBaseComponent's implementation of the IPreparedComponent interface,
+                <description>This tests the XQueryBaseComponent's implementation of the
+                    IPreparedComponent interface,
                     verifying that we can gain access to the component
                 </description>
                 <author>Will Gorman</author>
@@ -2144,7 +2285,8 @@
             <path>golden</path>
             <title>golden</title>
         </file>
-        <file type="FILE.FOLDER" name="reporting" path="reporting" visible="false" displaytype="icons">
+        <file type="FILE.FOLDER" name="reporting" path="reporting" visible="false"
+            displaytype="icons">
             <path>reporting</path>
             <title>Reporting Examples</title>
             <description>Examples of HTML and PDF reports</description>
@@ -2155,9 +2297,12 @@
                 <path>reporting</path>
                 <solution>test</solution>
                 <title>Eclipse BIRT HTML Example</title>
-                <description>This is an example of an HTML report produced by Eclipse BIRT.&lt;p/&gt;It shows the actual
-                    headcount cost, budgeted headcount cost, and variance for every position, department and region&lt;p/&gt;It
-                    demostrates using colors and styles for headers and groupings. It also shows sub-totals.
+                <description>This is an example of an HTML report produced by Eclipse
+                    BIRT.&lt;p/&gt;It shows the actual
+                    headcount cost, budgeted headcount cost, and variance for every position,
+                    department and region&lt;p/&gt;It
+                    demostrates using colors and styles for headers and groupings. It also shows
+                    sub-totals.
                 </description>
                 <author>James Dixon</author>
                 <icon>file.png|BIRT-quadrant-budget-hsql.png</icon>
@@ -2171,9 +2316,11 @@
                 <title>Eclipse BIRT HTML Example</title>
                 <description>
                     This is an example of an HTML report produced by Eclipse BIRt.
-                    &lt;p/&gt; It shows the actual headcount cost, budgeted headcount cost, and variance for every
+                    &lt;p/&gt; It shows the actual headcount cost, budgeted headcount cost, and
+                    variance for every
                     position, department and region
-                    &lt;p/&gt; It demostrates using colors and styles for headers and groupings. It also shows
+                    &lt;p/&gt; It demostrates using colors and styles for headers and groupings. It
+                    also shows
                     sub-totals.
                 </description>
                 <author>James Dixon</author>
@@ -2195,7 +2342,8 @@
                 <solution>test</solution>
                 <title>JFreeReport Demo Example</title>
                 <description>
-                    This is an example of using JFreeReport to execute their own demos in the demo jar file. This
+                    This is an example of using JFreeReport to execute their own demos in the demo
+                    jar file. This
                     demonstrates the use of
                     jar resources, and arbitrary tablemodel objects.
                 </description>
@@ -2208,9 +2356,12 @@
                 <path>reporting</path>
                 <solution>test</solution>
                 <title>JasperReports HTML Example</title>
-                <description>This is an example of an HTML report produced by JasperReports.&lt;p/&gt;It shows the
-                    actual headcount cost, budgeted headcount cost, and variance for every position, department and
-                    region&lt;p/&gt;It demostrates using colors and styles for headers and groupings. It also shows
+                <description>This is an example of an HTML report produced by
+                    JasperReports.&lt;p/&gt;It shows the
+                    actual headcount cost, budgeted headcount cost, and variance for every position,
+                    department and
+                    region&lt;p/&gt;It demostrates using colors and styles for headers and
+                    groupings. It also shows
                     sub-totals.
                 </description>
                 <author>James Dixon and Barry Klawans</author>
@@ -2234,9 +2385,11 @@
                 <title>JFreeReport HTML Example</title>
                 <description>
                     This is an example of an HTML report produced by JFreeReport.
-                    &lt;p/&gt; It shows the actual headcount cost, budgeted headcount cost, and variance for every
+                    &lt;p/&gt; It shows the actual headcount cost, budgeted headcount cost, and
+                    variance for every
                     position, department and region
-                    &lt;p/&gt; It demostrates using colors and styles for headers and groupings. It also shows
+                    &lt;p/&gt; It demostrates using colors and styles for headers and groupings. It
+                    also shows
                     sub-totals.
                 </description>
                 <author>Marc Batchelor</author>
@@ -2266,9 +2419,12 @@
                 <path>reporting</path>
                 <solution>test</solution>
                 <title>Eclipse BIRT Parameterized PDF Example</title>
-                <description>This is an example of a parameterized PDF report produced by Eclipse BIRT.&lt;p&gt;You will
-                    be first prompted for a region, valid entries are 'Eastern', 'Western', 'Southern' and 'Central'&lt;p&gt;A
-                    PDf containing a chart and a data table for the selected region will be generated and displayed
+                <description>This is an example of a parameterized PDF report produced by Eclipse
+                    BIRT.&lt;p&gt;You will
+                    be first prompted for a region, valid entries are 'Eastern', 'Western',
+                    'Southern' and 'Central'&lt;p&gt;A
+                    PDf containing a chart and a data table for the selected region will be
+                    generated and displayed
                     (Adobe Acrobat plug-in required)
                 </description>
                 <author>James Dixon</author>
@@ -2283,9 +2439,11 @@
                 <title>JFreeReport HTML Example</title>
                 <description>
                     This is an example of an HTML report produced by JFreeReport.
-                    &lt;p/&gt; It shows the actual headcount cost, budgeted headcount cost, and variance for every
+                    &lt;p/&gt; It shows the actual headcount cost, budgeted headcount cost, and
+                    variance for every
                     position, department and region
-                    &lt;p/&gt; It demostrates using colors and styles for headers and groupings. It also shows
+                    &lt;p/&gt; It demostrates using colors and styles for headers and groupings. It
+                    also shows
                     sub-totals.
                 </description>
                 <author>Marc Batchelor</author>
@@ -2306,8 +2464,10 @@
                 <path>reporting</path>
                 <solution>test</solution>
                 <title>OLAP Crosstab Report</title>
-                <description>A cross tab report that shows actual and budget data for every department across every
-                    region. The report queries a Mondrian OLAP server and uses JFreeReport to generate the page
+                <description>A cross tab report that shows actual and budget data for every
+                    department across every
+                    region. The report queries a Mondrian OLAP server and uses JFreeReport to
+                    generate the page
                 </description>
                 <author>William Seyler</author>
                 <icon>MDX_Datasource.png</icon>
@@ -2329,9 +2489,11 @@
                 <title>JFreeReport HTML Example</title>
                 <description>
                     This is an example of an HTML report produced by JFreeReport.
-                    &lt;p/&gt; It shows the actual headcount cost, budgeted headcount cost, and variance for every
+                    &lt;p/&gt; It shows the actual headcount cost, budgeted headcount cost, and
+                    variance for every
                     position, department and region
-                    &lt;p/&gt; It demostrates using colors and styles for headers and groupings. It also shows
+                    &lt;p/&gt; It demostrates using colors and styles for headers and groupings. It
+                    also shows
                     sub-totals.
                 </description>
                 <author>Marc Batchelor</author>
@@ -2343,7 +2505,8 @@
                 <path>reporting</path>
                 <solution>test</solution>
                 <title>Dynamic SQL Tech Tip</title>
-                <description>This action sequence demonstrates how to use a javascript rule to dynamically generate SQL
+                <description>This action sequence demonstrates how to use a javascript rule to
+                    dynamically generate SQL
                     for use in a report.
                 </description>
                 <author>Marc Batchelor</author>
@@ -2356,9 +2519,11 @@
                 <title>JFreeReport HTML Example</title>
                 <description>
                     This is an example of an HTML report produced by JFreeReport.
-                    &lt;p/&gt; It shows the actual headcount cost, budgeted headcount cost, and variance for every
+                    &lt;p/&gt; It shows the actual headcount cost, budgeted headcount cost, and
+                    variance for every
                     position, department and region
-                    &lt;p/&gt; It demostrates using colors and styles for headers and groupings. It also shows
+                    &lt;p/&gt; It demostrates using colors and styles for headers and groupings. It
+                    also shows
                     sub-totals.
                 </description>
                 <author>Marc Batchelor</author>
@@ -2372,9 +2537,11 @@
                 <title>JFreeReport HTML Example</title>
                 <description>
                     This is an example of an HTML report produced by JFreeReport.
-                    &lt;p/&gt; It shows the actual headcount cost, budgeted headcount cost, and variance for every
+                    &lt;p/&gt; It shows the actual headcount cost, budgeted headcount cost, and
+                    variance for every
                     position, department and region
-                    &lt;p/&gt; It demostrates using colors and styles for headers and groupings. It also shows
+                    &lt;p/&gt; It demostrates using colors and styles for headers and groupings. It
+                    also shows
                     sub-totals.
                 </description>
                 <author>Marc Batchelor</author>
@@ -2395,9 +2562,12 @@
                 <path>reporting</path>
                 <solution>test</solution>
                 <title>JasperReports Parameterized PDF Example</title>
-                <description>This is an example of a parameterized PDF report produced by JasperReports.&lt;p&gt;You
-                    will be first prompted for a region, valid entries are 'Eastern', 'Western', 'Southern' and
-                    'Central'&lt;p&gt;A PDf containing a chart and a data table for the selected region will be
+                <description>This is an example of a parameterized PDF report produced by
+                    JasperReports.&lt;p&gt;You
+                    will be first prompted for a region, valid entries are 'Eastern', 'Western',
+                    'Southern' and
+                    'Central'&lt;p&gt;A PDf containing a chart and a data table for the selected
+                    region will be
                     generated and displayed (Adobe Acrobat plug-in required)
                 </description>
                 <author>James Dixon and Barry Klawans</author>
@@ -2422,7 +2592,8 @@
                     <path>reporting/JFreeReportChartTypes</path>
                     <solution>test</solution>
                     <title>Multiple Chart Types</title>
-                    <description>This demonstrates multiple chart types within the JFreeReport definition</description>
+                    <description>This demonstrates multiple chart types within the JFreeReport
+                        definition</description>
                     <author>Marc Batchelor</author>
                     <icon>JFreeReport_WithChart.png</icon>
                     <properties>subscribable=false</properties>
@@ -2523,7 +2694,7 @@
                 <path>workflow</path>
                 <solution>test</solution>
                 <title>Workflow Component Test</title>
-                <description>Test a workflow with a Pentaho Tool Agent</description>
+                <description>Test a workflow with a Tahopen Tool Agent</description>
                 <author>James Dixon</author>
                 <icon>getImage?image=icons/shark.png</icon>
                 <properties>subscribable=false</properties>
@@ -2555,8 +2726,10 @@
                 <path>scheduler</path>
                 <solution>test</solution>
                 <title>Mass CRON Scheduler</title>
-                <description>Creates a set of crons based on two file inputs. One file is a list of action sequences to
-                    schedule. The other is a list of crons to schedule those action sequences against.
+                <description>Creates a set of crons based on two file inputs. One file is a list of
+                    action sequences to
+                    schedule. The other is a list of crons to schedule those action sequences
+                    against.
                 </description>
                 <author>William E. Seyler</author>
                 <properties>subscribable=false</properties>

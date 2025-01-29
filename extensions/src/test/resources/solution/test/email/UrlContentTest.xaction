@@ -7,7 +7,7 @@
    <documentation>
       <author>Doug Moran</author>
       <description>This Action Sequence will run a report and email it</description>
-      <help/>
+      <help />
       <result-type>email</result-type>
       <icon>BurstActionSequence.png</icon>
    </documentation>
@@ -25,7 +25,7 @@
          <default-value>html</default-value>
       </output-type>
    </inputs>
-   <outputs/>
+   <outputs />
    <resources>
       <report-definition>
          <solution-file>
@@ -43,10 +43,10 @@
    <actions>
       <action-definition>
          <action-inputs>
-            <output-type type="string"/>
+            <output-type type="string" />
          </action-inputs>
          <action-outputs>
-            <report-output type="content" mapping="southern-report"/>
+            <report-output type="content" mapping="southern-report" />
          </action-outputs>
          <component-name>JFreeReportComponent</component-name>
          <action-type>report</action-type>
@@ -54,36 +54,40 @@
             <source>sql</source>
             <live>true</live>
             <jndi>SampleData</jndi>
-            <query>select QUADRANT_ACTUALS.REGION, QUADRANT_ACTUALS.DEPARTMENT, QUADRANT_ACTUALS.POSITIONTITLE, QUADRANT_ACTUALS.ACTUAL, QUADRANT_ACTUALS.BUDGET, QUADRANT_ACTUALS.VARIANCE from QUADRANT_ACTUALS where QUADRANT_ACTUALS.REGION='Southern' order by QUADRANT_ACTUALS.REGION, QUADRANT_ACTUALS.DEPARTMENT</query>
+            <query>select QUADRANT_ACTUALS.REGION, QUADRANT_ACTUALS.DEPARTMENT,
+               QUADRANT_ACTUALS.POSITIONTITLE, QUADRANT_ACTUALS.ACTUAL, QUADRANT_ACTUALS.BUDGET,
+               QUADRANT_ACTUALS.VARIANCE from QUADRANT_ACTUALS where
+               QUADRANT_ACTUALS.REGION='Southern' order by QUADRANT_ACTUALS.REGION,
+               QUADRANT_ACTUALS.DEPARTMENT</query>
          </component-definition>
       </action-definition>
       <action-definition>
          <component-name>TemplateComponent</component-name>
          <component-definition>
-            <template><![CDATA[<HTML>Your report is ready. Here is a link to Southern report. <P> <A HREF="{southern-report}">Report for Southern Region</A> <P> Pentaho Dude]]></template>
+            <template><![CDATA[<HTML>Your report is ready. Here is a link to Southern report. <P> <A HREF="{southern-report}">Report for Southern Region</A> <P> Tahopen Dude]]></template>
          </component-definition>
          <action-type>Message Template</action-type>
          <action-inputs>
-            <southern-report type="content"/>
+            <southern-report type="content" />
          </action-inputs>
          <action-outputs>
-            <output-message type="string" mapping="message-html"/>
+            <output-message type="string" mapping="message-html" />
          </action-outputs>
       </action-definition>
       <action-definition>
          <component-name>EmailComponent</component-name>
          <action-inputs>
-            <output-type type="string"/>
-            <message-html type="string"/>
+            <output-type type="string" />
+            <message-html type="string" />
          </action-inputs>
          <action-resources>
-            <a-resource type="content"/>
+            <a-resource type="content" />
          </action-resources>
          <component-definition>
-            <to>dmoran@doug.org</to> 
+            <to>dmoran@doug.org</to>
             <from>dmoran@pentaho.org</from>
             <resource-name>HTML Attachment.html</resource-name>
-            <attachment-ref name-param="resource-name" resource-param="a-resource"/>
+            <attachment-ref name-param="resource-name" resource-param="a-resource" />
             <subject>Regional Reports</subject>
          </component-definition>
       </action-definition>

@@ -996,7 +996,7 @@ public class PentahoMetadataDomainRepositoryIT {
   }
 
   /**
-   * Loads a "real" Pentaho Metadata Domain
+   * Loads a "real" Tahopen Metadata Domain
    *
    * @param domainId
    * @param domainFile

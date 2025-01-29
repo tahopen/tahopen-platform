@@ -29,13 +29,12 @@ import javax.jws.WebService;
 import java.util.List;
 
 /**
- * Implementation of {@link IUserRoleListWebService} that delegates to an {@link IUserRoleListService} instance.
+ * Implementation of {@link IUserRoleListWebService} that delegates to an
+ * {@link IUserRoleListService} instance.
  * 
  * @author rmansoor
  */
-@WebService( endpointInterface = "org.pentaho.platform.security.userrole.ws.IUserRoleListWebService",
-    serviceName = "userRoleListService", portName = "userRoleListServicePort",
-    targetNamespace = "http://www.pentaho.org/ws/1.0" )
+@WebService(endpointInterface = "org.pentaho.platform.security.userrole.ws.IUserRoleListWebService", serviceName = "userRoleListService", portName = "userRoleListServicePort", targetNamespace = "http://www.pentaho.org/ws/1.0")
 public class DefaultUserRoleListWebService implements IUserRoleListWebService {
 
   // ~ Static fields/initializers
@@ -50,17 +49,17 @@ public class DefaultUserRoleListWebService implements IUserRoleListWebService {
   // ====================================================================================================
 
   /**
-   * No-arg constructor for when in Pentaho BI Server.
+   * No-arg constructor for when in Tahopen BI Server.
    */
   public DefaultUserRoleListWebService() {
     super();
-    userRoleListService = PentahoSystem.get( IUserRoleListService.class );
-    if ( userRoleListService == null ) {
-      throw new IllegalStateException( "no IUserRoleListService implementation" );
+    userRoleListService = PentahoSystem.get(IUserRoleListService.class);
+    if (userRoleListService == null) {
+      throw new IllegalStateException("no IUserRoleListService implementation");
     }
   }
 
-  public DefaultUserRoleListWebService( final IUserRoleListService userRoleListService ) {
+  public DefaultUserRoleListWebService(final IUserRoleListService userRoleListService) {
     super();
     this.userRoleListService = userRoleListService;
   }
@@ -78,30 +77,30 @@ public class DefaultUserRoleListWebService implements IUserRoleListWebService {
     return userRoleListService.getAllUsers();
   }
 
-  public List<String> getUsersInRole( String role ) {
-    return userRoleListService.getUsersInRole( null, role );
+  public List<String> getUsersInRole(String role) {
+    return userRoleListService.getUsersInRole(null, role);
   }
 
-  public List<String> getRolesForUser( String username ) {
-    return userRoleListService.getRolesForUser( null, username );
+  public List<String> getRolesForUser(String username) {
+    return userRoleListService.getRolesForUser(null, username);
   }
 
   @Override
   public UserRoleInfo getUserRoleInfo() {
     UserRoleInfo userRoleInfo = new UserRoleInfo();
-    userRoleInfo.setRoles( getAllRoles() );
-    userRoleInfo.setUsers( getAllUsers() );
+    userRoleInfo.setRoles(getAllRoles());
+    userRoleInfo.setUsers(getAllUsers());
     return userRoleInfo;
   }
 
   @Override
-  public List<String> getAllRolesForTenant( Tenant tenant ) {
-    return userRoleListService.getAllRoles( tenant );
+  public List<String> getAllRolesForTenant(Tenant tenant) {
+    return userRoleListService.getAllRoles(tenant);
   }
 
   @Override
-  public List<String> getAllUsersForTenant( Tenant tenant ) {
-    return userRoleListService.getAllUsers( tenant );
+  public List<String> getAllUsersForTenant(Tenant tenant) {
+    return userRoleListService.getAllUsers(tenant);
   }
 
 }

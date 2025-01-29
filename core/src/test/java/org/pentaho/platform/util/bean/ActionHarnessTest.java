@@ -93,7 +93,7 @@ public class ActionHarnessTest {
 
     TestAction action1 = new TestAction();
     ActionHarness harness1 = new ActionHarness( action1 );
-    // commons bBeanutils will throw exception if you try to type convert a null value. Pentaho BeanUtil
+    // commons bBeanutils will throw exception if you try to type convert a null value. Tahopen BeanUtil
     // will skip the set operation altogether if you try to set a null value on a bean. This test ensures
     // that no exception is thrown in this case. The correct behavior is a message will be logged indicating
     // that the null value could not be set. I don't consider this a "real" type conversion problem like

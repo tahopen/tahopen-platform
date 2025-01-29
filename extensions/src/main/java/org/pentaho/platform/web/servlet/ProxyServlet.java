@@ -78,11 +78,11 @@ import java.util.Map;
  * NOTES:
  * <p>
  * <p>
- * For this to be useful, both Pentaho servers should be using the same database repository.
+ * For this to be useful, both Tahopen servers should be using the same database repository.
  * <p>
  * The recieving server should have the ProxyTrustingFilter enabled to handle authicentation.
  * <p>
- * This Servlet only works with GET requests. All requests in the Pentaho BI Platform are currently gets.
+ * This Servlet only works with GET requests. All requests in the Tahopen BI Platform are currently gets.
  *
  * @author Doug Moran
  * @see org.pentaho.platform.web.http.filters.ProxyTrustingFilter

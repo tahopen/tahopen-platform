@@ -111,7 +111,7 @@ public class LocaleHelper {
    * as given by {@link Locale#getDefault()}.
    * In the rare cases that this may be {@code null}, it is initialized to {@link Locale#US}.
    * <p>
-   * In the Pentaho server, the default locale is initialized by the
+   * In the Tahopen server, the default locale is initialized by the
    * {@code org.pentaho.platform.web.http.context.SolutionContextListener}.
    * When the {@code web.xml} server parameters {@code locale-language} and {@code locale-country} are both specified
    * and match an available locale, as given by {@link Locale#getAvailableLocales()}, it sets the default locale to
@@ -187,8 +187,8 @@ public class LocaleHelper {
    * <p>
    * A thread's locale <i>override</i> is the most specific locale, as returned by {@link #getLocale()}.
    * <p>
-   * The Pentaho server sets the thread locale override, of threads handling HTTP requests,
-   * to the locale override of the Pentaho session of the corresponding request,
+   * The Tahopen server sets the thread locale override, of threads handling HTTP requests,
+   * to the locale override of the Tahopen session of the corresponding request,
    * as given by {@link IPentahoSession#getAttributeLocaleOverride()}.
    * This is done by the {@code org.pentaho.platform.web.http.filters.HttpSessionPentahoSessionIntegrationFilter}
    * filter.
@@ -230,14 +230,14 @@ public class LocaleHelper {
   /**
    * Sets the <i>base</i> locale of the current thread.
    * <p>
-   * The Pentaho server sets the base locale of threads handling HTTP requests
+   * The Tahopen server sets the base locale of threads handling HTTP requests
    * to the corresponding request's locale, as given by {@code javax.servlet.http.HttpServletRequest#getLocale()}.
    * This is done by the
    * {@code org.pentaho.platform.web.http.filters.HttpSessionPentahoSessionIntegrationFilter}
    * filter.
    * <p>
    * In this manner, according to the rules of {@link #getLocale()},
-   * and unless a web user has explicitly set their Pentaho session's locale override
+   * and unless a web user has explicitly set their Tahopen session's locale override
    * (or the thread's override locale is set by some other means),
    * the effective locale will be the web browser's preferred language.
    *

@@ -160,9 +160,9 @@ public abstract class PentahoBase implements ILogger, Serializable {
     if ( loggingLevel <= ILogger.ERROR ) {
       IVersionHelper helper = PentahoSystem.get( IVersionHelper.class, null );
       if ( helper != null ) {
-        getLogger().error( "Error Start: Pentaho " + helper.getVersionInformation( PentahoSystem.class ) ); //$NON-NLS-1$
+        getLogger().error( "Error Start: Tahopen " + helper.getVersionInformation( PentahoSystem.class ) ); //$NON-NLS-1$
       } else {
-        getLogger().error( "Error Start: Pentaho " ); //$NON-NLS-1$
+        getLogger().error( "Error Start: Tahopen " ); //$NON-NLS-1$
       }
       getLogger().error( getLogId() + message, error );
       getLogger().error( "Error end:" ); //$NON-NLS-1$ 
@@ -174,9 +174,9 @@ public abstract class PentahoBase implements ILogger, Serializable {
     if ( loggingLevel <= ILogger.FATAL ) {
       IVersionHelper helper = PentahoSystem.get( IVersionHelper.class, null );
       if ( helper != null ) {
-        getLogger().error( "Error Start: Pentaho " + helper.getVersionInformation( PentahoSystem.class ) ); //$NON-NLS-1$
+        getLogger().error( "Error Start: Tahopen " + helper.getVersionInformation( PentahoSystem.class ) ); //$NON-NLS-1$
       } else {
-        getLogger().error( "Error Start: Pentaho " ); //$NON-NLS-1$
+        getLogger().error( "Error Start: Tahopen " ); //$NON-NLS-1$
       }
       getLogger().fatal( getLogId() + message, error );
       getLogger().error( "Error end:" ); //$NON-NLS-1$ 

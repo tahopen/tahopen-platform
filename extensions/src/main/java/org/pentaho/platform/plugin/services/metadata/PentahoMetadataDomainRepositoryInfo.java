@@ -30,13 +30,13 @@ import org.pentaho.platform.repository2.ClientRepositoryPaths;
  */
 public class PentahoMetadataDomainRepositoryInfo {
   /**
-   * The name of the folder in which Pentaho Metadata should be stored (appended to the proper path for each tenant) -
+   * The name of the folder in which Tahopen Metadata should be stored (appended to the proper path for each tenant) -
    * the value is {@value}
    */
   private static final String METADATA_FOLDER_NAME = "metadata";
 
   /**
-   * The file extension to be used with Pentaho Metadata Files
+   * The file extension to be used with Tahopen Metadata Files
    */
   private static final String FILE_EXTENSION = ".xmi";
 
@@ -48,21 +48,21 @@ public class PentahoMetadataDomainRepositoryInfo {
   }
 
   /**
-   * Returns the path location in which the Pentaho Metadata folder will be created
+   * Returns the path location in which the Tahopen Metadata folder will be created
    */
   public static String getMetadataParentPath() {
     return ClientRepositoryPaths.getEtcFolderPath();
   }
 
   /**
-   * Generates the repository location for the Pentaho Metadata to be stored
+   * Generates the repository location for the Tahopen Metadata to be stored
    */
   public static String getMetadataFolderPath() {
     return getMetadataParentPath() + RepositoryFile.SEPARATOR + getMetadataFolderName();
   }
 
   /**
-   * Returns the file extension to be used with Pentaho Metadata files
+   * Returns the file extension to be used with Tahopen Metadata files
    */
   public static String getFileExtension() {
     return FILE_EXTENSION;

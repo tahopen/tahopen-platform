@@ -734,7 +734,7 @@ public class SessionCachingMetadataDomainRepository implements IMetadataDomainRe
     // maximum number of threads in the thread pool.
     int numberOfThreads;
 
-    // Pentaho session to be set in threads
+    // Tahopen session to be set in threads
     IPentahoSession pentahoSession;
 
     /** naming pattern used to creating executor threads that run the tasks/callables */
@@ -785,7 +785,7 @@ public class SessionCachingMetadataDomainRepository implements IMetadataDomainRe
       ExecutorService executorService = Executors.newFixedThreadPool( numberOfThreads, threadFactory );
 
 
-      logger.debug( String.format( "creating executorService with number of threads: %d and Pentaho sessionId: %s",
+      logger.debug( String.format( "creating executorService with number of threads: %d and Tahopen sessionId: %s",
               numberOfThreads, pentahoSession.getId() ) );
       return executorService;
     }

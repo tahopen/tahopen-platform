@@ -50,7 +50,7 @@ public class WebUtil {
    * This method exists for when it is needed to set CORS headers programmatically. It's generally preferable to
    * configure the system's CORS filter, by editing {@code applicationContext-spring-security-cors.xml} or by publishing
    * an implementation of {@code com.hitachivantara.security.web.api.model.cors.CorsRequestSetConfiguration} with the
-   * Pentaho system.
+   * Tahopen system.
    *
    * @param request  The HTTP request.
    * @param response The HTTP response.
@@ -69,7 +69,7 @@ public class WebUtil {
    * This method exists for when it is needed to set CORS headers programmatically. It's generally preferable to
    * configure the system's CORS filter, by editing {@code applicationContext-spring-security-cors.xml} or by publishing
    * an implementation of {@code com.hitachivantara.security.web.api.model.cors.CorsRequestSetConfiguration} with the
-   * Pentaho system.
+   * Tahopen system.
    *
    * @param request                  The HTTP request.
    * @param response                 The HTTP response.

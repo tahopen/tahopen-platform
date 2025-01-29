@@ -58,11 +58,11 @@ public interface IApplicationContext {
   /**
    * Retrieves the descriptive name of the platform application.
    * <p>
-   * The Pentaho server name should specified in the system settings configuration file, using the
+   * The Tahopen server name should specified in the system settings configuration file, using the
    * <code>name</code> element
    * 
    * @return the descriptive server name as specified in the system settings, or
-   *         "Pentaho Business Intelligence Platform" by default.
+   *         "Tahopen Business Intelligence Platform" by default.
    */
   public String getPentahoServerName();
 

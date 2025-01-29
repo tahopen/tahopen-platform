@@ -25,7 +25,8 @@ import org.springframework.extensions.jcr.JcrConstants;
 import javax.jcr.Session;
 
 /**
- * Pentaho JCR constants. The {@code get* } methods automatically prepend the appropriate namespace prefix.
+ * Tahopen JCR constants. The {@code get* } methods automatically prepend the
+ * appropriate namespace prefix.
  * 
  * @author mlowery
  */
@@ -35,17 +36,17 @@ public class PentahoJcrConstants extends JcrConstants {
   // ======================================================================================
 
   /**
-   * Pentaho item name namespace.
+   * Tahopen item name namespace.
    */
   public static final String PHO_NS = "http://www.pentaho.org/jcr/2.0"; //$NON-NLS-1$
 
   /**
-   * Pentaho node type namespace.
+   * Tahopen node type namespace.
    */
   public static final String PHO_NT_NS = "http://www.pentaho.org/jcr/nt/2.0"; //$NON-NLS-1$
 
   /**
-   * Pentaho mixin type namespace.
+   * Tahopen mixin type namespace.
    */
   public static final String PHO_MIX_NS = "http://www.pentaho.org/jcr/mix/2.0"; //$NON-NLS-1$
 
@@ -118,125 +119,127 @@ public class PentahoJcrConstants extends JcrConstants {
   // ~ Constructors
   // ====================================================================================================
 
-  public PentahoJcrConstants( final Session session ) {
-    super( session );
+  public PentahoJcrConstants(final Session session) {
+    super(session);
   }
 
-  public PentahoJcrConstants( final Session session, final boolean cache ) {
-    super( session, cache );
+  public PentahoJcrConstants(final Session session, final boolean cache) {
+    super(session, cache);
   }
 
   // ~ Methods
   // =========================================================================================================
 
   public String getPHO_NT_PENTAHOFILE() {
-    return resolveName( PHO_NT_NS, PHO_NT_PENTAHOFILE );
+    return resolveName(PHO_NT_NS, PHO_NT_PENTAHOFILE);
   }
 
   public String getPHO_MIX_VERSIONABLE() {
-    return resolveName( PHO_MIX_NS, PHO_MIX_VERSIONABLE );
+    return resolveName(PHO_MIX_NS, PHO_MIX_VERSIONABLE);
   }
 
   public String getPHO_NT_INTERNALFOLDER() {
-    return resolveName( PHO_NT_NS, PHO_NT_INTERNALFOLDER );
+    return resolveName(PHO_NT_NS, PHO_NT_INTERNALFOLDER);
   }
 
   public String getPHO_NT_LOCKTOKENSTORAGE() {
-    return resolveName( PHO_NT_NS, PHO_NT_LOCKTOKENSTORAGE );
+    return resolveName(PHO_NT_NS, PHO_NT_LOCKTOKENSTORAGE);
   }
 
   public String getPHO_LOCKEDNODEREF() {
-    return resolveName( PHO_NS, PHO_LOCKEDNODEREF );
+    return resolveName(PHO_NS, PHO_LOCKEDNODEREF);
   }
 
   public String getPHO_LOCKTOKEN() {
-    return resolveName( PHO_NS, PHO_LOCKTOKEN );
+    return resolveName(PHO_NS, PHO_LOCKTOKEN);
   }
 
   public String getPHO_VERSIONAUTHOR() {
-    return resolveName( PHO_NS, PHO_VERSIONAUTHOR );
+    return resolveName(PHO_NS, PHO_VERSIONAUTHOR);
   }
 
   public String getPHO_VERSIONMESSAGE() {
-    return resolveName( PHO_NS, PHO_VERSIONMESSAGE );
+    return resolveName(PHO_NS, PHO_VERSIONMESSAGE);
   }
 
   public String getPHO_LASTMODIFIED() {
-    return resolveName( PHO_NS, PHO_LASTMODIFIED );
+    return resolveName(PHO_NS, PHO_LASTMODIFIED);
   }
 
   public String getPHO_TITLE() {
-    return resolveName( PHO_NS, PHO_TITLE );
+    return resolveName(PHO_NS, PHO_TITLE);
   }
 
   public String getPHO_DESCRIPTION() {
-    return resolveName( PHO_NS, PHO_DESCRIPTION );
+    return resolveName(PHO_NS, PHO_DESCRIPTION);
   }
 
   public String getPHO_LOCALES() {
-    return resolveName( PHO_NS, PHO_LOCALES );
+    return resolveName(PHO_NS, PHO_LOCALES);
   }
 
   public String getPHO_ROOTLOCALE() {
-    return resolveName( PHO_NS, PHO_ROOTLOCALE );
+    return resolveName(PHO_NS, PHO_ROOTLOCALE);
   }
 
   public String getPHO_NT_LOCALIZEDSTRING() {
-    return resolveName( PHO_NT_NS, PHO_NT_LOCALIZEDSTRING );
+    return resolveName(PHO_NT_NS, PHO_NT_LOCALIZEDSTRING);
   }
 
   public String getPHO_NT_LOCALE() {
-    return resolveName( PHO_NT_NS, PHO_NT_LOCALE );
+    return resolveName(PHO_NT_NS, PHO_NT_LOCALE);
   }
 
   public String getPHO_NT_PENTAHOFOLDER() {
-    return resolveName( PHO_NT_NS, PHO_NT_PENTAHOFOLDER );
+    return resolveName(PHO_NT_NS, PHO_NT_PENTAHOFOLDER);
   }
 
   public String getPHO_NT_PENTAHOHIERARCHYNODE() {
-    return resolveName( PHO_NT_NS, PHO_NT_PENTAHOHIERARCHYNODE );
+    return resolveName(PHO_NT_NS, PHO_NT_PENTAHOHIERARCHYNODE);
   }
 
   public String getPHO_BOUNDROLES() {
-    return resolveName( PHO_NS, PHO_BOUNDROLES );
+    return resolveName(PHO_NS, PHO_BOUNDROLES);
   }
 
   public String getPHO_CONTENTTYPE() {
-    return resolveName( PHO_NS, PHO_CONTENTTYPE );
+    return resolveName(PHO_NS, PHO_CONTENTTYPE);
   }
 
   public String getPHO_HIDDEN() {
-    return resolveName( PHO_NS, PHO_HIDDEN );
+    return resolveName(PHO_NS, PHO_HIDDEN);
   }
 
   public String getPHO_DELETEDDATE() {
-    return resolveName( PHO_NS, PHO_DELETEDDATE );
+    return resolveName(PHO_NS, PHO_DELETEDDATE);
   }
 
   public String getPHO_FILESIZE() {
-    return resolveName( PHO_NS, PHO_FILESIZE );
+    return resolveName(PHO_NS, PHO_FILESIZE);
   }
 
   public String getPHO_METADATA() {
-    return resolveName( PHO_NS, PHO_METADATA );
+    return resolveName(PHO_NS, PHO_METADATA);
   }
 
   public String getPHO_ORIGPARENTFOLDERPATH() {
-    return resolveName( PHO_NS, PHO_ORIGPARENTFOLDERPATH );
+    return resolveName(PHO_NS, PHO_ORIGPARENTFOLDERPATH);
   }
 
   public String getPHO_ORIGNAME() {
-    return resolveName( PHO_NS, PHO_ORIGNAME );
+    return resolveName(PHO_NS, PHO_ORIGNAME);
   }
 
   public String getPHO_ACLONLYCHANGE() {
-    return resolveName( PHO_NS, PHO_ACLONLYCHANGE );
+    return resolveName(PHO_NS, PHO_ACLONLYCHANGE);
   }
 
   public String getPHO_ACLMANAGEMENT_PRIVILEGE() {
-    return resolveName( PHO_NS, PHO_ACL_MANAGEMENT_PRIVILEGE );
+    return resolveName(PHO_NS, PHO_ACL_MANAGEMENT_PRIVILEGE);
   }
 
-  public String getPHO_ACLNODE() { return resolveName( PHO_NS, PHO_ACLNODE ); }
+  public String getPHO_ACLNODE() {
+    return resolveName(PHO_NS, PHO_ACLNODE);
+  }
 
 }

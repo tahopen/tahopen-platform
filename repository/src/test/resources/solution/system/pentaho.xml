@@ -46,13 +46,13 @@
       for this to work).
     -->
     <default-acls>
-      <acl-entry role="Administrator" acl="FULL_CONTROL"/>
+      <acl-entry role="Administrator" acl="FULL_CONTROL" />
       <!-- Admin users get all authorities -->
-      <acl-entry role="cto" acl="FULL_CONTROL"/>
+      <acl-entry role="cto" acl="FULL_CONTROL" />
       <!-- CTO gets everything -->
-      <acl-entry role="dev" acl="EXECUTE_SUBSCRIBE"/>
+      <acl-entry role="dev" acl="EXECUTE_SUBSCRIBE" />
       <!-- Dev gets execute/subscribe -->
-      <acl-entry role="Authenticated" acl="EXECUTE"/>
+      <acl-entry role="Authenticated" acl="EXECUTE" />
       <!-- Authenticated users get execute only -->
     </default-acls>
 
@@ -64,7 +64,7 @@
 
     <overrides>
       <file path="/pentaho-solutions/admin">
-        <acl-entry role="Administrator" acl="FULL_CONTROL"/>
+        <acl-entry role="Administrator" acl="FULL_CONTROL" />
       </file>
     </overrides>
 
@@ -86,7 +86,7 @@
     -->
   </acl-publisher>
   <acl-voter>
-    <!-- What role must someone be in to be an ADMIN of Pentaho -->
+    <!-- What role must someone be in to be an ADMIN of Tahopen -->
     <admin-role>Admin</admin-role>
   </acl-voter>
   <!--
@@ -146,25 +146,30 @@
       </FlashChart>
   -->
   <!--
-  This element, and any of its child elements are optional. These elements are used to explicitly identify
-  the xml transformer, sax parser, and dom parser implementations used by the platform. If any of these
+  This element, and any of its child elements are optional. These elements are used to explicitly
+  identify
+  the xml transformer, sax parser, and dom parser implementations used by the platform. If any of
+  these
   elements are missing, default implementations will be supplied. For more information, see:
   http://xml.apache.org/xalan-j/usagepatterns.html#plug
   -->
   <!--
 <xml-factories>
-  <factory-impl name="javax.xml.parsers.SAXParserFactory" implementation="org.apache.xerces.jaxp.SAXParserFactoryImpl"/>
-  <factory-impl name="javax.xml.transform.TransformerFactory" implementation="org.apache.xalan.processor.TransformerFactoryImpl"/>
-  <factory-impl name="javax.xml.parsers.DocumentBuilderFactory" implementation="org.apache.xerces.jaxp.DocumentBuilderFactoryImpl"/>
+  <factory-impl name="javax.xml.parsers.SAXParserFactory"
+  implementation="org.apache.xerces.jaxp.SAXParserFactoryImpl"/>
+  <factory-impl name="javax.xml.transform.TransformerFactory"
+  implementation="org.apache.xalan.processor.TransformerFactoryImpl"/>
+  <factory-impl name="javax.xml.parsers.DocumentBuilderFactory"
+  implementation="org.apache.xerces.jaxp.DocumentBuilderFactoryImpl"/>
 </xml-factories>
   -->
 
   <report-config>
-    <entry name="org.pentaho.web.ContentHandler" value="getImage?image={0}"/>
-    <entry name="org.jfree.base.LogLevel" value="Warn"/>
-    <entry name="org.jfree.base.LogTarget" value="org.jfree.logger.log4j.Log4JLogTarget"/>
-    <entry name="org.jfree.report.NoPrinterAvailable" value="true"/>
-    <entry name="org.jfree.report.modules.output.table.html.EmptyCellsUseCSS" value="true"/>
+    <entry name="org.pentaho.web.ContentHandler" value="getImage?image={0}" />
+    <entry name="org.jfree.base.LogLevel" value="Warn" />
+    <entry name="org.jfree.base.LogTarget" value="org.jfree.logger.log4j.Log4JLogTarget" />
+    <entry name="org.jfree.report.NoPrinterAvailable" value="true" />
+    <entry name="org.jfree.report.modules.output.table.html.EmptyCellsUseCSS" value="true" />
   </report-config>
   <hibernate>
     <hibernateConfigPath>system/hibernate/hsql.hibernate.cfg.xml</hibernateConfigPath>

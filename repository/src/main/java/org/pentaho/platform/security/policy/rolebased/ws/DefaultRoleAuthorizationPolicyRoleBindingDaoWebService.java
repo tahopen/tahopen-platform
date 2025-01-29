@@ -30,15 +30,14 @@ import javax.jws.WebService;
 import java.util.List;
 
 /**
- * Implementation of {@link IRoleAuthorizationPolicyRoleBindingDaoWebService} that delegates to an
+ * Implementation of {@link IRoleAuthorizationPolicyRoleBindingDaoWebService}
+ * that delegates to an
  * {@link IRoleAuthorizationPolicyRoleBindingDao} instance.
  * 
  * @author mlowery
  */
-@WebService(
-    endpointInterface = "org.pentaho.platform.security.policy.rolebased.ws."
-      + "IRoleAuthorizationPolicyRoleBindingDaoWebService",
-    serviceName = "roleBindingDao", portName = "roleBindingDaoPort", targetNamespace = "http://www.pentaho.org/ws/1.0" )
+@WebService(endpointInterface = "org.pentaho.platform.security.policy.rolebased.ws."
+    + "IRoleAuthorizationPolicyRoleBindingDaoWebService", serviceName = "roleBindingDao", portName = "roleBindingDaoPort", targetNamespace = "http://www.pentaho.org/ws/1.0")
 public class DefaultRoleAuthorizationPolicyRoleBindingDaoWebService implements
     IRoleAuthorizationPolicyRoleBindingDaoWebService {
 
@@ -54,19 +53,19 @@ public class DefaultRoleAuthorizationPolicyRoleBindingDaoWebService implements
   // ====================================================================================================
 
   /**
-   * No-arg constructor for when in Pentaho BI Server.
+   * No-arg constructor for when in Tahopen BI Server.
    */
   public DefaultRoleAuthorizationPolicyRoleBindingDaoWebService() {
     super();
-    roleBindingDao = PentahoSystem.get( IRoleAuthorizationPolicyRoleBindingDao.class );
-    if ( roleBindingDao == null ) {
-      throw new IllegalStateException( Messages.getInstance().getString(
-          "DefaultRoleAuthorizationPolicyRoleBindingDaoWebService.ERROR_0001_MISSING_ROLE_BINDING_DAO" ) ); //$NON-NLS-1$
+    roleBindingDao = PentahoSystem.get(IRoleAuthorizationPolicyRoleBindingDao.class);
+    if (roleBindingDao == null) {
+      throw new IllegalStateException(Messages.getInstance().getString(
+          "DefaultRoleAuthorizationPolicyRoleBindingDaoWebService.ERROR_0001_MISSING_ROLE_BINDING_DAO")); //$NON-NLS-1$
     }
   }
 
   public DefaultRoleAuthorizationPolicyRoleBindingDaoWebService(
-      final IRoleAuthorizationPolicyRoleBindingDao roleBindingDao ) {
+      final IRoleAuthorizationPolicyRoleBindingDao roleBindingDao) {
     super();
     this.roleBindingDao = roleBindingDao;
   }
@@ -75,32 +74,32 @@ public class DefaultRoleAuthorizationPolicyRoleBindingDaoWebService implements
   // =========================================================================================================
 
   @Override
-  public RoleBindingStruct getRoleBindingStruct( final String locale ) {
-    return roleBindingDao.getRoleBindingStruct( locale );
+  public RoleBindingStruct getRoleBindingStruct(final String locale) {
+    return roleBindingDao.getRoleBindingStruct(locale);
   }
 
   @Override
-  public List<String> getBoundLogicalRoleNames( final List<String> runtimeRoleNames ) {
-    return roleBindingDao.getBoundLogicalRoleNames( runtimeRoleNames );
+  public List<String> getBoundLogicalRoleNames(final List<String> runtimeRoleNames) {
+    return roleBindingDao.getBoundLogicalRoleNames(runtimeRoleNames);
   }
 
   @Override
-  public void setRoleBindings( final String runtimeRoleName, final List<String> logicalRolesNames ) {
-    roleBindingDao.setRoleBindings( runtimeRoleName, logicalRolesNames );
+  public void setRoleBindings(final String runtimeRoleName, final List<String> logicalRolesNames) {
+    roleBindingDao.setRoleBindings(runtimeRoleName, logicalRolesNames);
   }
 
   @Override
-  public List<String> getBoundLogicalRoleNamesForTenant( Tenant tenant, List<String> runtimeRoleNames ) {
-    return roleBindingDao.getBoundLogicalRoleNames( tenant, runtimeRoleNames );
+  public List<String> getBoundLogicalRoleNamesForTenant(Tenant tenant, List<String> runtimeRoleNames) {
+    return roleBindingDao.getBoundLogicalRoleNames(tenant, runtimeRoleNames);
   }
 
   @Override
-  public RoleBindingStruct getRoleBindingStructForTenant( Tenant tenant, String locale ) {
-    return roleBindingDao.getRoleBindingStruct( tenant, locale );
+  public RoleBindingStruct getRoleBindingStructForTenant(Tenant tenant, String locale) {
+    return roleBindingDao.getRoleBindingStruct(tenant, locale);
   }
 
   @Override
-  public void setRoleBindingsForTenant( Tenant tenant, String runtimeRoleName, List<String> logicalRolesNames ) {
-    roleBindingDao.setRoleBindings( tenant, runtimeRoleName, logicalRolesNames );
+  public void setRoleBindingsForTenant(Tenant tenant, String runtimeRoleName, List<String> logicalRolesNames) {
+    roleBindingDao.setRoleBindings(tenant, runtimeRoleName, logicalRolesNames);
   }
 }

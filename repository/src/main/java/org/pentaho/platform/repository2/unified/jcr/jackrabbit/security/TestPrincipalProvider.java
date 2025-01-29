@@ -52,7 +52,8 @@ import java.util.Properties;
 import java.util.Set;
 
 /**
- * PrincipalProvider for unit test purposes. Has admin and the other Pentaho users. In addition, it has the
+ * PrincipalProvider for unit test purposes. Has admin and the other Tahopen
+ * users. In addition, it has the
  * Jackrabbit principals "everyone", "admin", and "anonymous".
  * 
  * <p>
@@ -61,7 +62,7 @@ import java.util.Set;
  * 
  * @author mlowery
  */
-@SuppressWarnings( "nls" )
+@SuppressWarnings("nls")
 public class TestPrincipalProvider implements PrincipalProvider {
 
   // ~ Instance fields
@@ -69,8 +70,7 @@ public class TestPrincipalProvider implements PrincipalProvider {
 
   private Map<String, Principal> principals = new HashMap<String, Principal>();
 
-  private Map<String, List<SpringSecurityRolePrincipal>> roleAssignments =
-      new HashMap<String, List<SpringSecurityRolePrincipal>>();
+  private Map<String, List<SpringSecurityRolePrincipal>> roleAssignments = new HashMap<String, List<SpringSecurityRolePrincipal>>();
 
   private String adminId;
 
@@ -93,7 +93,7 @@ public class TestPrincipalProvider implements PrincipalProvider {
   private ITenantedPrincipleNameResolver tenantedUserNameUtils = new DefaultTenantedPrincipleNameResolver();
 
   private ITenantedPrincipleNameResolver tenantedRoleNameUtils = new DefaultTenantedPrincipleNameResolver(
-      DefaultTenantedPrincipleNameResolver.ALTERNATE_DELIMETER );
+      DefaultTenantedPrincipleNameResolver.ALTERNATE_DELIMETER);
 
   private boolean primeWithSampleUsers;
 
@@ -106,10 +106,10 @@ public class TestPrincipalProvider implements PrincipalProvider {
   // ====================================================================================================
 
   public TestPrincipalProvider() {
-    this( true );
+    this(true);
   }
 
-  public TestPrincipalProvider( boolean primeWithSampleUsers ) {
+  public TestPrincipalProvider(boolean primeWithSampleUsers) {
     super();
     this.primeWithSampleUsers = primeWithSampleUsers;
   }
@@ -121,37 +121,37 @@ public class TestPrincipalProvider implements PrincipalProvider {
    * {@inheritDoc}
    */
   @Override
-  public void init( Properties options ) {
-    adminId = options.getProperty( KEY_ADMIN_ID, SecurityConstants.ADMIN_ID );
-    adminPrincipal = new AdminPrincipal( adminId );
-    adminRole = options.getProperty( KEY_ADMIN_ROLE, SecurityConstants.ADMINISTRATORS_NAME );
-    adminRolePrincipal = new SpringSecurityRolePrincipal( adminRole );
+  public void init(Properties options) {
+    adminId = options.getProperty(KEY_ADMIN_ID, SecurityConstants.ADMIN_ID);
+    adminPrincipal = new AdminPrincipal(adminId);
+    adminRole = options.getProperty(KEY_ADMIN_ROLE, SecurityConstants.ADMINISTRATORS_NAME);
+    adminRolePrincipal = new SpringSecurityRolePrincipal(adminRole);
 
-    anonymousId = options.getProperty( KEY_ANONYMOUS_ID, SecurityConstants.ANONYMOUS_ID );
+    anonymousId = options.getProperty(KEY_ANONYMOUS_ID, SecurityConstants.ANONYMOUS_ID);
 
-    principals.put( adminId, adminPrincipal );
-    principals.put( adminRole, adminRolePrincipal );
+    principals.put(adminId, adminPrincipal);
+    principals.put(adminRole, adminRolePrincipal);
     ArrayList<SpringSecurityRolePrincipal> assignedAdminRoles = new ArrayList<SpringSecurityRolePrincipal>();
-    assignedAdminRoles.add( adminRolePrincipal );
-    roleAssignments.put( adminId, assignedAdminRoles );
+    assignedAdminRoles.add(adminRolePrincipal);
+    roleAssignments.put(adminId, assignedAdminRoles);
 
-    principals.put( anonymousId, anonymousPrincipal );
+    principals.put(anonymousId, anonymousPrincipal);
 
     EveryonePrincipal everyone = EveryonePrincipal.getInstance();
-    principals.put( everyone.getName(), everyone );
+    principals.put(everyone.getName(), everyone);
 
   }
 
   Session getAdminSession() {
     try {
-      if ( session == null ) {
-        session = repository.login( adminCredentialsStrategy.getCredentials(), null );
+      if (session == null) {
+        session = repository.login(adminCredentialsStrategy.getCredentials(), null);
       }
-    } catch ( LoginException e ) {
+    } catch (LoginException e) {
       e.printStackTrace();
-    } catch ( NoSuchWorkspaceException e ) {
+    } catch (NoSuchWorkspaceException e) {
       e.printStackTrace();
-    } catch ( RepositoryException e ) {
+    } catch (RepositoryException e) {
       e.printStackTrace();
     }
     return session;
@@ -169,7 +169,7 @@ public class TestPrincipalProvider implements PrincipalProvider {
    * {@inheritDoc}
    */
   @Override
-  public boolean canReadPrincipal( Session session, Principal principal ) {
+  public boolean canReadPrincipal(Session session, Principal principal) {
     return true;
   }
 
@@ -177,29 +177,30 @@ public class TestPrincipalProvider implements PrincipalProvider {
    * {@inheritDoc}
    */
   @Override
-  public Principal getPrincipal( String principalName ) {
-    if ( AclMetadataPrincipal.isAclMetadataPrincipal( principalName ) ) {
-      return new AclMetadataPrincipal( principalName );
+  public Principal getPrincipal(String principalName) {
+    if (AclMetadataPrincipal.isAclMetadataPrincipal(principalName)) {
+      return new AclMetadataPrincipal(principalName);
     }
-    if ( principals.containsKey( principalName ) ) {
-      return principals.get( principalName );
+    if (principals.containsKey(principalName)) {
+      return principals.get(principalName);
     } else {
-      if ( userRoleDao != null ) {
+      if (userRoleDao != null) {
         try {
-          if ( userRoleDao.getUser( null, principalName ) != null ) {
-            return new UserPrincipal( principalName );
-          } else if ( userRoleDao.getRole( null, principalName ) != null ) {
-            return new SpringSecurityRolePrincipal( principalName );
+          if (userRoleDao.getUser(null, principalName) != null) {
+            return new UserPrincipal(principalName);
+          } else if (userRoleDao.getRole(null, principalName) != null) {
+            return new SpringSecurityRolePrincipal(principalName);
           } else {
             /*
-             * if(principalName.startsWith("super")) { return new UserPrincipal(principalName); }
+             * if(principalName.startsWith("super")) { return new
+             * UserPrincipal(principalName); }
              */
-            if ( principalName.startsWith( "super" ) ) {
-              return new SpringSecurityRolePrincipal( principalName );
+            if (principalName.startsWith("super")) {
+              return new SpringSecurityRolePrincipal(principalName);
             }
 
           }
-        } catch ( Exception e ) {
+        } catch (Exception e) {
           // CHECKSTYLES IGNORE
         }
       }
@@ -215,94 +216,97 @@ public class TestPrincipalProvider implements PrincipalProvider {
    * </p>
    */
   @Override
-  public PrincipalIterator getGroupMembership( Principal principal ) {
-    if ( principal instanceof EveryonePrincipal ) {
+  public PrincipalIterator getGroupMembership(Principal principal) {
+    if (principal instanceof EveryonePrincipal) {
       return PrincipalIteratorAdapter.EMPTY;
     }
-    if ( principal instanceof AclMetadataPrincipal ) {
+    if (principal instanceof AclMetadataPrincipal) {
       return PrincipalIteratorAdapter.EMPTY;
     }
-    Set<Principal> principals =
-        new HashSet<Principal>( roleAssignments.containsKey( principal.getName() ) ? roleAssignments.get( principal
-            .getName() ) : new HashSet<Principal>() );
-    principals.add( EveryonePrincipal.getInstance() );
-    if ( principal instanceof AdminPrincipal ) {
-      principals.add( adminRolePrincipal );
-    } else if ( principal instanceof UserPrincipal ) {
-      if ( userRoleDao != null ) {
+    Set<Principal> principals = new HashSet<Principal>(
+        roleAssignments.containsKey(principal.getName()) ? roleAssignments.get(principal
+            .getName()) : new HashSet<Principal>());
+    principals.add(EveryonePrincipal.getInstance());
+    if (principal instanceof AdminPrincipal) {
+      principals.add(adminRolePrincipal);
+    } else if (principal instanceof UserPrincipal) {
+      if (userRoleDao != null) {
         List<IPentahoRole> roles;
         try {
-          roles = userRoleDao.getUserRoles( null, principal.getName() );
-          for ( IPentahoRole role : roles ) {
-            principals.add( new SpringSecurityRolePrincipal( tenantedRoleNameUtils.getPrincipleId( role.getTenant(),
-                role.getName() ) ) );
+          roles = userRoleDao.getUserRoles(null, principal.getName());
+          for (IPentahoRole role : roles) {
+            principals.add(new SpringSecurityRolePrincipal(tenantedRoleNameUtils.getPrincipleId(role.getTenant(),
+                role.getName())));
           }
-        } catch ( Exception e ) {
-          roles = userRoleDao.getUserRoles( null, principal.getName() );
-          for ( IPentahoRole role : roles ) {
-            principals.add( new SpringSecurityRolePrincipal( tenantedRoleNameUtils.getPrincipleId( role.getTenant(),
-                role.getName() ) ) );
+        } catch (Exception e) {
+          roles = userRoleDao.getUserRoles(null, principal.getName());
+          for (IPentahoRole role : roles) {
+            principals.add(new SpringSecurityRolePrincipal(tenantedRoleNameUtils.getPrincipleId(role.getTenant(),
+                role.getName())));
           }
         }
       } else {
-        if ( principal.getName() != null
-            && ( principal.getName().startsWith( "admin" ) || principal.getName().startsWith( "suzy" ) || principal
-                .getName().startsWith( "tiffany" ) ) ) {
-          ITenant tenant = tenantedUserNameUtils.getTenant( principal.getName() );
-          principals.add( new SpringSecurityRolePrincipal( tenantedRoleNameUtils.getPrincipleId( tenant,
-              "Authenticated" ) ) );
+        if (principal.getName() != null
+            && (principal.getName().startsWith("admin") || principal.getName().startsWith("suzy") || principal
+                .getName().startsWith("tiffany"))) {
+          ITenant tenant = tenantedUserNameUtils.getTenant(principal.getName());
+          principals.add(new SpringSecurityRolePrincipal(tenantedRoleNameUtils.getPrincipleId(tenant,
+              "Authenticated")));
         }
-        if ( principal.getName() != null && principal.getName().startsWith( "admin" ) ) {
-          ITenant tenant = tenantedUserNameUtils.getTenant( principal.getName() );
+        if (principal.getName() != null && principal.getName().startsWith("admin")) {
+          ITenant tenant = tenantedUserNameUtils.getTenant(principal.getName());
           principals
-              .add( new SpringSecurityRolePrincipal( tenantedRoleNameUtils.getPrincipleId( tenant, "TenantAdmin" ) ) );
+              .add(new SpringSecurityRolePrincipal(tenantedRoleNameUtils.getPrincipleId(tenant, "TenantAdmin")));
         }
-        if ( principal.getName() != null && principal.getName().startsWith( "super" ) ) {
-          ITenant tenant = tenantedUserNameUtils.getTenant( principal.getName() );
+        if (principal.getName() != null && principal.getName().startsWith("super")) {
+          ITenant tenant = tenantedUserNameUtils.getTenant(principal.getName());
           principals
-              .add( new SpringSecurityRolePrincipal( tenantedRoleNameUtils.getPrincipleId( tenant, "SysAdmin" ) ) );
+              .add(new SpringSecurityRolePrincipal(tenantedRoleNameUtils.getPrincipleId(tenant, "SysAdmin")));
         }
       }
     }
-    return new PrincipalIteratorAdapter( principals );
+    return new PrincipalIteratorAdapter(principals);
   }
 
   /**
    * {@inheritDoc}
    * 
    * <p>
-   * Not implemented. This method only ever called from method in {@code PrincipalManagerImpl} and that method is
+   * Not implemented. This method only ever called from method in
+   * {@code PrincipalManagerImpl} and that method is
    * never called.
    * </p>
    */
   @Override
-  public PrincipalIterator findPrincipals( String simpleFilter ) {
-    throw new UnsupportedOperationException( "not implemented" );
+  public PrincipalIterator findPrincipals(String simpleFilter) {
+    throw new UnsupportedOperationException("not implemented");
   }
 
   /**
    * {@inheritDoc}
    * 
    * <p>
-   * Not implemented. This method only ever called from method in {@code PrincipalManagerImpl} and that method is
+   * Not implemented. This method only ever called from method in
+   * {@code PrincipalManagerImpl} and that method is
    * never called.
    * </p>
    */
   @Override
-  public PrincipalIterator findPrincipals( String simpleFilter, int searchType ) {
-    throw new UnsupportedOperationException( "not implemented" );
+  public PrincipalIterator findPrincipals(String simpleFilter, int searchType) {
+    throw new UnsupportedOperationException("not implemented");
   }
 
   /**
    * {@inheritDoc}
    * 
    * <p>
-   * Not implemented. This method only ever called from method in {@code PrincipalManagerImpl} and that method is
+   * Not implemented. This method only ever called from method in
+   * {@code PrincipalManagerImpl} and that method is
    * never called.
    * </p>
    */
   @Override
-  public PrincipalIterator getPrincipals( int searchType ) {
-    throw new UnsupportedOperationException( "not implemented" );
+  public PrincipalIterator getPrincipals(int searchType) {
+    throw new UnsupportedOperationException("not implemented");
   }
 }

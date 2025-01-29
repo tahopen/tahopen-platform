@@ -75,7 +75,7 @@ public class PentahoSystemDatabaseDialectProvider implements IDatabaseDialectPro
   }
 
   /**
-   * Returns database dialect registered to the Pentaho System for specified database type.
+   * Returns database dialect registered to the Tahopen System for specified database type.
    *
    * @param usableOnly
    * @param databaseType

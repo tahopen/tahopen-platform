@@ -51,7 +51,7 @@
 </head>
 <body bgcolor="white" dir="<%= LocaleHelper.getTextDirection() %>">
 
-  <h2>Pentaho Initialization Exception</h2>
+  <h2>Tahopen Initialization Exception</h2>
   <br />
   <div style='border:2px solid #cccccc'>
     <table width='100%' border='0'>

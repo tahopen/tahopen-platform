@@ -23,7 +23,7 @@ package org.pentaho.platform.api.mt;
 import java.io.Serializable;
 
 /**
- * A tenant of the Pentaho platform. Contains name, path and ID of a tenant.
+ * A tenant of the Tahopen platform. Contains name, path and ID of a tenant.
  * This interface should be implemented if you need create your own tenant.
  * Tenants are used for implementing the security mechanism. 
  * 

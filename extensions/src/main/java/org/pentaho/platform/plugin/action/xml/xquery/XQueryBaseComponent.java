@@ -63,7 +63,7 @@ import java.util.Map;
 import java.util.StringTokenizer;
 
 /**
- * XQueryBaseComponent provides a mechanism to run xqueries within the Pentaho BI Platform.
+ * XQueryBaseComponent provides a mechanism to run xqueries within the Tahopen BI Platform.
  * <p/>
  * <p/>
  * TODO: In regards to IPreparedComponent, implement a method for choosing the datasource on the fly
