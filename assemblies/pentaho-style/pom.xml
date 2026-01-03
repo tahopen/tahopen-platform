@@ -5,10 +5,10 @@
   <parent>
     <groupId>org.tahopen</groupId>
     <artifactId>tahopen-platform-assemblies</artifactId>
-    <version>0.1.0.0-SNAPSHOT</version>
+    <version>0.1.0.0</version>
   </parent>
   <artifactId>tahopen-style</artifactId>
-  <version>0.1.0.0-SNAPSHOT</version>
+  <version>0.1.0.0</version>
   <packaging>war</packaging>
   <properties>
     <package.resources.directory>${basedir}/src/main/webapp</package.resources.directory>

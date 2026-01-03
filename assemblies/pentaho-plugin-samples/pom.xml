@@ -5,10 +5,10 @@
   <parent>
     <groupId>org.tahopen</groupId>
     <artifactId>tahopen-platform-assemblies</artifactId>
-    <version>0.1.0.0-SNAPSHOT</version>
+    <version>0.1.0.0</version>
   </parent>
   <artifactId>tahopen-plugin-samples</artifactId>
-  <version>0.1.0.0-SNAPSHOT</version>
+  <version>0.1.0.0</version>
   <packaging>pom</packaging>
   <properties>
     <pentaho-server.samples.directory>${pentaho-server.solutions.directory}/plugin-samples</pentaho-server.samples.directory>

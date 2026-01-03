@@ -5,10 +5,10 @@
   <parent>
     <groupId>org.tahopen</groupId>
     <artifactId>tahopen-platform-assemblies</artifactId>
-    <version>0.1.0.0-SNAPSHOT</version>
+    <version>0.1.0.0</version>
   </parent>
   <artifactId>tahopen-solutions</artifactId>
-  <version>0.1.0.0-SNAPSHOT</version>
+  <version>0.1.0.0</version>
   <packaging>pom</packaging>
   <properties>
     <prepared.samples.directory>${project.build.directory}/dependency/plugin-samples</prepared.samples.directory>
@@ -132,7 +132,7 @@
                 <artifactItem>
                   <groupId>org.tahopen</groupId>
                   <artifactId>tahopen-big-data-plugin</artifactId>
-                  <version>0.1.0.0-SNAPSHOT</version>
+                  <version>0.1.0.0</version>
                   <type>zip</type>
                   <outputDirectory>${prepared.kettle.plugins.directory}</outputDirectory>
                 </artifactItem>
@@ -452,7 +452,7 @@
                 <artifactItem>
                   <groupId>org.tahopen</groupId>
                   <artifactId>tahopen-plugin-samples</artifactId>
-                  <version>0.1.0.0-SNAPSHOT</version>
+                  <version>0.1.0.0</version>
                   <type>zip</type>
                   <outputDirectory>${prepared.samples.directory}</outputDirectory>
                 </artifactItem>
@@ -466,77 +466,77 @@
                 <artifactItem>
                   <groupId>org.tahopen.di.plugins</groupId>
                   <artifactId>connected-to-repository-plugins</artifactId>
-                  <version>0.1.0.0-SNAPSHOT</version>
+                  <version>0.1.0.0</version>
                   <type>zip</type>
                   <outputDirectory>${prepared.kettle.plugins.directory}</outputDirectory>
                 </artifactItem>
                 <artifactItem>
                   <groupId>org.tahopen.di.plugins</groupId>
                   <artifactId>export-repository-plugins</artifactId>
-                  <version>0.1.0.0-SNAPSHOT</version>
+                  <version>0.1.0.0</version>
                   <type>zip</type>
                   <outputDirectory>${prepared.kettle.plugins.directory}</outputDirectory>
                 </artifactItem>
                 <artifactItem>
                   <groupId>org.tahopen.di.plugins</groupId>
                   <artifactId>get-repository-names-plugins</artifactId>
-                  <version>0.1.0.0-SNAPSHOT</version>
+                  <version>0.1.0.0</version>
                   <type>zip</type>
                   <outputDirectory>${prepared.kettle.plugins.directory}</outputDirectory>
                 </artifactItem>
                 <artifactItem>
                   <groupId>org.tahopen.di.plugins</groupId>
                   <artifactId>random-cc-number-generator-plugins</artifactId>
-                  <version>0.1.0.0-SNAPSHOT</version>
+                  <version>0.1.0.0</version>
                   <type>zip</type>
                   <outputDirectory>${prepared.kettle.plugins.directory}</outputDirectory>
                 </artifactItem>
                 <artifactItem>
                   <groupId>org.tahopen.di.plugins</groupId>
                   <artifactId>credit-card-validator-plugins</artifactId>
-                  <version>0.1.0.0-SNAPSHOT</version>
+                  <version>0.1.0.0</version>
                   <type>zip</type>
                   <outputDirectory>${prepared.kettle.plugins.directory}</outputDirectory>
                 </artifactItem>
                 <artifactItem>
                   <groupId>org.tahopen.di.plugins</groupId>
                   <artifactId>email-messages-plugins</artifactId>
-                  <version>0.1.0.0-SNAPSHOT</version>
+                  <version>0.1.0.0</version>
                   <type>zip</type>
                   <outputDirectory>${prepared.kettle.plugins.directory}</outputDirectory>
                 </artifactItem>
                 <artifactItem>
                   <groupId>org.tahopen.di.plugins</groupId>
                   <artifactId>mail-plugins</artifactId>
-                  <version>0.1.0.0-SNAPSHOT</version>
+                  <version>0.1.0.0</version>
                   <type>zip</type>
                   <outputDirectory>${prepared.kettle.plugins.directory}</outputDirectory>
                 </artifactItem>
                 <artifactItem>
                   <groupId>org.tahopen.di.plugins</groupId>
                   <artifactId>mail-job-plugins</artifactId>
-                  <version>0.1.0.0-SNAPSHOT</version>
+                  <version>0.1.0.0</version>
                   <type>zip</type>
                   <outputDirectory>${prepared.kettle.plugins.directory}</outputDirectory>
                 </artifactItem>
                 <artifactItem>
                   <groupId>org.tahopen.di.plugins</groupId>
                   <artifactId>mail-validator-plugins</artifactId>
-                  <version>0.1.0.0-SNAPSHOT</version>
+                  <version>0.1.0.0</version>
                   <type>zip</type>
                   <outputDirectory>${prepared.kettle.plugins.directory}</outputDirectory>
                 </artifactItem>
                 <artifactItem>
                   <groupId>org.tahopen.di.plugins</groupId>
                   <artifactId>get-file-with-ftp-plugins</artifactId>
-                  <version>0.1.0.0-SNAPSHOT</version>
+                  <version>0.1.0.0</version>
                   <type>zip</type>
                   <outputDirectory>${prepared.kettle.plugins.directory}</outputDirectory>
                 </artifactItem>
                 <artifactItem>
                   <groupId>org.tahopen.di.plugins</groupId>
                   <artifactId>put-a-file-with-ftp-plugins</artifactId>
-                  <version>0.1.0.0-SNAPSHOT</version>
+                  <version>0.1.0.0</version>
                   <type>zip</type>
                   <outputDirectory>${prepared.kettle.plugins.directory}</outputDirectory>
                 </artifactItem>

@@ -907,7 +907,7 @@
     <dependency>
       <groupId>org.tahopen</groupId>
       <artifactId>simple-jndi</artifactId>
-      <version>0.1.0.0-SNAPSHOT</version>      
+      <version>0.1.0.0</version>      
       <!--<version>${simple-jndi.version}</version>-->
       <scope>test</scope>
     </dependency>

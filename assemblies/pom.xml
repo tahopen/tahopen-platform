@@ -5,11 +5,11 @@
   <parent>
     <groupId>org.tahopen</groupId>
     <artifactId>tahopen-platform-ce-parent</artifactId>
-    <version>0.1.0.0-SNAPSHOT</version>
+    <version>0.1.0.0</version>
   </parent>
 
   <artifactId>tahopen-platform-assemblies</artifactId>
-  <version>0.1.0.0-SNAPSHOT</version>
+  <version>0.1.0.0</version>
   <packaging>pom</packaging>
 
   <name>Platform assemblies</name>

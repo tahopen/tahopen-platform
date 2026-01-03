@@ -16,11 +16,11 @@
     <jcommon.version>1.0.14</jcommon.version>
     <license.header.definition.file>${basedir}/../license/styles/javadoc_style_license_header.xml</license.header.definition.file>
     <license.header.file>${basedir}/../license/templates/GPL-2.0.txt</license.header.file>
-    <commons-xul.version>0.1.0.0-SNAPSHOT</commons-xul.version>
-    <pentaho-connections.version>0.1.0.0-SNAPSHOT</pentaho-connections.version>
-    <pentaho-actionsequence-dom.version>0.1.0.0-SNAPSHOT</pentaho-actionsequence-dom.version>
-    <pentaho-metadata.version>0.1.0.0-SNAPSHOT</pentaho-metadata.version>
-    <pentaho-versionchecker.version>0.1.0.0-SNAPSHOT</pentaho-versionchecker.version>
+    <commons-xul.version>0.1.0.0</commons-xul.version>
+    <pentaho-connections.version>0.1.0.0</pentaho-connections.version>
+    <pentaho-actionsequence-dom.version>0.1.0.0</pentaho-actionsequence-dom.version>
+    <pentaho-metadata.version>0.1.0.0</pentaho-metadata.version>
+    <pentaho-versionchecker.version>0.1.0.0</pentaho-versionchecker.version>
     <pdi.version>0.1.0.0</pdi.version>
   </properties>
   <dependencies>
