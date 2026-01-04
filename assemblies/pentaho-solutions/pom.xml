@@ -43,16 +43,17 @@
             <configuration>
               <artifactItems>
                 <artifactItem>
-                  <groupId>org.pentaho.di.plugins</groupId>
-                  <artifactId>pdi-pur-plugin</artifactId>
-                  <version>9.4.0.0-SNAPSHOT</version>
+                  <groupId>org.tahopen.di.plugins</groupId>
+                  <artifactId>tdi-pur-plugin</artifactId>
+                  <version>0.1.0.0</version>
                   <type>zip</type>
                   <outputDirectory>${prepared.plugins.directory}</outputDirectory>
                 </artifactItem>
                 <artifactItem>
                   <groupId>org.tahopen</groupId>
                   <artifactId>tahopen-cdf</artifactId>
-                  <version>${project.version}</version>
+                  <version>0.1.0.0-SNAPSHOT</version>
+                  <!-- temp <version>${project.version}</version> -->
                   <type>zip</type>
                   <outputDirectory>${prepared.plugins.directory}</outputDirectory>
                 </artifactItem>
@@ -66,14 +67,16 @@
                 <artifactItem>
                   <groupId>org.tahopen</groupId>
                   <artifactId>cda</artifactId>
-                  <version>${project.version}</version>
+                 <version>0.1.0.0-SNAPSHOT</version>
+                  <!-- temp <version>${project.version}</version> -->
                   <type>zip</type>
                   <outputDirectory>${prepared.plugins.directory}</outputDirectory>
                 </artifactItem>
                 <artifactItem>
                   <groupId>org.tahopen.ctools</groupId>
                   <artifactId>tahopen-cdf-dd</artifactId>
-                  <version>${project.version}</version>
+                 <version>0.1.0.0-SNAPSHOT</version>
+                  <!-- temp <version>${project.version}</version> -->
                   <type>zip</type>
                   <outputDirectory>${prepared.plugins.directory}</outputDirectory>
                 </artifactItem>
@@ -94,9 +97,9 @@
                   <outputDirectory>${prepared.plugins.directory}</outputDirectory>
                 </artifactItem>
                 <artifactItem>
-                  <groupId>pentaho</groupId>
+                  <groupId>org.tahopen</groupId>
                   <artifactId>data-access-plugin</artifactId>
-                  <version>9.4.0.0-SNAPSHOT</version>
+                  <version>0.1.0.0</version>
                   <type>zip</type>
                   <outputDirectory>${prepared.plugins.directory}</outputDirectory>
                 </artifactItem>
@@ -117,7 +120,8 @@
                 <artifactItem>
                   <groupId>org.tahopen.reporting.plugin</groupId>
                   <artifactId>classic-core-platform-plugin-package</artifactId>
-                  <version>${project.version}</version>
+                 <version>0.1.0.0-SNAPSHOT</version>
+                  <!-- temp <version>${project.version}</version> -->
                   <type>zip</type>
                   <outputDirectory>${prepared.plugins.directory}</outputDirectory>
                 </artifactItem>
@@ -287,7 +291,8 @@
                 <artifactItem>
                   <groupId>org.tahopen</groupId>
                   <artifactId>tahopen-big-data-plugin-samples</artifactId>
-                  <version>${project.version}</version>
+                 <version>0.1.0.0-SNAPSHOT</version>
+                  <!-- temp <version>${project.version}</version> -->
                   <type>zip</type>
                   <outputDirectory>${prepared.kettle.plugins.directory}</outputDirectory>
                 </artifactItem>

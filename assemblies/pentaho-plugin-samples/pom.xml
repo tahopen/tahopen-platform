@@ -36,14 +36,16 @@
                 <artifactItem>
                   <groupId>org.tahopen</groupId>
                   <artifactId>cda-samples</artifactId>
-                  <version>${project.version}</version>
+                  <version>0.1.0.0-SNAPSHOT</version>
+                  <!-- temp <version>${project.version}</version> -->
                   <type>zip</type>
                   <outputDirectory>${pentaho-server.samples.directory}</outputDirectory>
                 </artifactItem>
                 <artifactItem>
                   <groupId>org.tahopen.ctools</groupId>
                   <artifactId>tahopen-cdf-dd-samples</artifactId>
-                  <version>${project.version}</version>
+                  <version>0.1.0.0-SNAPSHOT</version>
+                  <!-- temp <version>${project.version}</version> -->
                   <type>zip</type>
                   <outputDirectory>${pentaho-server.samples.directory}</outputDirectory>
                 </artifactItem>

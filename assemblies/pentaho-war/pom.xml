@@ -160,7 +160,8 @@
     <dependency>
       <groupId>org.tahopen.reporting.plugin</groupId>
       <artifactId>classic-core-platform-plugin</artifactId>
-      <version>${project.version}</version>
+      <version>0.1.0.0-SNAPSHOT</version>
+      <!-- <version>${project.version}</version> -->
       <scope>compile</scope>
       <exclusions>
         <exclusion>
