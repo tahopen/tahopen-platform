@@ -67,6 +67,5 @@
       <outputFileNameMapping>plugin-samples.${artifact.extension}</outputFileNameMapping>
     </dependencySet>
 
-
   </dependencySets>
 </assembly>
